@@ -1,6 +1,6 @@
 # Citation Typing Ontology (CiTO)
 
-CiTO, the Citation Typing Ontology, is an ontology for the characterization of citations, both factually and rhetorically.
+The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically.
 
 **URL:** http://purl.org/spar/cito
 
