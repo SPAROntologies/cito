@@ -85,9 +85,19 @@ in v 2.7.3
 Added the class cito:SelfCitation, i.e. citation in which the citing and the cited entities have at least one author in common."""^^xsd:string ;
     dc:rights "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en ;
     dc:title "CiTO, the Citation Typing Ontology"@en ;
-    rdfs:comment """CiTO, the Citation Typing Ontology, is an ontology for the characterization of citations, both factually and rhetorically.  It forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies.
+    rdfs:comment """The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically.
 
-This ontology is available at http://purl.org/spar/cito, and uses the namespace prefix cito. Other SPAR ontologies are described at http://purl.org/spar/."""@en ;
+**URL:** http://purl.org/spar/cito
+
+**Creators**: [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
+
+**Contributors:** [Paolo Ciccarese](https://orcid.org/0000-0002-5156-2703), [Tim Clark](https://orcid.org/0000-0003-4060-7360)
+
+**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+**Website:** http://www.sparontologies.net/ontologies/cito
+
+**Cite as:** Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-cito-ontologies.pdf"""@en ;
     owl:imports <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> ;
     owl:priorVersion <https://svn.code.sf.net/p/sempublishing/code/CiTO/2017-10-21-cito-2_7_2.owl> ;
     owl:versionIRI <http://purl.org/spar/cito/2017-10-30> ;
