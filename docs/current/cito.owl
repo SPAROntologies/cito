@@ -13,26 +13,14 @@
      xmlns:cito="http://purl.org/spar/cito/cito:"
      xmlns:sit="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#">
     <owl:Ontology rdf:about="http://purl.org/spar/cito">
-        <owl:versionIRI rdf:resource="http://purl.org/spar/cito/2017-10-30"/>
+        <owl:versionIRI rdf:resource="http://purl.org/spar/cito/2018-02-12"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
+        <owl:priorVersion rdf:resource="http://purl.org/spar/cito/2017-10-30"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.8</owl:versionInfo>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paolo Ciccarese</dc:contributor>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tim Clark</dc:contributor>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.7.3</owl:versionInfo>
-        <rdfs:comment xml:lang="en">The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically.
-
-**URL:** http://purl.org/spar/cito
-
-**Creators**: [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
-
-**Contributors:** [Paolo Ciccarese](https://orcid.org/0000-0002-5156-2703), [Tim Clark](https://orcid.org/0000-0003-4060-7360)
-
-**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
-
-**Website:** http://www.sparontologies.net/ontologies/cito
-
-**Cite as:** Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-cito-ontologies.pdf</rdfs:comment>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiTO, the Citation Typing Ontology, is an ontology written in OWL 2 DL to enable characterization of the nature or type of citations, both factually and rhetorically, and to permit these descriptions to be published on the Web.  
 
 The citations characterized may be either direct and explicit (as in the reference list of a journal article), indirect (e.g. a citation to a more recent paper by the same research group on the same topic), or implicit (e.g. as in artistic quotations or parodies, or in cases of plagiarism).
@@ -49,7 +37,7 @@ The addition of two additional properties, cito:compiles and cito:isCompiledBy, 
 
 Subsequent expansions include:
 
-in versions 2.3 and 2.4 the addition of the object properties cito:citesAsPotentialSolution, cito:citesAsRecommended, cito:repliesTo, cito:retracts, cito:speculates on, and their inverse properties;
+in versions 2.3 and 2.4 the addition of the object properties cito:citesAsPotentialSolution, cito:citesAsRecommendedReading, cito:repliesTo, cito:retracts, cito:speculates on, and their inverse properties;
 
 in v2.5 the addition of cito:CitationAct, cito:hasCitationEvent, cito:hasCitedEntity and cito:hasCitingEntity;
 
@@ -86,10 +74,25 @@ in v 2.7.2
 The name of the class cito:CitationAct has been changed to cito:Citation, and its definition has been modified. The property cito:hasCitationTimeSpan has been added.
 
 in v 2.7.3
-Added the class cito:SelfCitation, i.e. citation in which the citing and the cited entities have at least one author in common.</dc:description>
+Added the class cito:SelfCitation, i.e. citation in which the citing and the cited entities have at least one author in common.
+
+in v 2.8
+Renamed the class cito:SelfCitation in cito:AuthorSelfCitation. Created a new class cito:SelfCitation with a more general definition (citation in which the citing and the cited entities have something significant in common with one another), which now includes five subclasses: cito:AuthorSelfCitation, cito:JournalSelfCitation, cito:FunderSelfCitation, cito:AffiliationSelfCitation, cito:AuthorNetworkSelfCitation. The latter class is also accompanied by the new data property cito:hasCoAuthorCitationLevel, which specifies the minimal distance that one of the authors of a citing entity has with regards to one of the authors of a cited entity according to their co-author network. Added the object properties cito:sharesPublicationVenueWith and its subproperty cito:sharesJournalWith. Added the data property cito:hasCitationCreationDate, and changed the domain of cito:hasCitationTimeSpan with xsd:duration.</dc:description>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-02-12</dc:date>
+        <rdfs:comment xml:lang="en">The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically.
+
+**URL:** http://purl.org/spar/cito
+
+**Creators**: [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
+
+**Contributors:** [Paolo Ciccarese](https://orcid.org/0000-0002-5156-2703), [Tim Clark](https://orcid.org/0000-0003-4060-7360)
+
+**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+**Website:** http://www.sparontologies.net/ontologies/cito
+
+**Cite as:** Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-cito-ontologies.pdf</rdfs:comment>
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
-        <owl:priorVersion rdf:resource="https://svn.code.sf.net/p/sempublishing/code/CiTO/2017-10-21-cito-2_7_2.owl"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-10-30</dc:date>
         <dc:title xml:lang="en">CiTO, the Citation Typing Ontology</dc:title>
     </owl:Ontology>
     
@@ -163,6 +166,23 @@ Added the class cito:SelfCitation, i.e. citation in which the citing and the cit
     <!-- http://www.w3.org/2002/07/owl#versionInfo -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
     
 
 
@@ -1142,6 +1162,25 @@ On June 4th 1940, Winston Churchill made a speech on the radio that has since be
     
 
 
+    <!-- http://purl.org/spar/cito/sharesJournalWith -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/sharesJournalWith">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/sharesPublicationVenueWith"/>
+        <rdfs:comment xml:lang="en">The citing and cited bibliographic resources are published in the same journal.</rdfs:comment>
+        <rdfs:label xml:lang="en">shares journal with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/sharesPublicationVenueWith -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/sharesPublicationVenueWith">
+        <rdfs:comment xml:lang="en">The citing and cited bibliographic resources are published in same publication venue.</rdfs:comment>
+        <rdfs:label xml:lang="en">shares publication venue with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/spar/cito/speculatesOn -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/speculatesOn">
@@ -1241,13 +1280,36 @@ On June 4th 1940, Winston Churchill made a speech on the radio that has since be
     
 
 
+    <!-- http://purl.org/spar/cito/hasCitationCreationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/spar/cito/hasCitationCreationDate">
+        <rdfs:comment xml:lang="en">The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself.  When combined with the citation time span, it permits that citation to be located in history.</rdfs:comment>
+        <rdfs:label xml:lang="en">has citation creation date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/spar/cito/hasCitationTimeSpan -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/spar/cito/hasCitationTimeSpan">
         <rdfs:domain rdf:resource="http://purl.org/spar/cito/Citation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">The temporal characteristic of a citation, namely the date interval (expressed in whole years) between the publication year of the cited entity and the publication year of the citing entity.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+        <rdfs:comment xml:lang="en">The temporal characteristic of a citation, namely the interval between the publication date of the cited entity and the publication date of the citing entity. Note that when one or both of the publication dates is given as just &apos;year&apos;, then the citation time span is rounded to the nearest year, and when one or both of the publication dates is given as just &apos;year and month&apos;, then the citation time span is rounded to the nearest month, with the inherent inaccuracies that such rounding involves.</rdfs:comment>
         <rdfs:label xml:lang="en">has citation time span</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/hasCoAuthorCitationLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/spar/cito/hasCoAuthorCitationLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/spar/cito/AuthorNetworkSelfCitation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="en">It specifies the minimal distance that one of the authors of the citing entity has with regards to one of the authors of the cited entity according to their co-author network.
+
+For instance, a citation has co-author citation level equal to 1 if at least one author of the citing entity has previously published as co-author with one of the authors of the cited entity. Similarly, we say that a citation has co-author citation level equal to 2 if at least one author of the citing entity has previously published as co-author with someone who him/herself has previously published as co-author with one of the authors of the cited entity. And so on.</rdfs:comment>
+        <rdfs:label xml:lang="en">has co-author citation level</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1260,6 +1322,72 @@ On June 4th 1940, Winston Churchill made a speech on the radio that has since be
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/spar/cito/AffilationSelfCitation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/cito/AffilationSelfCitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
+        <rdfs:comment xml:lang="en">A citation in which at least one author from each of the citing and the cited entities is affiliated with the same academic institution.
+
+In particular, like the ancestor class cito:Citation, cito:AffiliationSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesAuthorInstitutionWith for linking the citing paper and the cited paper. 
+
+For example, the following cito:AffiliationSelfCitation resource
+
+     :thisCitation a cito:AffiliationSelfCitation ; 
+          cito:hasCitingEntity :paperA ;
+          cito:hasCitationCharacterization cito:extends ;
+          cito:hasCitedEntity :paperB .
+
+can be alternatively described as follows
+
+     :paperA cito:extends :paperB .
+     :paperA cito:sharesAuthorInstitutionWith :paperB .</rdfs:comment>
+        <rdfs:label xml:lang="en">affilation self citation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/cito/AuthorNetworkSelfCitation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/cito/AuthorNetworkSelfCitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCoAuthorCitationLevel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Derived from the article &apos;A Small World of Citations? The Influence of Collaboration Networks on Citation Practices&apos; by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339).</dc:description>
+        <rdfs:comment xml:lang="en">A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">author network self citation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/cito/AuthorSelfCitation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/cito/AuthorSelfCitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
+        <rdfs:comment xml:lang="en">A citation in which the citing and the cited entities have at least one author in common.
+
+In particular, like the ancestor class cito:Citation, cito:AuthorSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesAuthorWith for linking the citing paper and the cited paper. 
+
+For example, the following cito:AuthorSelfCitation resource
+
+     :thisCitation a cito:AuthorSelfCitation ; 
+          cito:hasCitingEntity :paperA ;
+          cito:hasCitationCharacterization cito:extends ;
+          cito:hasCitedEntity :paperB .
+
+can be alternatively described as follows
+
+     :paperA cito:extends :paperB .
+     :paperA cito:sharesAuthorWith :paperB .</rdfs:comment>
+        <rdfs:label xml:lang="en">author self citation</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1318,17 +1446,28 @@ Such situations can be resolved by the creation of a user-defined citation chara
     
 
 
-    <!-- http://purl.org/spar/cito/SelfCitation -->
+    <!-- http://purl.org/spar/cito/DistantCitation -->
 
-    <owl:Class rdf:about="http://purl.org/spar/cito/SelfCitation">
+    <owl:Class rdf:about="http://purl.org/spar/cito/DistantCitation">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/Citation"/>
-        <rdfs:comment xml:lang="en">A citation in which the citing and the cited entities have at least one author in common.
+        <dc:description xml:lang="en">Derived from the article &apos;A Small World of Citations? The Influence of Collaboration Networks on Citation Practices&apos; by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339).</dc:description>
+        <rdfs:comment xml:lang="en">A citation in which the citing and the cited entities have nothing significant in common with one another (for example authors, journal, institutional affiliation, or funding agency) over and beyond their subject matter.</rdfs:comment>
+        <rdfs:label xml:lang="en">distant citation</rdfs:label>
+    </owl:Class>
+    
 
-In particular, like the parent class cito:Citation, cito:SelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesAuthorWith for linking the citing paper and the cited paper. 
 
-For example, the following cito:SelfCitation resource
+    <!-- http://purl.org/spar/cito/FunderSelfCitation -->
 
-     :thisCitation a cito:SelfCitation ; 
+    <owl:Class rdf:about="http://purl.org/spar/cito/FunderSelfCitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
+        <rdfs:comment xml:lang="en">A citation in which the works reported in the citing and the cited entities were funded by the same funding agency.
+
+In particular, like the ancestor class cito:Citation, cito:FunderSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesFundingAgencyWith for linking the citing paper and the cited paper. 
+
+For example, the following cito:FundingSelfCitation resource
+
+     :thisCitation a cito:FundingSelfCitation ; 
           cito:hasCitingEntity :paperA ;
           cito:hasCitationCharacterization cito:extends ;
           cito:hasCitedEntity :paperB .
@@ -1336,7 +1475,53 @@ For example, the following cito:SelfCitation resource
 can be alternatively described as follows
 
      :paperA cito:extends :paperB .
-     :paperA cito:sharesAuthorWith :paperB .</rdfs:comment>
+     :paperA cito:sharesFundingAgencyWith :paperB .</rdfs:comment>
+        <rdfs:label xml:lang="en">funder self citation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/cito/JournalCartelCitation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/cito/JournalCartelCitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/Citation"/>
+        <dc:description xml:lang="en">Derived from the blog post &apos;What do we know about journal citation cartels? A call for information&apos; by Philippe Mongeon, Ludo Waltman and Sarah de Rijcke (https://www.cwts.nl/blog?article=n-q2w2b4).</dc:description>
+        <rdfs:comment xml:lang="en">A citation from one journal to another journal which forms one of a very large number of citations from the citing journal to recent articles in the cited journal, possibly undertaken as part of a citation cartel for the purpose of gaming the impact factor of the cited journal.</rdfs:comment>
+        <rdfs:label xml:lang="en">journal cartel citation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/cito/JournalSelfCitation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/cito/JournalSelfCitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
+        <dc:description xml:lang="en">Derived from the blog post &apos;Journal self-citations are increasingly biased toward impact factor years&apos; by Ludo Waltman and Caspar Chorus (https://www.cwts.nl/blog?article=n-q2x264).</dc:description>
+        <rdfs:comment xml:lang="en">A citation in which the citing and the cited entities are published in the same journal.
+
+In particular, like the ancestor class cito:Citation, cito:JournalSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesJournalWith for linking the citing paper and the cited paper. 
+
+For example, the following cito:JournalSelfCitation resource
+
+     :thisCitation a cito:JournalSelfCitation ; 
+          cito:hasCitingEntity :paperA ;
+          cito:hasCitationCharacterization cito:extends ;
+          cito:hasCitedEntity :paperB .
+
+can be alternatively described as follows
+
+     :paperA cito:extends :paperB .
+     :paperA cito:sharesJournalWith :paperB .</rdfs:comment>
+        <rdfs:label xml:lang="en">journal self citation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/cito/SelfCitation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/cito/SelfCitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/Citation"/>
+        <rdfs:comment xml:lang="en">A citation in which the citing and the cited entities have something significant in common with one another, over and beyond their subject matter, for example authors, journal, institutional affiliation, or funding agency.</rdfs:comment>
         <rdfs:label xml:lang="en">self citation</rdfs:label>
     </owl:Class>
 </rdf:RDF>
