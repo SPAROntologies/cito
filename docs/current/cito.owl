@@ -13,12 +13,11 @@
      xmlns:cito="http://purl.org/spar/cito/cito:"
      xmlns:sit="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#">
     <owl:Ontology rdf:about="http://purl.org/spar/cito">
-        <owl:versionIRI rdf:resource="http://purl.org/spar/cito/2018-02-12"/>
+        <owl:versionIRI rdf:resource="http://purl.org/spar/cito/2018-02-16"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
-        <owl:priorVersion rdf:resource="http://purl.org/spar/cito/2017-10-30"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.8</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.8.1</owl:versionInfo>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paolo Ciccarese</dc:contributor>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tim Clark</dc:contributor>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiTO, the Citation Typing Ontology, is an ontology written in OWL 2 DL to enable characterization of the nature or type of citations, both factually and rhetorically, and to permit these descriptions to be published on the Web.  
@@ -77,8 +76,11 @@ in v 2.7.3
 Added the class cito:SelfCitation, i.e. citation in which the citing and the cited entities have at least one author in common.
 
 in v 2.8
-Renamed the class cito:SelfCitation in cito:AuthorSelfCitation. Created a new class cito:SelfCitation with a more general definition (citation in which the citing and the cited entities have something significant in common with one another), which now includes five subclasses: cito:AuthorSelfCitation, cito:JournalSelfCitation, cito:FunderSelfCitation, cito:AffiliationSelfCitation, cito:AuthorNetworkSelfCitation. The latter class is also accompanied by the new data property cito:hasCoAuthorCitationLevel, which specifies the minimal distance that one of the authors of a citing entity has with regards to one of the authors of a cited entity according to their co-author network. Added the object properties cito:sharesPublicationVenueWith and its subproperty cito:sharesJournalWith. Added the data property cito:hasCitationCreationDate, and changed the domain of cito:hasCitationTimeSpan with xsd:duration.</dc:description>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-02-12</dc:date>
+Renamed the class cito:SelfCitation in cito:AuthorSelfCitation. Created a new class cito:SelfCitation with a more general definition (citation in which the citing and the cited entities have something significant in common with one another), which now includes five subclasses: cito:AuthorSelfCitation, cito:JournalSelfCitation, cito:FunderSelfCitation, cito:AffiliationSelfCitation, cito:AuthorNetworkSelfCitation. The latter class is also accompanied by the new data property cito:hasCoAuthorCitationLevel, which specifies the minimal distance that one of the authors of a citing entity has with regards to one of the authors of a cited entity according to their co-author network. Added the object properties cito:sharesPublicationVenueWith and its subproperty cito:sharesJournalWith. Added the data property cito:hasCitationCreationDate, and changed the domain of cito:hasCitationTimeSpan with xsd:duration.
+
+in v 2.8.1
+Renamed the property cito:hasCoAuthorCitationLevel in cito:hasCoAuthorshipCitationLevel.</dc:description>
+        <owl:priorVersion rdf:resource="http://purl.org/spar/cito/2018-02-12"/>
         <rdfs:comment xml:lang="en">The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically.
 
 **URL:** http://purl.org/spar/cito
@@ -94,6 +96,7 @@ Renamed the class cito:SelfCitation in cito:AuthorSelfCitation. Created a new cl
 **Cite as:** Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-cito-ontologies.pdf</rdfs:comment>
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
         <dc:title xml:lang="en">CiTO, the Citation Typing Ontology</dc:title>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-02-16</dc:date>
     </owl:Ontology>
     
 
@@ -1300,16 +1303,16 @@ On June 4th 1940, Winston Churchill made a speech on the radio that has since be
     
 
 
-    <!-- http://purl.org/spar/cito/hasCoAuthorCitationLevel -->
+    <!-- http://purl.org/spar/cito/hasCoAuthorshipCitationLevel -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/spar/cito/hasCoAuthorCitationLevel">
+    <owl:DatatypeProperty rdf:about="http://purl.org/spar/cito/hasCoAuthorshipCitationLevel">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/spar/cito/AuthorNetworkSelfCitation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-        <rdfs:comment xml:lang="en">It specifies the minimal distance that one of the authors of the citing entity has with regards to one of the authors of the cited entity according to their co-author network.
+        <rdfs:comment xml:lang="en">This property specifies the minimal distance that one of the authors of the citing entity has with regards to one of the authors of the cited entity, according to their co-authorship network.
 
-For instance, a citation has co-author citation level equal to 1 if at least one author of the citing entity has previously published as co-author with one of the authors of the cited entity. Similarly, we say that a citation has co-author citation level equal to 2 if at least one author of the citing entity has previously published as co-author with someone who him/herself has previously published as co-author with one of the authors of the cited entity. And so on.</rdfs:comment>
-        <rdfs:label xml:lang="en">has co-author citation level</rdfs:label>
+For instance, a citation has a co-authorship citation level equal to 1 if at least one author of the citing entity has previously published as co-author with one of the authors of the cited entity. Similarly, we say that a citation has a co-authorship citation level equal to 2 if at least one author of the citing entity has previously published as co-author with someone who him/herself has previously published as co-author with one of the authors of the cited entity. And so on.</rdfs:comment>
+        <rdfs:label xml:lang="en">has co-authorship citation level</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1355,7 +1358,7 @@ can be alternatively described as follows
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCoAuthorCitationLevel"/>
+                <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCoAuthorshipCitationLevel"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
             </owl:Restriction>
