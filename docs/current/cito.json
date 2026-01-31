@@ -762,7 +762,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "affilation self citation"
+        "@value": "affiliation self citation"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [

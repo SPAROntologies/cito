@@ -1347,7 +1347,7 @@ can be alternatively described as follows
 
      :paperA cito:extends :paperB .
      :paperA cito:sharesAuthorInstitutionWith :paperB .</rdfs:comment>
-        <rdfs:label xml:lang="en">affilation self citation</rdfs:label>
+        <rdfs:label xml:lang="en">affiliation self citation</rdfs:label>
     </owl:Class>
     
 

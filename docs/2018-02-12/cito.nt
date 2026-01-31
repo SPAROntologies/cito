@@ -292,7 +292,7 @@ _:Nd4c5439c5b53444085f50bf36456ff37 <http://www.w3.org/2002/07/owl#onProperty> <
 <http://purl.org/spar/cito/usesMethodIn> <http://purl.org/dc/elements/1.1/description> "Example: We follow [X] in using design patterns for testing."@en .
 <http://purl.org/spar/cito/repliesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/spar/cito/extends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/cito/AffilationSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "affilation self citation"@en .
+<http://purl.org/spar/cito/AffilationSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "affiliation self citation"@en .
 <http://purl.org/spar/cito/critiques> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> .
 <http://purl.org/spar/cito/isUpdatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is updated by"@en .
 <http://purl.org/spar/cito/hasCitationTimeSpan> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
