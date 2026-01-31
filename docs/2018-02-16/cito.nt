@@ -545,7 +545,7 @@ _:N9e911dad8b2641f2bd460646380fea39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#
 <http://purl.org/spar/cito/hasCitationTimeSpan> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/cito/Citation> .
 <http://purl.org/spar/cito/isSpeculatedOnBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity is cited because the citing article contains speculations on its content or ideas."@en .
 <http://purl.org/spar/cito/citesAsEvidence> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity cites the cited entity as source of factual evidence for statements it contains."@en .
-<http://purl.org/spar/cito/AffilationSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "affilation self citation"@en .
+<http://purl.org/spar/cito/AffilationSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "affiliation self citation"@en .
 <http://purl.org/spar/cito/refutes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/spar/cito/isSpeculatedOnBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/spar/cito/updates> <http://www.w3.org/2000/01/rdf-schema#label> "updates"@en .

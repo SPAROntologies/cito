@@ -689,7 +689,7 @@ can be alternatively described as follows
     <rdfs:label xml:lang="en">has reply from</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/cito/AffilationSelfCitation">
-    <rdfs:label xml:lang="en">affilation self citation</rdfs:label>
+    <rdfs:label xml:lang="en">affiliation self citation</rdfs:label>
     <rdfs:comment xml:lang="en">A citation in which at least one author from each of the citing and the cited entities is affiliated with the same academic institution.
 
 In particular, like the ancestor class cito:Citation, cito:AffiliationSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesAuthorInstitutionWith for linking the citing paper and the cited paper. 

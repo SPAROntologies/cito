@@ -368,7 +368,7 @@ can be alternatively described as follows
      :paperA cito:sharesAuthorInstitutionWith :paperB .</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
-    <rdfs:label xml:lang="en">affilation self citation</rdfs:label>
+    <rdfs:label xml:lang="en">affiliation self citation</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N524d3704c43f49609b487483f177aafc">
     <rdf:rest rdf:nodeID="N80549e0f89d0406d8111702e1c502b2d"/>
