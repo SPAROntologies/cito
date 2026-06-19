@@ -1343,7 +1343,7 @@ This property can be used, for example, to describe references in a lecture read
         cito:isCompiledBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :isConfirmedBy a owl:ObjectProperty ;
@@ -1351,20 +1351,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity presents facts, ideas or statements that are confirmed by the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isConfirmedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :isCorrectedBy a owl:ObjectProperty ;
@@ -1372,20 +1363,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity presents statements, ideas or conclusions that are corrected by the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isCorrectedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :isCreditedBy a owl:ObjectProperty ;
@@ -1393,20 +1375,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity makes contributions that are acknowledged by the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isCreditedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :isCritiquedBy a owl:ObjectProperty ;
@@ -1414,17 +1387,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity presents statements, ideas or conclusions that are critiqued by the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isCritiquedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -1435,17 +1399,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity contains ideas or conclusions for which the citing entity express derision."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isDeridedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -1456,17 +1411,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity is described by the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isDescribedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -1477,17 +1423,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity presents statements, ideas or conclusions that are disagreed with by the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isDisagreedWithBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -1498,20 +1435,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity presents statements, ideas or conclusions that are discussed by the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isDiscussedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :isDisputedBy a owl:ObjectProperty ;
@@ -1519,20 +1447,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity presents statements, ideas or conclusions that are disputed by the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isDisputedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :isDocumentedBy a owl:ObjectProperty ;
@@ -1540,20 +1459,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "Information about the cited entity is documented by the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isDocumentedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :isExtendedBy a owl:ObjectProperty ;
@@ -1561,20 +1471,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity presents facts, ideas or understandings that are extended by the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isExtendedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :linksTo a owl:ObjectProperty ;
@@ -1583,20 +1484,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity provides a link, in the form of an HTTP Uniform Resource Locator (URL), to the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:linksTo :paperB .  
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :obtainsBackgroundFrom a owl:ObjectProperty ;
@@ -1605,20 +1497,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity obtains background information from the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:obtainsBackgroundFrom :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :obtainsSupportFrom a owl:ObjectProperty ;
@@ -1627,20 +1510,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity obtains intellectual or factual support from the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:obtainsSupportFrom :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :parodies a owl:ObjectProperty ;
@@ -1649,20 +1523,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity imitates the characteristic style or content of the cited entity for comic effect, usually without explicit citation."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:parodies :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :plagiarizes a owl:ObjectProperty ;
@@ -1671,20 +1536,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "A property indicating that the author of the citing entity plagiarizes the cited entity, by including textual or other elements from the cited entity without formal acknowledgement of their source.  The citing entity thus contains no explicit citation of the cited entity, according to the norms of scholarly practice, but cites it implicitly."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:plagiarizes :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :providesAssertionFor a owl:ObjectProperty ;
@@ -1692,20 +1548,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity contains and is the original source of a statement of fact or a logical assertion (or a collection of such facts and/or assertions) that is to be found in the citing entity.   This inverse object property is designed to be used to relate a cited entity to a separate abstract, summary or nanopublication based upon it."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:providesAssertionFor :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :providesExcerptFor a owl:ObjectProperty ;
@@ -1713,20 +1560,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity contains information, usually of a textual nature, that is excerpted by (used as an excerpt within) the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:providesExcerptFor :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :providesQuotationFor a owl:ObjectProperty ;
@@ -1734,20 +1572,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The cited entity contains information, usually of a textual nature, that is quoted by (used as a quotation within) the citing entity."@en ;
     rdfs:subPropertyOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:providesQuotationFor :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :qualifies a owl:ObjectProperty ;
@@ -1756,20 +1585,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity qualifies or places conditions or restrictions upon statements, ideas or conclusions presented in the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:qualifies :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :refutes a owl:ObjectProperty ;
@@ -1778,20 +1598,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity refutes statements, ideas or conclusions presented in the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:refutes :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :repliesTo a owl:ObjectProperty ;
@@ -1800,20 +1611,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity replies to statements, ideas or criticisms presented in the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:repliesTo :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :retracts a owl:ObjectProperty ;
@@ -1822,20 +1624,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity constitutes a formal retraction of the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:retracts :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :reviews a owl:ObjectProperty ;
@@ -1844,20 +1637,11 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity reviews statements, ideas or conclusions presented in the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:reviews :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 
 
 :ridicules a owl:ObjectProperty ;
@@ -1866,17 +1650,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity ridicules the cited entity or aspects of its contents."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:ridicules :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -1886,17 +1661,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:label "shares publication venue with"@en ;
     rdfs:comment "The citing and cited bibliographic resources are published in same publication venue."@en ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:sharesPublicationVenueWith :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -1908,17 +1674,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity speculates on something within or related to the cited entity, without firm evidence."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:speculatesOn :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -1930,17 +1687,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity provides intellectual or factual support for statements, ideas or conclusions presented in the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:supports :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -1952,17 +1700,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity updates statements, ideas, hypotheses or understanding presented in the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:updates :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -1974,17 +1713,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity describes work that uses conclusions presented in the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:usesConclusionsFrom :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -1996,17 +1726,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity describes work that uses data presented in the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:usesDataFrom :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -2018,17 +1739,8 @@ This property can be used, for example, to describe references in a lecture read
     rdfs:comment "The citing entity describes work that uses a method detailed in the cited entity."@en ;
     rdfs:subPropertyOf :cites ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:usesMethodIn :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -2043,33 +1755,22 @@ owl:topObjectProperty a owl:ObjectProperty .
 :Citation a owl:Class ;
     rdfs:label "citation"@en ;
     rdfs:comment """A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (biro:BibliographicReference) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.
-
+    """@en ;
+    <http://www.w3.org/2004/02/skos/core#scopeNote> """
 The time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property cito:hasCitationTimeSpan.
 
-The nature or type of a citation can be characterized by using CiTO object properties, e.g. http://purl.org/spar/cito/citesAsDataSource (definition: “The citing entity cites the cited entity as a source of data”).  
+The nature or type of a citation can be characterized by using CiTO object properties, e.g. http://purl.org/spar/cito/citesAsDataSource (definition: “The citing entity cites the cited entity as a source of data”). 
 
 This CiTO class cito:Citation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties. 
 
-For example, the following RDF statement
-
-     :paperA cito:extends :paperB .
-
-can be alternatively described as follows
-
-     :thisCitation a cito:Citation ; 
-          cito:hasCitingEntity :paperA ;
-          cito:hasCitationCharacterization cito:extends ;
-          cito:hasCitedEntity :paperB .
-
 This usage involved OWL2 punning, whereby a CiTO object property, such as the aforementioned cito:extends, is used as the object of the OWL assertion.
-
-     :thisCitation cito:hasCitationCharacterization cito:extends .
 
 Using such OWL2 punning (described at http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), the CiTO object property is considered as a proper named individual of the class owl:Thing. 
 
-Such reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable.  
+Such reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable. 
 
-Such situations can be resolved by the creation of a user-defined citation characterization, for example by using the Open Annotation Data Model, as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/."""@en ;
+Such situations can be resolved by the creation of a user-defined citation characterization, for example by using the Open Annotation Data Model, as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/.
+    """@en ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( sit:Situation [ a owl:Restriction ;
                         owl:cardinality "1"^^xsd:nonNegativeInteger ;
@@ -2079,17 +1780,16 @@ Such situations can be resolved by the creation of a user-defined citation chara
                         owl:cardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onProperty :hasCitingEntity ] ) ] ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
+    # The following RDF statement
 
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
+    :paperA cito:extends :paperB .
 
     # can be alternatively described as follows
 
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :thisCitation a cito:Citation ; 
+        cito:hasCitingEntity :paperA ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -2100,17 +1800,10 @@ Such situations can be resolved by the creation of a user-defined citation chara
     rdfs:comment "A citation in which the citing and the cited entities have something significant in common with one another, over and beyond their subject matter, for example authors, journal, institutional affiliation, or funding agency."@en ;
     rdfs:subClassOf :Citation ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
+    :thisCitation a cito:SelfCitation ; 
         cito:hasCitingEntity :paperA ;
         cito:hasCitationCharacterization cito:extends ;
         cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -2122,17 +1815,8 @@ Such situations can be resolved by the creation of a user-defined citation chara
     rdfs:subPropertyOf discourse-relationships:refersTo ;
     owl:inverseOf :isCitedBy ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:cites :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
@@ -2142,17 +1826,8 @@ Such situations can be resolved by the creation of a user-defined citation chara
     rdfs:label "is cited by"@en ;
     rdfs:comment "The cited entity (the subject of the RDF triple) is cited by the citing entity (the object of the triple)."@en ;
     <http://purl.org/vocab/vann/example> """
-    # The following cito:AffiliationSelfCitation resource
-
-    :thisCitation a cito:AffiliationSelfCitation ; 
-        cito:hasCitingEntity :paperA ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paperB .
-
-    # can be alternatively described as follows
-
-    :paperA cito:extends :paperB .
-    :paperA cito:sharesAuthorInstitutionWith :paperB .
+    :paperA a fabio:JournalArticle ;
+        cito:isCitedBy :paperB .
     """ ;
     rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
