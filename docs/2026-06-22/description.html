@@ -1,0 +1,143 @@
+<h2>Description</h2>
+<p>The <em>Citation Typing Ontology</em> (<em>CiTO</em>) makes it possible for authors (or others) to mark citation links and to capture their citation intent (e.g., <code>cito:extends</code>, <code>cito:usesMethodIn</code>, <code>cito:supports</code>) when someone cites a particular publication. 
+In particular, CiTO allows one to create metadata describing citations that are distinct from metadata describing the cited works themselves, and permits the motives of an author when referring to another document to be captured.</p>
+<p>CiTO contains just two main object properties, <code>cito:cites</code> and its inverse <code>cito:isCitedBy</code>, each of which has forty-one sub-properties, plus four additional generic object properties – i.e. <code>cito:shareAuthorWith</code>, <code>cito:sharesAuthorInstitutionWith</code>, <code>cito:sharesFundingAgencyWith</code> and <code>cito:likes</code> – that may be used even outside a citation. 
+As defined in <em>Functions of Citations Ontology</em>, all these properties (and, consequently, their inverses) may be classified as rhetorical and/or factual, with the rhetorical properties being grouped in three sets depending on their connotation: positive, informative (or neutral) or negative. 
+Note that all the domain and range constraints from the object properties are not defined, so that this ontology could be easily integrated with other models, e.g., <a href="http://purl.org/spar/fabio">FaBiO</a>.</p>
+<p>CiTO makes available a mechanism that permits the citation itself to be reified, so that it can become the subject or object of other RDF statements. 
+In particular, the reifying class is <code>cito:Citation</code>, and its accompanying object properties, i.e., <code>cito:hasCitingEntity</code>, <code>cito:hasCitationCharacterization</code> and <code>cito:hasCitedEntity</code>, can be employed to reify direct citation statements made using the CiTO citation object property <code>cito:cites</code> or one of its sub-properties.</p>
+<h2>Examples of use</h2>
+<p>In the following subsections, we introduce some examples to showcase how to use CiTO. </p>
+<p>The prefixes that are used in all the examples provided below are defined as follows:</p>
+<pre><code>@prefix : &lt;http://www.sparontologies.net/example/&gt; .
+@prefix c4o: &lt;http://purl.org/spar/c4o/&gt; .
+@prefix cito: &lt;http://purl.org/spar/cito&gt; .
+@prefix cnt: &lt;http://www.w3.org/2011/content#&gt; .
+@prefix oa: &lt;http://www.w3.org/ns/oa#&gt; .
+@prefix per: &lt;http://data.semanticweb.org/person/&gt; .
+</code></pre>
+<h3>Defining citation links and their functions</h3>
+<p>CiTO allows one to link two papers – or, more generally, two generic resources – where one (i.e., the citing paper) cites another one (i.e., the cited paper) according to a particular citation function (e.g., <code>cito:extends</code>, <code>cito:usesMethodIn</code>, <code>cito:supports</code>).</p>
+<p>CiTO makes available two different approaches for creating such links. 
+In the direct approach, we can use any of the CiTO properties as predicate of statements for defining citations. 
+In the reified approach, we can define the citation as a proper individual of the class <code>cito:Citation</code>, in order to use it as subject/object of other statements.</p>
+<pre><code># Direct form for a citation
+:paper-a cito:extends :paper-b .
+
+# Reified form for a citation sharing the same
+# citation function of the above one
+:citation a cito:Citation ;
+    cito:hasCitingEntity :paper-a ;
+    cito:hasCitationCharacterization cito:extends ;
+    cito:hasCitedEntity :paper-b .
+</code></pre>
+<h3>Annotating a citation with an additional text-defined citation function</h3>
+<p>Despite the extensive list of CiTO properties, there could be situations in which the purpose of making a citation cannot be adequately expressed using these CiTO properties. 
+It is now possible to use the <a href="http://www.openannotation.org/spec/core/">Open Annotation Data Model</a> to define the reason for, or the nature of, the citation.</p>
+<p>In the <a href="http://www.w3.org/ns/oa">Open Annotation Data Model Ontology</a>, an annotation is described as a member of the class <code>oa:Annotation</code>, which has a body containing the annotation itself defined by <code>oa:hasBody</code>, and an annotation target (the thing to which the annotation relates) defined by <code>oa:hasTarget</code>.</p>
+<p>In order to express a more precise justification of a citation, the target of the annotation should be an individual of the class <code>cito:Citation</code>, while the body, i.e. the textual content of the annotation itself, is described using the <a href="http://www.w3.org/TR/Content-in-RDF10/">W3C Content Vocabulary</a> as an individual of the class <code>cnt:ContentAsText</code>, which the property <code>cnt:chars</code> relates to the text string actually providing the annotation. 
+In addition, an OA annotation can be further characterized by the motivation for making such annotation, defined by <code>oa:motivatedBy</code>. 
+In this case, the appropriate motivation is <code>oa:commenting</code>, an instance of the class <code>oa:Motivation</code>.</p>
+<p>The whole example has been extracted from the blog post 'Extending CiTO to enable use of the Open Annotation Data Model to describe citations'.</p>
+<pre><code>:annotation a oa:Annotation;
+    oa:motivatedBy oa:commenting ;
+    oa:hasBody :comment ;
+    oa:hasTarget :citation .
+
+:comment a cnt:ContentAsText ;
+    cnt:chars \"I\'m citing that paper because it
+        initiated this whole new field of research.\" .
+
+:citation a cito:Citation;
+    cito:hasCitingEntity :paper-a ;
+    cito:hasCitationCharacterization cito:cites ;
+    cito:hasCitedEntity :paper-b .
+</code></pre>
+<h3>Annotating an in-text reference pointer with a citation function</h3>
+<p>Several citations to the same article could exist in the same text, and such citations could express different functions depending on the author\'s view. 
+Usually, in a scientific paper, each of these citations is actually described by means of an in-text reference pointers, i.e., a textual device (e.g., "[6]") denoting a single bibliographic reference (referring to the cited paper) that is embedded in the text of a document within the context of a particular sentence. 
+One of the SPAR Ontologies, i.e., <a href="https://www.sparontologies.net/ontologies/c4o">C4O</a>, defines the entities for describing in-text reference pointers (individuals of the class <code>c4o:InTextReferencePointer</code>) and to link them to the related bibliographic references included in the paper.</p>
+<p>The <a href="http://www.w3.org/ns/oa">Open Annotation Data Model Ontology</a> can be used to annotate each in-text reference pointer of a paper with the particular citation it conveys. 
+In particular, we can create an annotation (i.e., an individual of the class <code>oa:Annotation</code>) with a body (object property <code>oa:hasBody</code>) containing a specific citation among the citing paper and the cited paper, and with the in-text reference pointer as target (object property <code>oa:hasTarget</code>) of the annotation. 
+In addition, it is also possible to specify (through the object property <code>oa:annotatedBy</code>) the agent who created such annotation – who can be the author of the paper containing the in-text reference pointer, a reader or a software agent.</p>
+<pre><code>:annotation a oa:Annotation ;
+    oa:hasBody :citation ;
+    oa:hasTarget :in-text-ref-pointer ;
+    oa:annotatedBy per:silvio-peroni .
+
+:citation a cito:Citation;
+    cito:hasCitingEntity :paper-a ;
+    cito:hasCitationEvent cito:extends ;
+    cito:hasCitedEntity :paper-b .
+
+:in-text-ref-pointer a c4o:InTextReferencePointer ;
+    c4o:hasContent '[6]' .
+</code></pre>
+<h2>Competency Questions</h2>
+<p>CiTO can be used for answering several questions related to citations, their intent and their overall context.</p>
+<p>In the following subsections, some of them are introduced together with their respective SPARQL queries. </p>
+<p>The prefixes that are used in all the SPARQL queries provided below are defined as follows:</p>
+<pre><code>PREFIX : &lt;http://www.sparontologies.net/example/&gt;
+PREFIX c4o: &lt;http://purl.org/spar/c4o/&gt;
+PREFIX cito: &lt;http://purl.org/spar/cito&gt;
+PREFIX cnt: &lt;http://www.w3.org/2011/content#&gt;
+PREFIX oa: &lt;http://www.w3.org/ns/oa#&gt;
+PREFIX per: &lt;http://data.semanticweb.org/person/&gt;
+</code></pre>
+<h3>CQ1</h3>
+<p>Which papers directly extend other papers?</p>
+<pre><code>SELECT ?citingPaper ?citedPaper
+WHERE {
+    ?citingPaper cito:extends ?citedPaper .
+}
+</code></pre>
+<h3>CQ2</h3>
+<p>What are the reified citations originated by a specific paper, and what are their citation functions?</p>
+<pre><code>SELECT ?citation ?citedPaper ?characterization
+WHERE {
+    ?citation a cito:Citation ;
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitedEntity ?citedPaper ;
+        cito:hasCitationCharacterization ?characterization .
+}
+</code></pre>
+<h3>CQ3</h3>
+<p>What is the text of the motivational comment associated with a citation?</p>
+<pre><code>SELECT ?citation ?commentText
+WHERE {
+    ?annotation a oa:Annotation ;
+                oa:motivatedBy oa:commenting ;
+                oa:hasTarget ?citation ;
+                oa:hasBody ?comment .
+
+    ?comment a cnt:ContentAsText ;
+            cnt:chars ?commentText .
+}
+</code></pre>
+<h3>CQ4</h3>
+<p>Which in-text reference pointers have been annotated by a specific agent?</p>
+<pre><code>SELECT ?pointer ?textValue
+WHERE {
+    ?annotation a oa:Annotation ;
+                oa:annotatedBy per:silvio-peroni ;
+                oa:hasTarget ?pointer .
+
+    ?pointer a c4o:InTextReferencePointer ;
+            c4o:hasContent ?textValue .
+}
+</code></pre>
+<h3>CQ5</h3>
+<p>Which citations are linked to an in-text reference pointer, and what are the papers involved?</p>
+<pre><code>SELECT ?pointer ?citation ?citingPaper ?citedPaper
+WHERE {
+    ?annotation a oa:Annotation ;
+                oa:hasTarget ?pointer ;
+                oa:hasBody ?citation .
+
+    ?pointer a c4o:InTextReferencePointer .
+
+    ?citation a cito:Citation ;
+            cito:hasCitingEntity ?citingPaper ;
+            cito:hasCitedEntity ?citedPaper .
+}
+</code></pre>
