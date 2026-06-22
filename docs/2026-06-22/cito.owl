@@ -17,7 +17,7 @@
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.8.2</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.8.1</owl:versionInfo>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paolo Ciccarese</dc:contributor>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tim Clark</dc:contributor>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CiTO, the Citation Typing Ontology, is an ontology written in OWL 2 DL to enable characterization of the nature or type of citations, both factually and rhetorically, and to permit these descriptions to be published on the Web.  

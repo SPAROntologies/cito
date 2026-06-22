@@ -219,7 +219,8 @@ Which citations are linked to an in-text reference pointer, and what are the pap
                              rdfs:seeAlso <http://www.sparontologies.net/ontologies/cito> ;
                              owl:backwardCompatibleWith <http://purl.org/spar/cito/2018-02-16> ;
                              owl:priorVersion <http://purl.org/spar/cito/2018-02-16> ;
-                             owl:versionInfo "2.8.2" ;
+                             owl:versionInfo "2.8.1" ,
+                                             "2.8.2" ;
                              <http://xmlns.com/foaf/0.1/logo> <http://purl.org/spar/cito/spar.png> ;
                              <https://schema.org/codeRepository> <https://github.com/SPAROntologies/cito> ;
                              <https://schema.org/includedInDataCatalog> <https://fairsharing.org/> ;

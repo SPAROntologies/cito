@@ -23,6 +23,7 @@
 <http://purl.org/spar/cito> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.sparontologies.net/ontologies/cito> .
 <http://purl.org/spar/cito> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://purl.org/spar/cito/2018-02-16> .
 <http://purl.org/spar/cito> <http://www.w3.org/2002/07/owl#priorVersion> <http://purl.org/spar/cito/2018-02-16> .
+<http://purl.org/spar/cito> <http://www.w3.org/2002/07/owl#versionInfo> "2.8.1" .
 <http://purl.org/spar/cito> <http://www.w3.org/2002/07/owl#versionInfo> "2.8.2" .
 <http://purl.org/spar/cito> <http://xmlns.com/foaf/0.1/logo> <http://purl.org/spar/cito/spar.png> .
 <http://purl.org/spar/cito> <https://schema.org/codeRepository> <https://github.com/SPAROntologies/cito> .
