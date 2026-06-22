@@ -178,8 +178,6 @@
     "@id" : "http://purl.org/spar/cito/2026-06-22"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "2.8.1"
-  }, {
     "@value" : "2.8.2"
   } ],
   "http://xmlns.com/foaf/0.1/logo" : [ {

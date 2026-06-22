@@ -230,7 +230,6 @@ Which citations are linked to an in-text reference pointer, and what are the pap
         <rdfs:seeAlso rdf:resource="http://www.sparontologies.net/ontologies/cito"/>
         <owl:backwardCompatibleWith rdf:resource="http://purl.org/spar/cito/2018-02-16"/>
         <owl:priorVersion rdf:resource="http://purl.org/spar/cito/2018-02-16"/>
-        <owl:versionInfo>2.8.1</owl:versionInfo>
         <owl:versionInfo>2.8.2</owl:versionInfo>
         <foaf:logo rdf:resource="http://purl.org/spar/cito/spar.png"/>
         <schema:codeRepository rdf:resource="https://github.com/SPAROntologies/cito"/>
