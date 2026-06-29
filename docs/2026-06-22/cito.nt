@@ -16,6 +16,7 @@
 <http://purl.org/spar/cito> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/legalcode> .
 <http://purl.org/spar/cito> <http://purl.org/dc/terms/modified> "2026-06-22" .
 <http://purl.org/spar/cito> <http://purl.org/dc/terms/publisher> <https://ror.org/00wb4mk85> .
+<http://purl.org/spar/cito> <http://purl.org/dc/terms/source> <https://doi.org/10.1087/2009202> .
 <http://purl.org/spar/cito> <http://purl.org/ontology/bibo/doi> "10.1016/j.websem.2012.08.001" .
 <http://purl.org/spar/cito> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cito" .
 <http://purl.org/spar/cito> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/spar/cito/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -79,6 +80,9 @@
 # 
 # http://purl.org/dc/terms/publisher
 <http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/ontology/bibo/doi
 <http://purl.org/ontology/bibo/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
