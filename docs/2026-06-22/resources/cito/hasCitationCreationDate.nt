@@ -1,0 +1,6 @@
+<http://purl.org/spar/cito/hasCitationCreationDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/hasCitationCreationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/cito/hasCitationCreationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself. When combined with the citation time span, it permits that citation to be located in history."@en .
+<http://purl.org/spar/cito/hasCitationCreationDate> <http://www.w3.org/2000/01/rdf-schema#label> "has citation creation date"@en .
+<http://purl.org/spar/cito/hasCitationCreationDate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/hasCitationCreationDate> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:hasCitationCreationDate \"2025-06-16\"^^xsd:date .\n    " .

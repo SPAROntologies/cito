@@ -1,0 +1,17 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:hasCitationCreationDate a owl:DatatypeProperty ;
+    rdfs:label "has citation creation date"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:hasCitationCreationDate "2025-06-16"^^xsd:date .
+    """ ;
+    rdfs:comment "The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself. When combined with the citation time span, it permits that citation to be located in history."@en ;
+    rdfs:isDefinedBy cito: ;
+    vs:term_status reg:statusStable .
+

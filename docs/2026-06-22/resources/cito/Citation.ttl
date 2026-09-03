@@ -1,0 +1,54 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cito:Citation a owl:Class ;
+    rdfs:label "citation"@en ;
+    vann:example """
+    # The following RDF statement
+
+    :paper-a cito:extends :paper-b .
+
+    # can be alternatively described as follows
+
+    :my-citation a cito:Citation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+    """ ;
+    rdfs:comment """
+A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (biro:BibliographicReference) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.
+    """@en ;
+    rdfs:isDefinedBy cito: ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( sit:Situation [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty cito:hasCitationCharacterization ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty cito:hasCitedEntity ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty cito:hasCitingEntity ] ) ] ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+The time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property `cito:hasCitationTimeSpan`.
+
+The nature or type of a citation can be characterized by using CiTO object properties, e.g. http://purl.org/spar/cito/citesAsDataSource (definition: “The citing entity cites the cited entity as a source of data”). 
+
+This CiTO class `cito:Citation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties. 
+
+This usage involved [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), whereby a CiTO object property, such as the aforementioned `cito:extends`, is used as the object of the OWL assertion.
+
+Using punning, the CiTO object property is considered as a proper named individual of the class `owl:Thing`. 
+
+Such reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable. 
+
+Such situations can be resolved by the creation of a user-defined citation characterization, for example by using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/), as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/.
+    """@en .
+

@@ -1,0 +1,20 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:obtainsBackgroundFrom a owl:ObjectProperty ;
+    rdfs:label "obtains background from"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:obtainsBackgroundFrom :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the citing entity obtains background information from the cited entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:cites ;
+    vs:term_status reg:statusStable ;
+    skos:note "Example: There is a need for more observational studies and studies using narrative causation to describe the potential contribution of information in problem-solving and decision-making [X]; our work addresses these needs."@en .
+

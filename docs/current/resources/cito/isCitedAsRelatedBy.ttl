@@ -1,0 +1,18 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:isCitedAsRelatedBy a owl:ObjectProperty ;
+    rdfs:label "is cited as related by"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsRelatedBy :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the cited entity is cited as being related to the citing entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:isCitedBy ;
+    vs:term_status reg:statusStable .
+

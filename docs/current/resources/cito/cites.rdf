@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/cites">
+    <rdfs:comment xml:lang="en">A relation according to which a citing entity cites a cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:label xml:lang="en">cites</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:cites :paper-b .
+    </vann:example>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+</rdf:RDF>

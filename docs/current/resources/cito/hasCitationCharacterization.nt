@@ -1,0 +1,9 @@
+<http://purl.org/spar/cito/hasCitationCharacterization> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor> .
+<http://purl.org/spar/cito/hasCitationCharacterization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/hasCitationCharacterization> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/hasCitationCharacterization> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a citation and its characterization, made by using a CiTO citation characterization property."@en .
+<http://purl.org/spar/cito/hasCitationCharacterization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/hasCitationCharacterization> <http://www.w3.org/2004/02/skos/core#note> "\nThis usage involved [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), whereby a CiTO object property, such as the aforementioned `cito:extends`, is used as the object of an OWL assertion.\n\nIn such cases of OWL punning, the CiTO object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class `owl:Thing`.\n    "@en .
+<http://purl.org/spar/cito/hasCitationCharacterization> <http://www.w3.org/2000/01/rdf-schema#label> "has citation characterization"@en .
+<http://purl.org/spar/cito/hasCitationCharacterization> <http://purl.org/vocab/vann/example> "\n    :my-citation a cito:Citation ;\n        cito:hasCitationCharacterization cito:extends .\n    " .
+<http://purl.org/spar/cito/hasCitationCharacterization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/cito/Citation> .

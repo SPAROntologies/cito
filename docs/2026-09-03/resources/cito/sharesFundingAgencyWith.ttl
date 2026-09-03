@@ -1,0 +1,18 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:sharesFundingAgencyWith a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "shares funding agency with"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:sharesFundingAgencyWith :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which two entities result from activities that have been funded by the same funding agency."@en ;
+    rdfs:isDefinedBy cito: ;
+    vs:term_status reg:statusStable .
+

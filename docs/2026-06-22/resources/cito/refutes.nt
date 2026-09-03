@@ -1,0 +1,8 @@
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/2000/01/rdf-schema#label> "refutes"@en .
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the citing entity refutes statements, ideas or conclusions presented in the cited entity."@en .
+<http://purl.org/spar/cito/refutes> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:refutes :paper-b .\n    " .
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/2004/02/skos/core#note> "Example: We do not think that all their arguments in favour of their own and against the other strategies are equally convincing [X]."@en .
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> .
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

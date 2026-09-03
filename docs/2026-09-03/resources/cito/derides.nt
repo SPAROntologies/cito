@@ -1,0 +1,9 @@
+<http://purl.org/spar/cito/derides> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the citing entity express derision for the cited entity, or for ideas or conclusions contained within it."@en .
+<http://purl.org/spar/cito/derides> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:derides :paper-b .\n    " .
+<http://purl.org/spar/cito/derides> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/derides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/derides> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/derides> <http://www.w3.org/2000/01/rdf-schema#label> "derides"@en .
+<http://purl.org/spar/cito/derides> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> .
+<http://purl.org/spar/cito/derides> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isDeridedBy> .
+<http://purl.org/spar/cito/derides> <http://www.w3.org/2004/02/skos/core#note> "Example: The ideas published in [X] are incredibly stupid."@en .

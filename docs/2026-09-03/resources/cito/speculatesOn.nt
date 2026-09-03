@@ -1,0 +1,8 @@
+<http://purl.org/spar/cito/speculatesOn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the citing entity speculates on something within or related to the cited entity, without firm evidence."@en .
+<http://purl.org/spar/cito/speculatesOn> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:speculatesOn :paper-b .\n    " .
+<http://purl.org/spar/cito/speculatesOn> <http://www.w3.org/2000/01/rdf-schema#label> "speculates on"@en .
+<http://purl.org/spar/cito/speculatesOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/speculatesOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/speculatesOn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/speculatesOn> <http://www.w3.org/2004/02/skos/core#note> "Example: We believe that if Galileo believed that Earth goes around the Sun [X], he also should believe that Moon goes around Earth."@en .
+<http://purl.org/spar/cito/speculatesOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> .

@@ -1,0 +1,19 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:isParodiedBy a owl:ObjectProperty ;
+    rdfs:label "is parodied by"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:isParodiedBy :paper-b .
+    """ ;
+    rdfs:comment "The characteristic style or content of the cited entity is imitated by the citing entity for comic effect, usually without explicit citation."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:isCitedBy ;
+    owl:inverseOf cito:parodies ;
+    vs:term_status reg:statusStable .
+

@@ -1,0 +1,8 @@
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/2000/01/rdf-schema#label> "ridicules"@en .
+<http://purl.org/spar/cito/ridicules> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:ridicules :paper-b .\n    " .
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the citing entity ridicules the cited entity or aspects of its contents."@en .
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> .
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/2004/02/skos/core#note> "Example: Galileo said that the Earth \"moves\" [X]; really? And where is it going?"@en .

@@ -1,0 +1,431 @@
+<!doctype html><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>LODE 2.0 - Semantic Artefact Viewer</title><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css rel=stylesheet><link href=../../static/style.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css rel=stylesheet><body><div class="container-fluid px-4 py-4"><details class=metadata-accordion><summary class=metadata-accordion-summary><div class=resource-frontmatter><h1 class=resource-title>is cited by</h1><div class=resource-meta-line><span class="resource-meta-uri font-monospace text-truncate">http://purl.org/spar/cito/isCitedBy</span><a title="Go to Resource" class=resource-meta-link href=http://purl.org/spar/cito/isCitedBy target=_blank> <i class="bi bi-box-arrow-up-right"></i> </a></div><p class=resource-subtitle>as defined in <span class=resource-subtitle-ontology> The Citation Typing Ontology (CiTO) </span> <button title="Show/hide ontology metadata" class=metadata-accordion-toggle onclick=toggleMetadataAccordion(event) type=button><i class="bi bi-chevron-down"></i></button></div></summary> <div class=p-3><section class=metadata-block><dl class="row mb-0 lead fs-6"><dt class="text-capitalize fs-7 fw-bold">bibliographic citation<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: https://doi.org/10.2139/ssrn.3198992</div></div></div><dt class="text-capitalize fs-7 fw-bold">code repository<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/cito target=_blank>https://github.com/SPAROntologies/cito</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">contributor<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Paolo Ciccarese (https://orcid.org/0000-0002-5156-2703)</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Tim Clark (https://orcid.org/0000-0003-4060-7360)</div></div></div><dt class="text-capitalize fs-7 fw-bold">created<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">2017-10-30</div></div></div><dt class="text-capitalize fs-7 fw-bold">creator<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Silvio Peroni (http://orcid.org/0000-0003-0530-4305)</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">David Shotton (http://orcid.org/0000-0001-5506-523X)</div></div></div><dt class="text-capitalize fs-7 fw-bold">date<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">2026-09-03</div></div></div><dt class="text-capitalize fs-7 fw-bold">description<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">
+The **_Citation Typing Ontology (CiTO)_** is an ontology written in OWL 2 DL to enable characterization of the nature or type of citations, both factually and rhetorically, and to permit these descriptions to be published on the Web.
+It makes it possible for authors (or others) to mark citation links and to capture their citation intent (e.g., `cito:extends`, `cito:usesMethodIn`, `cito:supports`) when someone cites a particular publication. 
+In particular, CiTO allows one to create metadata describing citations that are distinct from metadata describing the cited works themselves, and permits the motives of an author when referring to another document to be captured.
+
+CiTO contains just two main object properties, `cito:cites` and its inverse `cito:isCitedBy`, each of which has forty-one sub-properties, plus four additional generic object properties – i.e. `cito:shareAuthorWith`, `cito:sharesAuthorInstitutionWith`, `cito:sharesFundingAgencyWith` and `cito:likes` – that may be used even outside a citation. 
+Note that all the domain and range constraints from these properties are not defined, so that this ontology could be easily integrated with other models, e.g., [FaBiO](http://purl.org/spar/fabio).
+
+CiTO makes available a mechanism that permits the citation itself to be reified, so that it can become the subject or object of other RDF statements. 
+In particular, the reifying class is `cito:Citation`, and its accompanying object properties, i.e., `cito:hasCitingEntity`, `cito:hasCitationCharacterization` and `cito:hasCitedEntity`, can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties.
+
+![The architecture of the citation reification mechanism in CiTO.](cito.png)
+
+## Examples of use
+
+In the following subsections, we introduce some examples to showcase how to use CiTO. 
+
+The prefixes that are used in all the examples provided below are defined as follows:
+
+    @prefix : &lt;http://www.sparontologies.net/example/&gt; .
+    @prefix c4o: &lt;http://purl.org/spar/c4o/&gt; .
+    @prefix cito: &lt;http://purl.org/spar/cito&gt; .
+    @prefix cnt: &lt;http://www.w3.org/2011/content#&gt; .
+    @prefix oa: &lt;http://www.w3.org/ns/oa#&gt; .
+    @prefix per: &lt;http://data.semanticweb.org/person/&gt; .
+
+### Defining citation links and their functions
+
+CiTO allows one to link two papers – or, more generally, two generic resources – where one (i.e., the citing paper) cites another one (i.e., the cited paper) according to a particular citation function (e.g., `cito:extends`, `cito:usesMethodIn`, `cito:supports`).
+
+CiTO makes available two different approaches for creating such links. 
+In the direct approach, we can use any of the CiTO properties as predicate of statements for defining citations. 
+In the reified approach, we can define the citation as a proper individual of the class `cito:Citation`, in order to use it as subject/object of other statements.
+
+    # Direct form for a citation
+    :paper-a cito:extends :paper-b .
+
+    # Reified form for a citation sharing the same
+    # citation function of the above one
+    :citation a cito:Citation ;
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+
+### Annotating a citation with an additional text-defined citation function
+
+Despite the extensive list of CiTO properties, there could be situations in which the purpose of making a citation cannot be adequately expressed using these CiTO properties. 
+It is now possible to use the [Open Annotation Data Model](http://www.openannotation.org/spec/core/) to define the reason for, or the nature of, the citation.
+
+In the [Open Annotation Data Model Ontology](http://www.w3.org/ns/oa), an annotation is described as a member of the class `oa:Annotation`, which has a body containing the annotation itself defined by `oa:hasBody`, and an annotation target (the thing to which the annotation relates) defined by `oa:hasTarget`.
+
+In order to express a more precise justification of a citation, the target of the annotation should be an individual of the class `cito:Citation`, while the body, i.e. the textual content of the annotation itself, is described using the [W3C Content Vocabulary](http://www.w3.org/TR/Content-in-RDF10/) as an individual of the class `cnt:ContentAsText`, which the property `cnt:chars` relates to the text string actually providing the annotation. 
+In addition, an OA annotation can be further characterized by the motivation for making such annotation, defined by `oa:motivatedBy`. 
+In this case, the appropriate motivation is `oa:commenting`, an instance of the class `oa:Motivation`.
+
+The whole example has been extracted from the blog post &#39;Extending CiTO to enable use of the Open Annotation Data Model to describe citations&#39;.
+
+    :annotation a oa:Annotation;
+        oa:motivatedBy oa:commenting ;
+        oa:hasBody :comment ;
+        oa:hasTarget :citation .
+
+    :comment a cnt:ContentAsText ;
+        cnt:chars &#39;I&#39;m citing that paper because it
+            initiated this whole new field of research.&#39; .
+
+    :citation a cito:Citation;
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:cites ;
+        cito:hasCitedEntity :paper-b .
+
+### Annotating an in-text reference pointer with a citation function
+
+Several citations to the same article could exist in the same text, and such citations could express different functions depending on the author&#39;s view. 
+Usually, in a scientific paper, each of these citations is actually described by means of an in-text reference pointers, i.e., a textual device (e.g., &#39;[6]&#39;) denoting a single bibliographic reference (referring to the cited paper) that is embedded in the text of a document within the context of a particular sentence. 
+One of the SPAR Ontologies, i.e., [C4O](https://www.sparontologies.net/ontologies/c4o), defines the entities for describing in-text reference pointers (individuals of the class `c4o:InTextReferencePointer`) and to link them to the related bibliographic references included in the paper.
+
+The [Open Annotation Data Model Ontology](http://www.w3.org/ns/oa) can be used to annotate each in-text reference pointer of a paper with the particular citation it conveys. 
+In particular, we can create an annotation (i.e., an individual of the class `oa:Annotation`) with a body (object property `oa:hasBody`) containing a specific citation among the citing paper and the cited paper, and with the in-text reference pointer as target (object property `oa:hasTarget`) of the annotation. 
+In addition, it is also possible to specify (through the object property `oa:annotatedBy`) the agent who created such annotation – who can be the author of the paper containing the in-text reference pointer, a reader or a software agent.
+
+    :annotation a oa:Annotation ;
+        oa:hasBody :citation ;
+        oa:hasTarget :in-text-ref-pointer ;
+        oa:annotatedBy per:silvio-peroni .
+
+    :citation a cito:Citation;
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationEvent cito:extends ;
+        cito:hasCitedEntity :paper-b .
+
+    :in-text-ref-pointer a c4o:InTextReferencePointer ;
+        c4o:hasContent &#39;[6]&#39; .
+
+## Competency Questions
+
+CiTO can be used for answering several questions related to citations, their intent and their overall context.
+
+In the following subsections, some of them are introduced together with their respective SPARQL queries. 
+
+The prefixes that are used in all the SPARQL queries provided below are defined as follows:
+
+    PREFIX : &lt;http://www.sparontologies.net/example/&gt;
+    PREFIX c4o: &lt;http://purl.org/spar/c4o/&gt;
+    PREFIX cito: &lt;http://purl.org/spar/cito&gt;
+    PREFIX cnt: &lt;http://www.w3.org/2011/content#&gt;
+    PREFIX oa: &lt;http://www.w3.org/ns/oa#&gt;
+    PREFIX per: &lt;http://data.semanticweb.org/person/&gt;
+
+### CQ1
+
+Which papers directly extend other papers?
+
+    SELECT ?citingPaper ?citedPaper
+    WHERE {
+        ?citingPaper cito:extends ?citedPaper .
+    }
+
+### CQ2
+
+What are the reified citations originated by a specific paper, and what are their citation functions?
+
+    SELECT ?citation ?citedPaper ?characterization
+    WHERE {
+        ?citation a cito:Citation ;
+            cito:hasCitingEntity :paper-a ;
+            cito:hasCitedEntity ?citedPaper ;
+            cito:hasCitationCharacterization ?characterization .
+    }
+
+### CQ3
+
+What is the text of the motivational comment associated with a citation?
+
+    SELECT ?citation ?commentText
+    WHERE {
+        ?annotation a oa:Annotation ;
+            oa:motivatedBy oa:commenting ;
+            oa:hasTarget ?citation ;
+            oa:hasBody ?comment .
+        
+        ?comment a cnt:ContentAsText ;
+            cnt:chars ?commentText .
+    }
+
+### CQ4
+
+Which in-text reference pointers have been annotated by a specific agent?
+
+    SELECT ?pointer ?textValue
+    WHERE {
+        ?annotation a oa:Annotation ;
+            oa:annotatedBy per:silvio-peroni ;
+            oa:hasTarget ?pointer .
+        
+        ?pointer a c4o:InTextReferencePointer ;
+            c4o:hasContent ?textValue .
+    }
+
+### CQ5
+
+Which citations are linked to an in-text reference pointer, and what are the papers involved?
+
+    SELECT ?pointer ?citation ?citingPaper ?citedPaper
+    WHERE {
+        ?annotation a oa:Annotation ;
+            oa:hasTarget ?pointer ;
+            oa:hasBody ?citation .
+        
+        ?pointer a c4o:InTextReferencePointer .
+        
+        ?citation a cito:Citation ;
+            cito:hasCitingEntity ?citingPaper ;
+            cito:hasCitedEntity ?citedPaper .
+    }
+
+    </div></div></div><dt class="text-capitalize fs-7 fw-bold">doi<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">https://doi.org/10.25504/FAIRsharing.b220d4</div></div></div><dt class="text-capitalize fs-7 fw-bold">image<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/cito/blob/master/docs/current/cito.png target=_blank>https://github.com/SPAROntologies/cito/blob/master/docs/current/cito.png</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">imports<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://www.ontologydesignpatterns.org/cp/owl/situation.owl target=_blank>http://www.ontologydesignpatterns.org/cp/owl/situation.owl</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">included in data catalog<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://fairsharing.org/ target=_blank>https://fairsharing.org/</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">is backward compatible with<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://purl.org/spar/cito/2026-06-22 target=_blank>http://purl.org/spar/cito/2026-06-22</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">issued<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">2017-10-30</div></div></div><dt class="text-capitalize fs-7 fw-bold">keywords<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">scholarly publishing</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">scientometrics</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">semantic publishing</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">citation networks</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">bibliometrics</div></div></div><dt class="text-capitalize fs-7 fw-bold">license<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://creativecommons.org/licenses/by/4.0/legalcode target=_blank>https://creativecommons.org/licenses/by/4.0/legalcode</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">logo<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/cito/blob/master/spar.png target=_blank>https://github.com/SPAROntologies/cito/blob/master/spar.png</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">modified<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">2026-09-03</div></div></div><dt class="text-capitalize fs-7 fw-bold">preferred namespace prefix<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">cito</div></div></div><dt class="text-capitalize fs-7 fw-bold">preferred namespace uri<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">http://purl.org/spar/cito/</div></div></div><dt class="text-capitalize fs-7 fw-bold">prior version<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://purl.org/spar/cito/2026-06-22 target=_blank>http://purl.org/spar/cito/2026-06-22</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">publisher<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://ror.org/00wb4mk85 target=_blank>https://ror.org/00wb4mk85</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">see also<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://www.sparontologies.net/ontologies/cito target=_blank>http://www.sparontologies.net/ontologies/cito</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">source<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/cito/blob/master/docs/cq.md target=_blank>https://github.com/SPAROntologies/cito/blob/master/docs/cq.md</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">status<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://purl.org/ontology/bibo/status/published target=_blank>http://purl.org/ontology/bibo/status/published</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">title<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">The Citation Typing Ontology (CiTO)</div></div></div><dt class="text-capitalize fs-7 fw-bold">version<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://purl.org/spar/cito/2026-09-03 target=_blank>http://purl.org/spar/cito/2026-09-03</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">version info<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">2.9.0</div></div></div><dt class="text-capitalize fs-7 fw-bold">Other visualisation<dd class=ms-5><a class="btn btn-sm btn-outline-dark me-2" href="https://service.tib.eu/webvowl/#iri=http://purl.org/spar/cito" target=_blank><i class="bi bi-share"></i> WebVOWL</a> <a class="btn btn-sm btn-outline-dark" href=http://purl.org/spar/cito target=_blank><i class="bi bi-file-code"></i> Source</a></dl></section></div></details><section class="metadata-block export-block"><dl class="mb-0 pb-3"><dt class="fs-7 fw-bold mb-1">Export<dd class=ms-5><a class="btn btn-sm btn-outline-dark me-2" href=isCitedBy.ttl> <i class="bi bi-filetype-raw"></i> Turtle </a> <a class="btn btn-sm btn-outline-dark me-2" href=isCitedBy.rdf> <i class="bi bi-file-code"></i> RDF/XML </a> <a class="btn btn-sm btn-outline-dark me-2" href=isCitedBy.jsonld> <i class="bi bi-filetype-json"></i> JSON-LD </a> <a class="btn btn-sm btn-outline-dark me-2" href=isCitedBy.nt> <i class="bi bi-file-text"></i> N-Triples </a></dl></section><div class="anchor-offset mb-5"><div class="card mb-2 anchor-offset" id=id_b8c244eb4a7eda4dbf63e818a06bd450_Relation><div class="card-header bg-white pt-2 px-1 d-flex justify-content-between align-items-center"><h4 class="fw-bold mb-0"><div class=d-inline-block>is cited by</div> <sup class="badge bg-light text-secondary op" title="Object Property">op</sup></h4></div><div class="card-body p-0"><div class="description p-3"><p class=mb-1><span class="text-dark fw-bold">IRI:</span> http://purl.org/spar/cito/isCitedBy <a title="Go to resource documentation" class=ms-2 href=../cito/isCitedBy.html><i class="bi bi-box-arrow-up-right"></i></a><div><h6 class="text-dark fw-bold pb-0 mb-0">comment</h6><div class=ms-2><div><div class="markdown-with-badge text-dark render-markdown inline-markdown me-1"
+                                            data-md="A relation according to which the cited entity is cited by the citing entity.">A relation according to which the cited entity is cited by the citing entity.
+                                        </div> <sup class="badge text-secondary lan" title=English>en</sup></div></div></div></div><div class="attribute p-3 border-top border-bottom bg-light-subtle"><div class=mb-1><h6 class="fw-bold text-dark pb-0 mb-0">domain</h6><div class=ms-2><div class=d-inline-block><a href=http://www.w3.org/2002/07/owl#Thing title=http://www.w3.org/2002/07/owl#Thing>thing</a><sup class="badge text-secondary c" title=Class>c</sup></div></div></div><div class=mb-1><h6 class="fw-bold text-dark pb-0 mb-0">range</h6><div class=ms-2><div class=d-inline-block><a href=http://www.w3.org/2002/07/owl#Thing title=http://www.w3.org/2002/07/owl#Thing>thing</a><sup class="badge text-secondary c" title=Class>c</sup></div></div></div><div class=mb-1><h6 class="fw-bold text-dark pb-0 mb-0">is defined by</h6><div class=ms-2><div class=d-inline-block><span class=external-ref title=http://purl.org/spar/cito/>http://purl.org/spar/cito/</span></div></div></div><div class=mb-1><h6 class="fw-bold text-dark pb-0 mb-0">is inverse of</h6><div class=ms-2><div class=d-inline-block><a href=../cito/cites.html title=http://purl.org/spar/cito/cites>cites</a><sup class="badge text-secondary op" title="Object Property">op</sup></div></div></div><div class=mb-1><h6 class="fw-bold text-dark pb-0 mb-0">label</h6><div class=ms-2><div class="markdown-with-badge text-dark mb-0 render-markdown inline-markdown "
+                                            data-md="is cited by">is cited by</div> <sup class="badge text-secondary lan" title=English>en</sup></div></div></div><div class="p-3 statement"><div><h6 class="fw-bold text-dark pb-0 mb-0">term status</h6><div class=ms-2><div class="d-flex flex-column gap-1"><div><a class=external-ref href=http://purl.org/linked-data/registry#statusStable rel=noopener target=_blank title=http://purl.org/linked-data/registry#statusStable>status stable<i class="bi bi-box-arrow-up-right ms-1"></i></a></div></div></div></div><div><h6 class="fw-bold text-dark pb-0 mb-0">example</h6><div class=ms-2><div class="d-flex flex-column gap-1"><div><div><div class="markdown-with-badge  render-markdown inline-markdown"
+                title="None"
+                data-md="
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedBy :paper-b .
+    ">
+                    
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedBy :paper-b .
+    
+                </div></div></div></div></div></div></div><div class="card-footer bg-white py-0"><div class="accordion accordion-flush prov-accordion" id=id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_acc><div class=accordion-item><h2 class="accordion-header d-flex justify-content-end" id=id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_head><button class="accordion-button collapsed py-1 px-2 small fw-bold text-uppercase text-primary w-auto" title="RDF provenance" aria-controls=id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov aria-expanded=false data-bs-target=#id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov data-bs-toggle=collapse type=button><span>RDF provenance</span> <i class="bi bi-code"></i></button></h2><div class="accordion-collapse collapse" aria-labelledby=id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_head data-bs-parent=#id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_acc id=id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov><div class="accordion-body p-2"><ul class="nav nav-tabs nav-tabs-sm justify-content-end small mb-0" role=tablist><li class=nav-item role=presentation><button class="nav-link active py-1 px-2" data-bs-target=#id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_1 data-bs-toggle=tab role=tab type=button>Turtle</button><li class=nav-item role=presentation><button class="nav-link py-1 px-2" data-bs-target=#id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_2 data-bs-toggle=tab role=tab type=button>RDF/XML</button><li class=nav-item role=presentation><button class="nav-link py-1 px-2" data-bs-target=#id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_3 data-bs-toggle=tab role=tab type=button>JSON-LD</button><li class=nav-item role=presentation><button class="nav-link py-1 px-2" data-bs-target=#id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_4 data-bs-toggle=tab role=tab type=button>N-Triples</button></ul><div class=tab-content><div class="tab-pane fade show active" id=id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_1 role=tabpanel><pre class="mb-0 small"><code>@prefix cito: &lt;http://purl.org/spar/cito/> .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: &lt;http://purl.org/linked-data/registry#> .
+@prefix vann: &lt;http://purl.org/vocab/vann/> .
+@prefix vs: &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:isCitedBy a owl:ObjectProperty ;
+    rdfs:label "is cited by"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedBy :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the cited entity is cited by the citing entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    vs:term_status reg:statusStable .
+
+</code></pre></div><div class="tab-pane fade" id=id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_2 role=tabpanel><pre class="mb-0 small"><code>&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  &lt;rdf:Description rdf:about="http://purl.org/spar/cito/isCitedBy">
+    &lt;rdfs:label xml:lang="en">is cited by&lt;/rdfs:label>
+    &lt;rdfs:comment xml:lang="en">A relation according to which the cited entity is cited by the citing entity.&lt;/rdfs:comment>
+    &lt;rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    &lt;rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    &lt;vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    &lt;vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedBy :paper-b .
+    &lt;/vann:example>
+  &lt;/rdf:Description>
+&lt;/rdf:RDF>
+</code></pre></div><div class="tab-pane fade" id=id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_3 role=tabpanel><pre class="mb-0 small"><code>[
+  {
+    "@id": "http://purl.org/spar/cito/isCitedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :paper-a a fabio:JournalArticle ;\n        cito:isCitedBy :paper-b .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A relation according to which the cited entity is cited by the citing entity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/cito/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is cited by"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]</code></pre></div><div class="tab-pane fade" id=id_b8c244eb4a7eda4dbf63e818a06bd450_Relation_prov_4 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/cito/isCitedBy> &lt;http://www.w3.org/2000/01/rdf-schema#label> "is cited by"@en .
+&lt;http://purl.org/spar/cito/isCitedBy> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the cited entity is cited by the citing entity."@en .
+&lt;http://purl.org/spar/cito/isCitedBy> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#ObjectProperty> .
+&lt;http://purl.org/spar/cito/isCitedBy> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> .
+&lt;http://purl.org/spar/cito/isCitedBy> &lt;http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:isCitedBy :paper-b .\n    " .
+&lt;http://purl.org/spar/cito/isCitedBy> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/cito/> .
+</code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../index.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
+
+                // Security hooks
+                DOMPurify.addHook('afterSanitizeAttributes', function(node) {
+                    if (node.tagName === 'A') {
+                        node.setAttribute('target', '_blank');
+                        node.setAttribute('rel', 'noopener noreferrer');
+                    }
+                    if (node.tagName === 'IMG') {
+                        node.setAttribute('class', 'img-fluid border rounded mt-2 mb-2');
+                    }
+                });
+
+                marked.use({
+                    gfm: true,
+                    breaks: false // So line breaks not be added
+                });
+
+                const mdElements = document.querySelectorAll('.render-markdown');
+
+                mdElements.forEach(function(el) {
+                    try {
+                        let rawText = el.dataset.md ?? el.textContent;
+
+                        // Rimuove solo righe vuote iniziali/finali, preserva l'indentazione delle righe
+                        rawText = rawText.replace(/^([ \t]*\n)+/, '').replace(/(\n[ \t]*)+$/, '');
+                        // 2. Strip ANY XML namespace prefix (Turns <html:div> into <div>, </xhtml:p> into </p>)
+                        let cleanText = rawText.replace(/<(\/?)[a-zA-Z0-9_-]+:([a-zA-Z0-9]+)/gi, '<$1$2');
+
+                        // 3. Strip xmlns attributes
+                        cleanText = cleanText.replace(/ xmlns(:[a-zA-Z0-9_-]+)?="[^"]*"/gi, '');
+
+                        let rawHTML = "";
+
+                        // 4. Smart Routing
+                        if (el.tagName === 'SPAN' || el.tagName === 'A') {
+                            rawHTML = marked.parseInline(cleanText);
+                        } else {
+                            rawHTML = marked.parse(cleanText);
+                        }
+
+                        // 5. Sanitize
+                        const cleanHTML = DOMPurify.sanitize(rawHTML, {
+                            ADD_TAGS: ['img'],
+                            ADD_ATTR: ['target', 'src', 'alt', 'title', 'class']
+                        });
+
+                        el.innerHTML = cleanHTML;
+                    } catch (e) {
+                        console.error("Error rendering markdown/html:", e);
+                    }
+                });
+            });
+
+            function exportGraph(mime, ext, navQs, resource) {
+                let qs = navQs;
+                if (resource) qs += "&resource=" + encodeURIComponent(resource);
+                fetch(`/extract?${qs}`, { headers: { "Accept": mime } })
+                    .then(r => { if (!r.ok) throw new Error(r.status); return r.blob(); })
+                    .then(blob => {
+                        const a = document.createElement("a");
+                        const slug = resource ? resource.split(/[#/]/).pop() : "ontology";
+                        a.href = URL.createObjectURL(blob);
+                        a.download = `${slug}.${ext}`;
+                        a.click();
+                        URL.revokeObjectURL(a.href);
+                    })
+                    .catch(e => alert("Export failed: " + e.message));
+            }
+
+            function toggleMetadataAccordion(event) {
+                event.preventDefault();   // blocca il comportamento nativo/bubbling incoerente
+                event.stopPropagation();  // evita il doppio-toggle se il summary lo cattura comunque
+                const details = event.currentTarget.closest('details.metadata-accordion');
+                if (details) details.open = !details.open;
+            }
+            
+            /* SEARCHBAR */
+            (function () {
+                const wrap = document.getElementById('toc-float-search');
+                const toggle = document.getElementById('toc-float-search-toggle');
+                const input = document.getElementById('toc-float-search-input');
+                const countEl = document.getElementById('toc-float-search-count');
+                const prevBtn = document.getElementById('toc-float-search-prev');
+                const nextBtn = document.getElementById('toc-float-search-next');
+                if (!wrap || !toggle || !input) return;
+
+                const cards = Array.from(document.querySelectorAll('.container-fluid .card[id]'));
+                let matches = [];
+                let current = -1;
+
+                function updateCount() {
+                    countEl.textContent = matches.length ? `${current + 1}/${matches.length}` : (input.value ? '0/0' : '');
+                }
+
+                function clearHighlight() {
+                    cards.forEach(c => c.classList.remove('toc-search-current'));
+                }
+
+                function goTo(index) {
+                    if (!matches.length) return;
+                    current = (index + matches.length) % matches.length;
+                    clearHighlight();
+                    const card = matches[current];
+                    card.classList.add('toc-search-current');
+                    card.scrollIntoView({ block: 'start' });
+                    updateCount();
+                }
+
+                function runSearch() {
+                    const q = input.value.trim().toLowerCase();
+                    clearHighlight();
+
+                    // Sidebar: dim + disable non-matching
+                    const sidebar = document.getElementById('toc-sidebar');
+                    if (sidebar) {
+                        sidebar.querySelectorAll('.toc-sidebar-section').forEach(section => {
+                            let anyMatch = false;
+                            section.querySelectorAll('.toc-sidebar-list li').forEach(li => {
+                                const match = !q || li.textContent.toLowerCase().includes(q);
+                                li.classList.toggle('toc-search-dim', !match);
+                                if (match) anyMatch = true;
+                            });
+                            section.classList.toggle('toc-search-dim', q.length > 0 && !anyMatch);
+                            if (q && anyMatch) section.open = true;
+                        });
+                    }
+
+                    if (!q) {
+                        matches = [];
+                        current = -1;
+                        updateCount();
+                        return;
+                    }
+                    matches = cards.filter(card => {
+                        const label = card.querySelector('.card-header h4')?.textContent.toLowerCase() || '';
+                        return label.includes(q);
+                    });
+                    current = -1;
+                    updateCount();
+                    if (matches.length) goTo(0);
+                }
+
+                toggle.addEventListener('click', function () {
+                    const open = wrap.classList.toggle('open');
+                    if (open) {
+                        input.focus();
+                    } else {
+                        input.value = '';
+                        runSearch();
+                    }
+                });
+
+                input.addEventListener('input', runSearch);
+
+                input.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (e.shiftKey) goTo(current - 1);
+                        else goTo(current + 1);
+                    }
+                });
+
+                prevBtn.addEventListener('click', () => goTo(current - 1));
+                nextBtn.addEventListener('click', () => goTo(current + 1));
+            })();</script></div>

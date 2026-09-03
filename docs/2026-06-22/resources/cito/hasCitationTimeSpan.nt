@@ -1,0 +1,8 @@
+<http://purl.org/spar/cito/hasCitationTimeSpan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/hasCitationTimeSpan> <http://www.w3.org/2000/01/rdf-schema#label> "has citation time span"@en .
+<http://purl.org/spar/cito/hasCitationTimeSpan> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/cito/Citation> .
+<http://purl.org/spar/cito/hasCitationTimeSpan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/cito/hasCitationTimeSpan> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:hasCitationTimeSpan \"P1Y\"^^xsd:duration .\n    " .
+<http://purl.org/spar/cito/hasCitationTimeSpan> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://purl.org/spar/cito/hasCitationTimeSpan> <http://www.w3.org/2000/01/rdf-schema#comment> "The temporal characteristic of a citation, namely the interval between the publication date of the cited entity and the publication date of the citing entity. Note that when one or both of the publication dates is given as just \"year\", then the citation time span is rounded to the nearest year, and when one or both of the publication dates is given as just \"year and month\", then the citation time span is rounded to the nearest month, with the inherent inaccuracies that such rounding involves."@en .
+<http://purl.org/spar/cito/hasCitationTimeSpan> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

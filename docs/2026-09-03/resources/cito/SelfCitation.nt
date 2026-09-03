@@ -1,0 +1,7 @@
+<http://purl.org/spar/cito/SelfCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/SelfCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which the citing and the cited entities have something significant in common with one another, over and beyond their subject matter, for example authors, journal, institutional affiliation, or funding agency."@en .
+<http://purl.org/spar/cito/SelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/Citation> .
+<http://purl.org/spar/cito/SelfCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/cito/SelfCitation> <http://purl.org/vocab/vann/example> "\n    :my-citation a cito:SelfCitation ; \n        cito:hasCitingEntity :paper-a ;\n        cito:hasCitationCharacterization cito:extends ;\n        cito:hasCitedEntity :paper-b .\n    " .
+<http://purl.org/spar/cito/SelfCitation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/SelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "self citation"@en .

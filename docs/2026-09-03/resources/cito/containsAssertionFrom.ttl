@@ -1,0 +1,25 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:containsAssertionFrom a owl:ObjectProperty ;
+    rdfs:label "contains assertion from"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:containsAssertionFrom :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the citing entity contains a statement of fact or a logical assertion (or a collection of such facts and/or assertions) originally present in the cited entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:cites ;
+    owl:inverseOf cito:providesAssertionFor ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+Example: We think that to stand on the top of giants [X] is a valuable principle to follow for our own research.
+
+This object property is designed to be used to relate a separate abstract, summary or nanopublication to the cited entity upon which it is based.
+    """@en .
+

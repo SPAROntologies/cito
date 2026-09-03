@@ -1,0 +1,8 @@
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which the citing and the cited entities have nothing significant in common with one another (for example authors, journal, institutional affiliation, or funding agency) over and beyond their subject matter."@en .
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/Citation> .
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/2004/02/skos/core#note> "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en .
+<http://purl.org/spar/cito/DistantCitation> <http://purl.org/vocab/vann/example> "\n    :my-citation a cito:DistantCitation ; \n        cito:hasCitingEntity :paper-a ;\n        cito:hasCitationCharacterization cito:extends ;\n        cito:hasCitedEntity :paper-b .\n    " .
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/2000/01/rdf-schema#label> "distant citation"@en .
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

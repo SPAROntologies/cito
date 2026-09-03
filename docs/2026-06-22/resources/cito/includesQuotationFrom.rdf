@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/includesQuotationFrom">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:label xml:lang="en">includes quotation from</rdfs:label>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity includes one or more quotations from the cited entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:includesQuotationFrom :paper-b .
+    </vann:example>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <skos:note xml:lang="en">
+A quotation is a repetition of what someone has said, and is presented "within quotation marks", for example:
+
+    On June 4th 1940, Winston Churchill made a speech on the radio that has since become famous, that included the words: " ... we shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender ..."
+    </skos:note>
+    <skos:note xml:lang="en">Example: As Newton wrote in [X]: "We are like dwarfs standing on the shoulders of giants".</skos:note>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/providesQuotationFor"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+</rdf:RDF>

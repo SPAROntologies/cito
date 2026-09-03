@@ -1,0 +1,46 @@
+[
+  {
+    "@id": "http://purl.org/spar/cito/JournalSelfCitation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    # The following cito:AffiliationSelfCitation resource\n\n    :my-citation a cito:AffiliationSelfCitation ; \n        cito:hasCitingEntity :paper-a ;\n        cito:hasCitationCharacterization cito:extends ;\n        cito:hasCitedEntity :paper-b .\n\n    # can be alternatively described as follows\n\n    :paper-a cito:extends :paper-b .\n    :paper-a cito:sharesAuthorInstitutionWith :paper-b .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "\nA citation in which the citing and the cited entities are published in the same journal.\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/cito/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "journal self citation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/spar/cito/SelfCitation"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "\nLike the ancestor class `cito:Citation`, `cito:JournalSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesJournalWith` for linking the citing paper and the cited paper.\n\nDerived from the blog post \"Journal self-citations are increasingly biased toward impact factor years\" by Ludo Waltman and Caspar Chorus (https://www.cwts.nl/blog?article=n-q2x264).\n    "
+      }
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/disagreesWith">
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:disagreesWith :paper-b .
+    </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:label xml:lang="en">disagrees with</rdfs:label>
+    <skos:note xml:lang="en">Example: We do not share Galileo's opinion [X]: the Earth does not move.</skos:note>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity disagrees with statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isDisagreedWithBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>

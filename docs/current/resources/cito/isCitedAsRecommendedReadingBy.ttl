@@ -1,0 +1,23 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:isCitedAsRecommendedReadingBy a owl:ObjectProperty ;
+    rdfs:label "is cited as recommended reading by"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsRecommendedReadingBy :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the cited entity is cited by the citing entity as an item of recommended reading."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:isCitedBy ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture. 
+Similarly, it could be used to describe items in a 'Suggested further reading' list at the end of a book chapter.
+    """@en .
+

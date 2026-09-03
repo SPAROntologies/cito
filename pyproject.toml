@@ -6,4 +6,6 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "markdown>=3.10.2",
+    "rdflib>=7.6.0",
+    "requests>=2.34.2",
 ]
