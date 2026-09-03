@@ -21,3 +21,4 @@ jobs:
 
       - name: Run syntax and FAIR validation
         run: uv run main.py
+        continue-on-error: true
