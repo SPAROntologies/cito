@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitationCharacterizationOf">
+    <rdfs:label xml:lang="en">is citation characterization of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vann:example>
+    cito:extends 
+        cito:isCitationCharacterizationOf :my-citation .
+
+    :my-citation a cito:Citation .
+    </vann:example>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/hasCitationCharacterization"/>
+    <rdfs:comment xml:lang="en">A relation between the characterization of a citation, made by using a CiTO citation characterization property, and that citation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+</rdf:RDF>

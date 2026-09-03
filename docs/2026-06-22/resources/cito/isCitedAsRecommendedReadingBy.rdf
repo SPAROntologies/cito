@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedAsRecommendedReadingBy">
+    <rdfs:label xml:lang="en">is cited as recommended reading by</rdfs:label>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited by the citing entity as an item of recommended reading.</rdfs:comment>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <skos:note xml:lang="en">
+This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture. 
+Similarly, it could be used to describe items in a "Suggested further reading" list at the end of a book chapter.
+    </skos:note>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsRecommendedReadingBy :paper-b .
+    </vann:example>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>

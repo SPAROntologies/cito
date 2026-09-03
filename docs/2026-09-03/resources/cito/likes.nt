@@ -1,0 +1,7 @@
+<http://purl.org/spar/cito/likes> <http://www.w3.org/2004/02/skos/core#note> "\nThis property enables social media \"likes\" statements to be encoded in RDF. \nUse of this property does NOT imply the existence of a formal citation of the entity that is \"liked\".\n    "@en .
+<http://purl.org/spar/cito/likes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/likes> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/likes> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the citing entity shows appreciation of or interest in the cited entity."@en .
+<http://purl.org/spar/cito/likes> <http://www.w3.org/2000/01/rdf-schema#label> "likes"@en .
+<http://purl.org/spar/cito/likes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/likes> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:likes :paper-b .\n    " .

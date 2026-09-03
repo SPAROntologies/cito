@@ -1,0 +1,20 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cito:hasCitationTimeSpan a owl:DatatypeProperty ;
+    rdfs:label "has citation time span"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:hasCitationTimeSpan "P1Y"^^xsd:duration .
+    """ ;
+    rdfs:comment "The temporal characteristic of a citation, namely the interval between the publication date of the cited entity and the publication date of the citing entity. Note that when one or both of the publication dates is given as just \"year\", then the citation time span is rounded to the nearest year, and when one or both of the publication dates is given as just \"year and month\", then the citation time span is rounded to the nearest month, with the inherent inaccuracies that such rounding involves."@en ;
+    rdfs:domain cito:Citation ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:range xsd:duration ;
+    vs:term_status reg:statusStable .
+

@@ -1,0 +1,6 @@
+<http://purl.org/spar/cito/sharesPublicationVenueWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/sharesPublicationVenueWith> <http://www.w3.org/2000/01/rdf-schema#label> "shares publication venue with"@en .
+<http://purl.org/spar/cito/sharesPublicationVenueWith> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the citing and cited bibliographic resources are published in same publication venue."@en .
+<http://purl.org/spar/cito/sharesPublicationVenueWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/sharesPublicationVenueWith> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:sharesPublicationVenueWith :paper-b .\n    " .
+<http://purl.org/spar/cito/sharesPublicationVenueWith> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

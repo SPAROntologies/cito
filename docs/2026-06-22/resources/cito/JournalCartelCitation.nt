@@ -1,0 +1,8 @@
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation from one journal to another journal which forms one of a very large number of citations from the citing journal to recent articles in the cited journal, possibly undertaken as part of a citation cartel for the purpose of gaming the impact factor of the cited journal."@en .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/Citation> .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/2004/02/skos/core#note> "Derived from the blog post \"What do we know about journal citation cartels? A call for information\" by Philippe Mongeon, Ludo Waltman and Sarah de Rijcke (https://www.cwts.nl/blog?article=n-q2w2b4)."@en .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/2000/01/rdf-schema#label> "journal cartel citation"@en .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://purl.org/vocab/vann/example> "\n    :my-citation a cito:JournalCartelCitation ; \n        cito:hasCitingEntity :paper-a ;\n        cito:hasCitationCharacterization cito:extends ;\n        cito:hasCitedEntity :paper-b .\n    " .

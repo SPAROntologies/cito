@@ -1,0 +1,13 @@
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "author network self citation"@en .
+_:n5f531ea2c21542a19bdc0b065762fbbeb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity."@en .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2004/02/skos/core#note> "Derived from the article \"A Small World of Citations? The Influence of Collaboration Networks on Citation Practices\" by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/SelfCitation> .
+_:n5f531ea2c21542a19bdc0b065762fbbeb1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:n5f531ea2c21542a19bdc0b065762fbbeb1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/cito/hasCoAuthorshipCitationLevel> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n5f531ea2c21542a19bdc0b065762fbbeb1 .
+_:n5f531ea2c21542a19bdc0b065762fbbeb1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://purl.org/vocab/vann/example> "\n    :my-citation a cito:AuthorNetworkSelfCitation ; \n        cito:hasCitingEntity :paper-a ;\n        cito:hasCitationCharacterization cito:extends ;\n        cito:hasCoAuthorshipCitationLevel \"2\"^^xsd:positiveInteger ;\n        cito:hasCitedEntity :paper-b .\n    " .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

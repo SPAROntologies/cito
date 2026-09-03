@@ -1,0 +1,9 @@
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:citesAsRecommendedReading :paper-b .\n    " .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2004/02/skos/core#note> "\nExample: To our knowledge, [X] is the best source of exercises about UML, making it a valuable proposal for beginners.\n\nThis property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture.  Similarly, it could be used to describe items in a \"Suggested further reading\" list at the end of a book chapter.\n    "@en .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2000/01/rdf-schema#label> "cites as recommended reading"@en .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the citing entity cites the cited entity as an item of recommended reading."@en .

@@ -1,0 +1,8 @@
+<http://purl.org/spar/cito/retracts> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/retracts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> .
+<http://purl.org/spar/cito/retracts> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the citing entity constitutes a formal retraction of the cited entity."@en .
+<http://purl.org/spar/cito/retracts> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:retracts :paper-b .\n    " .
+<http://purl.org/spar/cito/retracts> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/retracts> <http://www.w3.org/2000/01/rdf-schema#label> "retracts"@en .
+<http://purl.org/spar/cito/retracts> <http://www.w3.org/2004/02/skos/core#note> "Example: We wrote that the Earth moves in [X]; we now retire such statement."@en .
+<http://purl.org/spar/cito/retracts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

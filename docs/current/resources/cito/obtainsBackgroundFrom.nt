@@ -1,0 +1,8 @@
+<http://purl.org/spar/cito/obtainsBackgroundFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/obtainsBackgroundFrom> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/obtainsBackgroundFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the citing entity obtains background information from the cited entity."@en .
+<http://purl.org/spar/cito/obtainsBackgroundFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/obtainsBackgroundFrom> <http://www.w3.org/2000/01/rdf-schema#label> "obtains background from"@en .
+<http://purl.org/spar/cito/obtainsBackgroundFrom> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:obtainsBackgroundFrom :paper-b .\n    " .
+<http://purl.org/spar/cito/obtainsBackgroundFrom> <http://www.w3.org/2004/02/skos/core#note> "Example: There is a need for more observational studies and studies using narrative causation to describe the potential contribution of information in problem-solving and decision-making [X]; our work addresses these needs."@en .
+<http://purl.org/spar/cito/obtainsBackgroundFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> .

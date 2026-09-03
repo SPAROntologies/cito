@@ -1,0 +1,7 @@
+<http://purl.org/spar/cito/isCitingEntityOf> <http://purl.org/vocab/vann/example> "\n    :paper-a\n        cito:isCitingEntityOf :my-citation .\n\n    :my-citation a cito:Citation .\n    " .
+<http://purl.org/spar/cito/isCitingEntityOf> <http://www.w3.org/2000/01/rdf-schema#label> "is citing entity of"@en .
+<http://purl.org/spar/cito/isCitingEntityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/isCitingEntityOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/isCitingEntityOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/hasCitingEntity> .
+<http://purl.org/spar/cito/isCitingEntityOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/isCitingEntityOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a citing entity and a citation."@en .

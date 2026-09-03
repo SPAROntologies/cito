@@ -1,0 +1,19 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:isRefutedBy a owl:ObjectProperty ;
+    rdfs:label "is refuted by"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:isRefutedBy :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are refuted by the citing entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:isCitedBy ;
+    owl:inverseOf cito:refutes ;
+    vs:term_status reg:statusStable .
+

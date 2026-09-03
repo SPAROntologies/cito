@@ -1,0 +1,9 @@
+<http://purl.org/spar/cito/includesExcerptFrom> <http://www.w3.org/2004/02/skos/core#note> "\nAn excerpt is more general than a quotation. \nIt is generally used to indicate a re-published extract from a book, instruction manual, film, radio programme, etc, that need not be what someone said.  \nFor example:\n\n    Oxford 01865\n    Oxshott 01372\n    Oxted 01883\n    Oxton 01578\n\nis an excerpt from the UK Dialling Codes section of the Oxford Telephone Directory.\n\nExample: In her work, the author states that even though most Human Information Behaviour researchers are familiar with the literature related to their studies, it is not uncommon for investigators to fail to see the benefits they may gain from previous mistakes [X]\n    "@en .
+<http://purl.org/spar/cito/includesExcerptFrom> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/includesExcerptFrom> <http://www.w3.org/2000/01/rdf-schema#label> "includes excerpt from"@en .
+<http://purl.org/spar/cito/includesExcerptFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> .
+<http://purl.org/spar/cito/includesExcerptFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation according to which the citing entity includes one or more excerpts from the cited entity."@en .
+<http://purl.org/spar/cito/includesExcerptFrom> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/providesExcerptFor> .
+<http://purl.org/spar/cito/includesExcerptFrom> <http://purl.org/vocab/vann/example> "\n    :paper-a a fabio:JournalArticle ;\n        cito:includesExcerptFrom :paper-b .\n    " .
+<http://purl.org/spar/cito/includesExcerptFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/includesExcerptFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

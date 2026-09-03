@@ -1,0 +1,18 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:cites a owl:ObjectProperty ;
+    rdfs:label "cites"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:cites :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which a citing entity cites a cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en ;
+    rdfs:isDefinedBy cito: ;
+    owl:inverseOf cito:isCitedBy ;
+    vs:term_status reg:statusStable .
+

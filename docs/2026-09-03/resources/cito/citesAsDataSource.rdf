@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesAsDataSource">
+    <skos:note xml:lang="en">Example: Italy has more than ten thousand kilometers of shoreline: see [X].</skos:note>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:citesAsDataSource :paper-b .
+    </vann:example>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <rdfs:label xml:lang="en">cites as data source</rdfs:label>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity cites the cited entity as source of data.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedAsDataSourceBy"/>
+  </rdf:Description>
+</rdf:RDF>

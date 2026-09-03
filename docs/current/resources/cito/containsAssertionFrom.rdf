@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/containsAssertionFrom">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/providesAssertionFor"/>
+    <skos:note xml:lang="en">
+Example: We think that to stand on the top of giants [X] is a valuable principle to follow for our own research.
+
+This object property is designed to be used to relate a separate abstract, summary or nanopublication to the cited entity upon which it is based.
+    </skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:containsAssertionFrom :paper-b .
+    </vann:example>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity contains a statement of fact or a logical assertion (or a collection of such facts and/or assertions) originally present in the cited entity.</rdfs:comment>
+    <rdfs:label xml:lang="en">contains assertion from</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

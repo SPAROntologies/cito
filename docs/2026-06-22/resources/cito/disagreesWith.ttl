@@ -1,0 +1,21 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:disagreesWith a owl:ObjectProperty ;
+    rdfs:label "disagrees with"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:disagreesWith :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the citing entity disagrees with statements, ideas or conclusions presented in the cited entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:cites ;
+    owl:inverseOf cito:isDisagreedWithBy ;
+    vs:term_status reg:statusStable ;
+    skos:note "Example: We do not share Galileo's opinion [X]: the Earth does not move."@en .
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/compiles">
+    <rdfs:label xml:lang="en">compiles</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCompiledBy"/>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:compiles :paper-b .
+    </vann:example>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity is used to create or compile the cited entity.</rdfs:comment>
+    <skos:note xml:lang="en">
+Example: This book gathers interviews with academic researchers of several disciplines [X].
+
+Note: This property has been imported from the CiTO4Data ontology, usage of which has been deprecated.
+    </skos:note>
+  </rdf:Description>
+</rdf:RDF>
