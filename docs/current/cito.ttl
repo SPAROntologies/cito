@@ -1094,7 +1094,7 @@ vs:term_status a owl:AnnotationProperty .
 
 skos:note a owl:AnnotationProperty .
 
-foaf:logo a owl:AnnotationProperty .
+foaf:logo a owl:ObjectProperty .
 
 cito:AuthorNetworkSelfCitation a owl:Class ;
     rdfs:label "author network self citation"@en ;
