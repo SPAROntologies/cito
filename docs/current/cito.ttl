@@ -7,7 +7,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix reg: <http://purl.org/linked-data/registry#> .
-@prefix schema1: <http://schema.org/> .
+@prefix schema: <http://schema.org/> .
 @prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -53,7 +53,7 @@ bibo:doi a owl:AnnotationProperty .
         "Tim Clark (https://orcid.org/0000-0003-4060-7360)" ;
     dc:creator "David Shotton (http://orcid.org/0000-0001-5506-523X)",
         "Silvio Peroni (http://orcid.org/0000-0003-0530-4305)" ;
-    dc:date "2026-09-03" ;
+    dc:date "2026-10-05" ;
     dc:title "The Citation Typing Ontology (CiTO)"@en ;
     dcterms:bibliographicCitation "Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: https://doi.org/10.2139/ssrn.3198992"@en ;
     dcterms:created "2017-10-30" ;
@@ -145,7 +145,7 @@ In addition, it is also possible to specify (through the object property `oa:ann
 
     :citation a cito:Citation;
         cito:hasCitingEntity :paper-a ;
-        cito:hasCitationEvent cito:extends ;
+        cito:hasCitationCharacterization cito:extends ;
         cito:hasCitedEntity :paper-b .
 
     :in-text-ref-pointer a c4o:InTextReferencePointer ;
@@ -236,31 +236,36 @@ Which citations are linked to an in-text reference pointer, and what are the pap
     """ ;
     dcterms:issued "2017-10-30" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
-    dcterms:modified "2026-09-03" ;
+    dcterms:modified "2026-10-05" ;
     dcterms:publisher <https://ror.org/00wb4mk85> ;
     dcterms:source <https://github.com/SPAROntologies/cito/blob/master/docs/cq.md> ;
     bibo:doi "https://doi.org/10.25504/FAIRsharing.b220d4" ;
     bibo:status <http://purl.org/ontology/bibo/status/published> ;
     vann:preferredNamespacePrefix "cito" ;
     vann:preferredNamespaceUri "http://purl.org/spar/cito/"^^xsd:anyURI ;
-    schema1:codeRepository <https://github.com/SPAROntologies/cito> ;
-    schema1:image <https://github.com/SPAROntologies/cito/blob/master/docs/current/cito.png> ;
-    schema1:includedInDataCatalog <https://fairsharing.org/> ;
-    schema1:keywords "bibliometrics"@en,
+    schema:codeRepository <https://github.com/SPAROntologies/cito> ;
+    schema:image <https://github.com/SPAROntologies/cito/blob/master/docs/current/cito.png> ;
+    schema:includedInDataCatalog <https://fairsharing.org/> ;
+    dc:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    schema:keywords 
+        "SPAR Ontologies"@en ,
+        "Semantic Publishing and Referencing Ontologies"@en ,
+        "bibliometrics"@en,
         "citation networks"@en,
         "scholarly publishing"@en,
         "scientometrics"@en,
         "semantic publishing"@en ;
     rdfs:seeAlso <http://www.sparontologies.net/ontologies/cito> ;
-    owl:backwardCompatibleWith cito:2026-06-22 ;
+    owl:backwardCompatibleWith cito:2026-09-03 ;
     owl:imports <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> ;
-    owl:priorVersion cito:2026-06-22 ;
-    owl:versionIRI cito:2026-09-03 ;
-    owl:versionInfo "2.9.0" ;
-    foaf:logo <https://github.com/SPAROntologies/cito/blob/master/spar.png> .
+    owl:priorVersion cito:2026-09-03 ;
+    owl:versionIRI cito:2026-10-05 ;
+    owl:versionInfo "2.9.1" ;
+    vann:changes <https://github.com/SPAROntologies/cito/blob/master/CHANGELOG.md> ;
+    foaf:logo <https://github.com/SPAROntologies/sparontologies.github.io/blob/master/static/img/spar/spar-logo.png> .
 
-cito:AffilationSelfCitation a owl:Class ;
-    rdfs:label "affilation self citation"@en ;
+cito:AffiliationSelfCitation a owl:Class ;
+    rdfs:label "affiliation self citation"@en ;
     vann:example """
     # The following cito:AffiliationSelfCitation resource
 
@@ -1066,21 +1071,21 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
 vann:preferredNamespaceUri a owl:AnnotationProperty .
 
-schema1:citation a owl:ObjectProperty ;
+schema:citation a owl:ObjectProperty ;
     rdfs:label "citation" ;
     vann:example """
     :paper-a a fabio:JournalArticle ;
         schema:citation :paper-b .
     """ ;
     rdfs:comment "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."@en ;
-    rdfs:isDefinedBy schema1: ;
+    rdfs:isDefinedBy schema: ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "This property is defined in [schema.org](https://schema.org/) and has been added here to align schema.org with CiTO. The object property `schema:citation` expresses similar semantics to `cito:cites` except for the explicit definition of domain and range classes, that are `schema:CreativeWork` according to schema.org. For that reason, it is here defined as a subproperty of `cito:cites`."@en .
 
-schema1:codeRepository a owl:AnnotationProperty .
+schema:codeRepository a owl:AnnotationProperty .
 
-schema1:includedInDataCatalog a owl:AnnotationProperty .
+schema:includedInDataCatalog a owl:AnnotationProperty .
 
 rdfs:comment a owl:AnnotationProperty .
 
