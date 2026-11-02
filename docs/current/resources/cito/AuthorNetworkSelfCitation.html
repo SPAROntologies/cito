@@ -218,12 +218,12 @@ Which citations are linked to an in-text reference pointer, and what are the pap
     """ ;
         rdfs:comment "A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity."@en ;
         rdfs:isDefinedBy cito: ;
-        rdfs:subClassOf _:nf75e75c983704646b88d66dfd41d85a3b1,
+        rdfs:subClassOf _:ncc73a34cae4d4b23b0d7ebf741ccd056b1,
             cito:SelfCitation ;
         vs:term_status reg:statusStable ;
         skos:note "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en .
 
-    _:nf75e75c983704646b88d66dfd41d85a3b1 a owl:Restriction ;
+    _:ncc73a34cae4d4b23b0d7ebf741ccd056b1 a owl:Restriction ;
         owl:onDataRange xsd:positiveInteger ;
         owl:onProperty cito:hasCoAuthorshipCitationLevel ;
         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
@@ -264,7 +264,7 @@ Which citations are linked to an in-text reference pointer, and what are the pap
             "@id": "http://purl.org/spar/cito/SelfCitation"
           },
           {
-            "@id": "_:nf75e75c983704646b88d66dfd41d85a3b1"
+            "@id": "_:ncc73a34cae4d4b23b0d7ebf741ccd056b1"
           }
         ],
         "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -280,7 +280,7 @@ Which citations are linked to an in-text reference pointer, and what are the pap
         ]
       },
       {
-        "@id": "_:nf75e75c983704646b88d66dfd41d85a3b1",
+        "@id": "_:ncc73a34cae4d4b23b0d7ebf741ccd056b1",
         "@type": [
           "http://www.w3.org/2002/07/owl#Restriction"
         ],
@@ -304,19 +304,19 @@ Which citations are linked to an in-text reference pointer, and what are the pap
     ],
     "@id": "http://purl.org/spar/cito"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_a9462c007da623185fe7d77500bb1a99_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/cito> .
-&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/cito/> &lt;http://purl.org/spar/cito> .
-&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> &lt;http://purl.org/spar/cito/SelfCitation> &lt;http://purl.org/spar/cito> .
-_:nf75e75c983704646b88d66dfd41d85a3b1 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/cito/hasCoAuthorshipCitationLevel> &lt;http://purl.org/spar/cito> .
-_:nf75e75c983704646b88d66dfd41d85a3b1 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/cito> .
-_:nf75e75c983704646b88d66dfd41d85a3b1 &lt;http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^&lt;http://www.w3.org/2001/XMLSchema#nonNegativeInteger> &lt;http://purl.org/spar/cito> .
-&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nf75e75c983704646b88d66dfd41d85a3b1 &lt;http://purl.org/spar/cito> .
-&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2000/01/rdf-schema#label> "author network self citation"@en &lt;http://purl.org/spar/cito> .
+]</code></pre></div><div class="tab-pane fade" id=id_a9462c007da623185fe7d77500bb1a99_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2004/02/skos/core#note> "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en &lt;http://purl.org/spar/cito> .
 &lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://purl.org/vocab/vann/example> "\n    :my-citation a cito:AuthorNetworkSelfCitation ; \n        cito:hasCitingEntity :paper-a ;\n        cito:hasCitationCharacterization cito:extends ;\n        cito:hasCoAuthorshipCitationLevel \"2\"^^xsd:positiveInteger ;\n        cito:hasCitedEntity :paper-b .\n    " &lt;http://purl.org/spar/cito> .
-&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2004/02/skos/core#note> "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en &lt;http://purl.org/spar/cito> .
-&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity."@en &lt;http://purl.org/spar/cito> .
-_:nf75e75c983704646b88d66dfd41d85a3b1 &lt;http://www.w3.org/2002/07/owl#onDataRange> &lt;http://www.w3.org/2001/XMLSchema#positiveInteger> &lt;http://purl.org/spar/cito> .
+_:ncc73a34cae4d4b23b0d7ebf741ccd056b1 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/cito> .
+_:ncc73a34cae4d4b23b0d7ebf741ccd056b1 &lt;http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^&lt;http://www.w3.org/2001/XMLSchema#nonNegativeInteger> &lt;http://purl.org/spar/cito> .
+&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> &lt;http://purl.org/spar/cito/SelfCitation> &lt;http://purl.org/spar/cito> .
 &lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/cito> .
+&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/cito/> &lt;http://purl.org/spar/cito> .
+_:ncc73a34cae4d4b23b0d7ebf741ccd056b1 &lt;http://www.w3.org/2002/07/owl#onDataRange> &lt;http://www.w3.org/2001/XMLSchema#positiveInteger> &lt;http://purl.org/spar/cito> .
+&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/cito> .
+_:ncc73a34cae4d4b23b0d7ebf741ccd056b1 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/cito/hasCoAuthorshipCitationLevel> &lt;http://purl.org/spar/cito> .
+&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2000/01/rdf-schema#label> "author network self citation"@en &lt;http://purl.org/spar/cito> .
+&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity."@en &lt;http://purl.org/spar/cito> .
+&lt;http://purl.org/spar/cito/AuthorNetworkSelfCitation> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ncc73a34cae4d4b23b0d7ebf741ccd056b1 &lt;http://purl.org/spar/cito> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../cito.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

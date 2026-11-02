@@ -7,16 +7,16 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://schema.org/citation">
+    <rdfs:label>citation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.</rdfs:comment>
     <vann:example>
     :paper-a a fabio:JournalArticle ;
         schema:citation :paper-b .
     </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
-    <rdfs:label>citation</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <skos:note xml:lang="en">This property is defined in [schema.org](https://schema.org/) and has been added here to align schema.org with CiTO. The object property `schema:citation` expresses similar semantics to `cito:cites` except for the explicit definition of domain and range classes, that are `schema:CreativeWork` according to schema.org. For that reason, it is here defined as a subproperty of `cito:cites`.</skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
-    <rdfs:comment xml:lang="en">A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.</rdfs:comment>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
 </rdf:RDF>
