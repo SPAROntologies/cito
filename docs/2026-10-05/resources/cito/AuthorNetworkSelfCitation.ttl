@@ -1,0 +1,28 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cito:AuthorNetworkSelfCitation a owl:Class ;
+    rdfs:label "author network self citation"@en ;
+    vann:example """
+    :my-citation a cito:AuthorNetworkSelfCitation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCoAuthorshipCitationLevel "2"^^xsd:positiveInteger ;
+        cito:hasCitedEntity :paper-b .
+    """ ;
+    rdfs:comment "A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:positiveInteger ;
+            owl:onProperty cito:hasCoAuthorshipCitationLevel ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        cito:SelfCitation ;
+    vs:term_status reg:statusStable ;
+    skos:note "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en .
+

@@ -1,0 +1,20 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:parodies a owl:ObjectProperty ;
+    rdfs:label "parodies"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:parodies :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the citing entity imitates the characteristic style or content of the cited entity for comic effect, usually without explicit citation."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:cites ;
+    vs:term_status reg:statusStable ;
+    skos:note "Example: We act as giants on the shoulders of dwarfs [X]!"@en .
+

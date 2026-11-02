@@ -1,0 +1,20 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:reviews a owl:ObjectProperty ;
+    rdfs:label "reviews"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:reviews :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the citing entity reviews statements, ideas or conclusions presented in the cited entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:cites ;
+    vs:term_status reg:statusStable ;
+    skos:note "Example: This paper discusses Toulmin's methodology in modelling argumentation [X], focussing on highlighting advantages and drawbacks of the application of such a methodology in the Social Web."@en .
+

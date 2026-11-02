@@ -1,0 +1,19 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:providesDataFor a owl:ObjectProperty ;
+    rdfs:label "provides data for"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:providesDataFor :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the cited entity presents data that are used in work described in the citing entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:isCitedBy ;
+    owl:inverseOf cito:usesDataFrom ;
+    vs:term_status reg:statusStable .
+

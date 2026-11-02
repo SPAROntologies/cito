@@ -1,0 +1,19 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:sharesAuthorWith a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "shares author with"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:sharesAuthorWith :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which each entity has at least one author in common with the other entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    vs:term_status reg:statusStable .
+

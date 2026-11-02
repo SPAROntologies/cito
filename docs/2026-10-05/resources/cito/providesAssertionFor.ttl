@@ -1,0 +1,18 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:providesAssertionFor a owl:ObjectProperty ;
+    rdfs:label "provides assertion for"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:providesAssertionFor :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the cited entity contains and is the original source of a statement of fact or a logical assertion (or a collection of such facts and/or assertions) that is to be found in the citing entity. This inverse object property is designed to be used to relate a cited entity to a separate abstract, summary or nanopublication based upon it."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:isCitedBy ;
+    vs:term_status reg:statusStable .
+

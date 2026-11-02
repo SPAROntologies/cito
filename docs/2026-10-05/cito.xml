@@ -1,0 +1,1930 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:bibo="http://purl.org/ontology/bibo/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:schema1="http://schema.org/"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCitedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedAsRelatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited as related by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsRelatedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited as being related to the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/DistantCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">distant citation</rdfs:label>
+    <vann:example>
+    :my-citation a cito:DistantCitation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A citation in which the citing and the cited entities have nothing significant in common with one another (for example authors, journal, institutional affiliation, or funding agency) over and beyond their subject matter.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/Citation"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339).</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedAsPotentialSolutionBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited as potential solution by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsPotentialSolutionBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited as providing or containing a possible solution to the issues being discussed in the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isSupportedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is supported by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isSupportedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity receives intellectual or factual support from the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/supports"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isRetractedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is retracted by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isRetractedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is formally retracted by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/retracts"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/FunderSelfCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">funder self citation</rdfs:label>
+    <vann:example>
+    # The following cito:FunderSelfCitation resource
+
+    :my-citation a cito:FunderSelfCitation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+
+    # can be alternatively described as follows
+
+    :paper-a cito:extends :paper-b .
+    :paper-a cito:sharesFundingAgencyWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">
+A citation in which the works reported in the citing and the cited entities were funded by the same funding agency.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Like the ancestor class `cito:Citation`, `cito:FunderSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesFundingAgencyWith` for linking the citing paper and the cited paper.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/disputes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">disputes</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:disputes :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity disputes statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isDisputedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We doubt that Galileo is right when he writes [X] that the Earth moves.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/discusses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">discusses</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:discusses :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity discusses statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isDiscussedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We now examine if Galileo is right when he writes [X] that the Earth moves.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/sharesFundingAgencyWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:label xml:lang="en">shares funding agency with</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:sharesFundingAgencyWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which two entities result from activities that have been funded by the same funding agency.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesAsSourceDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites as source document</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:citesAsSourceDocument :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity cites the cited entity as being the entity from which the citing entity is derived, or about which the citing entity contains metadata.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedAsSourceDocumentBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Several sections of this work are based on our literature review of the topic published as journal article [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isDescribedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is described by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isDescribedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is described by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="en">Citation Typing Ontology (CiTO)</rdfs:label>
+    <dc:contributor>Paolo Ciccarese (https://orcid.org/0000-0002-5156-2703)</dc:contributor>
+    <dc:contributor>Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)</dc:contributor>
+    <dc:contributor>Tim Clark (https://orcid.org/0000-0003-4060-7360)</dc:contributor>
+    <dc:creator>David Shotton (http://orcid.org/0000-0001-5506-523X)</dc:creator>
+    <dc:creator>Silvio Peroni (http://orcid.org/0000-0003-0530-4305)</dc:creator>
+    <dc:date>2026-10-05</dc:date>
+    <dc:title xml:lang="en">The Citation Typing Ontology (CiTO)</dc:title>
+    <dcterms:bibliographicCitation xml:lang="en">Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: https://doi.org/10.2139/ssrn.3198992</dcterms:bibliographicCitation>
+    <dcterms:created>2017-10-30</dcterms:created>
+    <dcterms:description>
+The **_Citation Typing Ontology (CiTO)_** is an ontology written in OWL 2 DL to enable characterization of the nature or type of citations, both factually and rhetorically, and to permit these descriptions to be published on the Web.
+It makes it possible for authors (or others) to mark citation links and to capture their citation intent (e.g., `cito:extends`, `cito:usesMethodIn`, `cito:supports`) when someone cites a particular publication. 
+In particular, CiTO allows one to create metadata describing citations that are distinct from metadata describing the cited works themselves, and permits the motives of an author when referring to another document to be captured.
+
+CiTO contains just two main object properties, `cito:cites` and its inverse `cito:isCitedBy`, each of which has forty-one sub-properties, plus four additional generic object properties – i.e. `cito:shareAuthorWith`, `cito:sharesAuthorInstitutionWith`, `cito:sharesFundingAgencyWith` and `cito:likes` – that may be used even outside a citation. 
+Note that all the domain and range constraints from these properties are not defined, so that this ontology could be easily integrated with other models, e.g., [FaBiO](http://purl.org/spar/fabio).
+
+CiTO makes available a mechanism that permits the citation itself to be reified, so that it can become the subject or object of other RDF statements. 
+In particular, the reifying class is `cito:Citation`, and its accompanying object properties, i.e., `cito:hasCitingEntity`, `cito:hasCitationCharacterization` and `cito:hasCitedEntity`, can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties.
+
+![The architecture of the citation reification mechanism in CiTO.](cito.png)
+
+## Examples of use
+
+In the following subsections, we introduce some examples to showcase how to use CiTO. 
+
+The prefixes that are used in all the examples provided below are defined as follows:
+
+    @prefix : &lt;http://www.sparontologies.net/example/&gt; .
+    @prefix c4o: &lt;http://purl.org/spar/c4o/&gt; .
+    @prefix cito: &lt;http://purl.org/spar/cito&gt; .
+    @prefix cnt: &lt;http://www.w3.org/2011/content#&gt; .
+    @prefix oa: &lt;http://www.w3.org/ns/oa#&gt; .
+    @prefix per: &lt;http://data.semanticweb.org/person/&gt; .
+
+### Defining citation links and their functions
+
+CiTO allows one to link two papers – or, more generally, two generic resources – where one (i.e., the citing paper) cites another one (i.e., the cited paper) according to a particular citation function (e.g., `cito:extends`, `cito:usesMethodIn`, `cito:supports`).
+
+CiTO makes available two different approaches for creating such links. 
+In the direct approach, we can use any of the CiTO properties as predicate of statements for defining citations. 
+In the reified approach, we can define the citation as a proper individual of the class `cito:Citation`, in order to use it as subject/object of other statements.
+
+    # Direct form for a citation
+    :paper-a cito:extends :paper-b .
+
+    # Reified form for a citation sharing the same
+    # citation function of the above one
+    :citation a cito:Citation ;
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+
+### Annotating a citation with an additional text-defined citation function
+
+Despite the extensive list of CiTO properties, there could be situations in which the purpose of making a citation cannot be adequately expressed using these CiTO properties. 
+It is now possible to use the [Open Annotation Data Model](http://www.openannotation.org/spec/core/) to define the reason for, or the nature of, the citation.
+
+In the [Open Annotation Data Model Ontology](http://www.w3.org/ns/oa), an annotation is described as a member of the class `oa:Annotation`, which has a body containing the annotation itself defined by `oa:hasBody`, and an annotation target (the thing to which the annotation relates) defined by `oa:hasTarget`.
+
+In order to express a more precise justification of a citation, the target of the annotation should be an individual of the class `cito:Citation`, while the body, i.e. the textual content of the annotation itself, is described using the [W3C Content Vocabulary](http://www.w3.org/TR/Content-in-RDF10/) as an individual of the class `cnt:ContentAsText`, which the property `cnt:chars` relates to the text string actually providing the annotation. 
+In addition, an OA annotation can be further characterized by the motivation for making such annotation, defined by `oa:motivatedBy`. 
+In this case, the appropriate motivation is `oa:commenting`, an instance of the class `oa:Motivation`.
+
+The whole example has been extracted from the blog post 'Extending CiTO to enable use of the Open Annotation Data Model to describe citations'.
+
+    :annotation a oa:Annotation;
+        oa:motivatedBy oa:commenting ;
+        oa:hasBody :comment ;
+        oa:hasTarget :citation .
+
+    :comment a cnt:ContentAsText ;
+        cnt:chars 'I'm citing that paper because it
+            initiated this whole new field of research.' .
+
+    :citation a cito:Citation;
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:cites ;
+        cito:hasCitedEntity :paper-b .
+
+### Annotating an in-text reference pointer with a citation function
+
+Several citations to the same article could exist in the same text, and such citations could express different functions depending on the author's view. 
+Usually, in a scientific paper, each of these citations is actually described by means of an in-text reference pointers, i.e., a textual device (e.g., '[6]') denoting a single bibliographic reference (referring to the cited paper) that is embedded in the text of a document within the context of a particular sentence. 
+One of the SPAR Ontologies, i.e., [C4O](https://www.sparontologies.net/ontologies/c4o), defines the entities for describing in-text reference pointers (individuals of the class `c4o:InTextReferencePointer`) and to link them to the related bibliographic references included in the paper.
+
+The [Open Annotation Data Model Ontology](http://www.w3.org/ns/oa) can be used to annotate each in-text reference pointer of a paper with the particular citation it conveys. 
+In particular, we can create an annotation (i.e., an individual of the class `oa:Annotation`) with a body (object property `oa:hasBody`) containing a specific citation among the citing paper and the cited paper, and with the in-text reference pointer as target (object property `oa:hasTarget`) of the annotation. 
+In addition, it is also possible to specify (through the object property `oa:annotatedBy`) the agent who created such annotation – who can be the author of the paper containing the in-text reference pointer, a reader or a software agent.
+
+    :annotation a oa:Annotation ;
+        oa:hasBody :citation ;
+        oa:hasTarget :in-text-ref-pointer ;
+        oa:annotatedBy per:silvio-peroni .
+
+    :citation a cito:Citation;
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+
+    :in-text-ref-pointer a c4o:InTextReferencePointer ;
+        c4o:hasContent '[6]' .
+
+## Competency Questions
+
+CiTO can be used for answering several questions related to citations, their intent and their overall context.
+
+In the following subsections, some of them are introduced together with their respective SPARQL queries. 
+
+The prefixes that are used in all the SPARQL queries provided below are defined as follows:
+
+    PREFIX : &lt;http://www.sparontologies.net/example/&gt;
+    PREFIX c4o: &lt;http://purl.org/spar/c4o/&gt;
+    PREFIX cito: &lt;http://purl.org/spar/cito&gt;
+    PREFIX cnt: &lt;http://www.w3.org/2011/content#&gt;
+    PREFIX oa: &lt;http://www.w3.org/ns/oa#&gt;
+    PREFIX per: &lt;http://data.semanticweb.org/person/&gt;
+
+### CQ1
+
+Which papers directly extend other papers?
+
+    SELECT ?citingPaper ?citedPaper
+    WHERE {
+        ?citingPaper cito:extends ?citedPaper .
+    }
+
+### CQ2
+
+What are the reified citations originated by a specific paper, and what are their citation functions?
+
+    SELECT ?citation ?citedPaper ?characterization
+    WHERE {
+        ?citation a cito:Citation ;
+            cito:hasCitingEntity :paper-a ;
+            cito:hasCitedEntity ?citedPaper ;
+            cito:hasCitationCharacterization ?characterization .
+    }
+
+### CQ3
+
+What is the text of the motivational comment associated with a citation?
+
+    SELECT ?citation ?commentText
+    WHERE {
+        ?annotation a oa:Annotation ;
+            oa:motivatedBy oa:commenting ;
+            oa:hasTarget ?citation ;
+            oa:hasBody ?comment .
+        
+        ?comment a cnt:ContentAsText ;
+            cnt:chars ?commentText .
+    }
+
+### CQ4
+
+Which in-text reference pointers have been annotated by a specific agent?
+
+    SELECT ?pointer ?textValue
+    WHERE {
+        ?annotation a oa:Annotation ;
+            oa:annotatedBy per:silvio-peroni ;
+            oa:hasTarget ?pointer .
+        
+        ?pointer a c4o:InTextReferencePointer ;
+            c4o:hasContent ?textValue .
+    }
+
+### CQ5
+
+Which citations are linked to an in-text reference pointer, and what are the papers involved?
+
+    SELECT ?pointer ?citation ?citingPaper ?citedPaper
+    WHERE {
+        ?annotation a oa:Annotation ;
+            oa:hasTarget ?pointer ;
+            oa:hasBody ?citation .
+        
+        ?pointer a c4o:InTextReferencePointer .
+        
+        ?citation a cito:Citation ;
+            cito:hasCitingEntity ?citingPaper ;
+            cito:hasCitedEntity ?citedPaper .
+    }
+
+    </dcterms:description>
+    <dcterms:issued>2017-10-30</dcterms:issued>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/legalcode"/>
+    <dcterms:modified>2026-10-05</dcterms:modified>
+    <dcterms:publisher rdf:resource="https://ror.org/00wb4mk85"/>
+    <dcterms:source rdf:resource="https://github.com/SPAROntologies/cito/blob/master/docs/cq.md"/>
+    <bibo:doi>https://doi.org/10.25504/FAIRsharing.b220d4</bibo:doi>
+    <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
+    <vann:preferredNamespacePrefix>cito</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/spar/cito/</vann:preferredNamespaceUri>
+    <schema1:codeRepository rdf:resource="https://github.com/SPAROntologies/cito"/>
+    <schema1:image rdf:resource="https://github.com/SPAROntologies/cito/blob/master/docs/current/cito.png"/>
+    <schema1:includedInDataCatalog rdf:resource="https://fairsharing.org/"/>
+    <dc:language rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+    <schema1:keywords xml:lang="en">SPAR Ontologies</schema1:keywords>
+    <schema1:keywords xml:lang="en">Semantic Publishing and Referencing Ontologies</schema1:keywords>
+    <schema1:keywords xml:lang="en">bibliometrics</schema1:keywords>
+    <schema1:keywords xml:lang="en">citation networks</schema1:keywords>
+    <schema1:keywords xml:lang="en">scholarly publishing</schema1:keywords>
+    <schema1:keywords xml:lang="en">scientometrics</schema1:keywords>
+    <schema1:keywords xml:lang="en">semantic publishing</schema1:keywords>
+    <rdfs:seeAlso rdf:resource="http://www.sparontologies.net/ontologies/cito"/>
+    <owl:backwardCompatibleWith rdf:resource="http://purl.org/spar/cito/2026-09-03"/>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+    <owl:priorVersion rdf:resource="http://purl.org/spar/cito/2026-09-03"/>
+    <owl:versionIRI rdf:resource="http://purl.org/spar/cito/2026-10-05"/>
+    <owl:versionInfo>2.9.1</owl:versionInfo>
+    <vann:changes rdf:resource="https://github.com/SPAROntologies/cito/blob/master/CHANGELOG.md"/>
+    <foaf:logo rdf:resource="https://github.com/SPAROntologies/sparontologies.github.io/blob/master/static/img/spar/spar-logo.png"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesAsAuthority">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites as authority</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:citesAsAuthority :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity cites the cited entity as one that provides an authoritative description or definition of the subject under discussion.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedAsAuthorityBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Newton asserted that we are like dwarfs standing on the shoulders of giants [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/hasCitationTimeSpan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has citation time span</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:hasCitationTimeSpan 'P1Y'^^xsd:duration .
+    </vann:example>
+    <rdfs:comment xml:lang="en">The temporal characteristic of a citation, namely the interval between the publication date of the cited entity and the publication date of the citing entity. Note that when one or both of the publication dates is given as just 'year', then the citation time span is rounded to the nearest year, and when one or both of the publication dates is given as just 'year and month', then the citation time span is rounded to the nearest month, with the inherent inaccuracies that such rounding involves.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/cito/Citation"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesAsMetadataDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites as metadata document</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:citesAsMetadataDocument :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity cites the cited entity as being the container of metadata describing the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedAsMetadataDocumentBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Basic bibliographic, entity and project metadata relating to this article, recorded in a structured machine-readable form, is available as an additional file [X] accompanying this paper.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/hasCitationCreationDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has citation creation date</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:hasCitationCreationDate '2025-06-16'^^xsd:date .
+    </vann:example>
+    <rdfs:comment xml:lang="en">The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself. When combined with the citation time span, it permits that citation to be located in history.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/JournalSelfCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">journal self citation</rdfs:label>
+    <vann:example>
+    # The following cito:AffiliationSelfCitation resource
+
+    :my-citation a cito:AffiliationSelfCitation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+
+    # can be alternatively described as follows
+
+    :paper-a cito:extends :paper-b .
+    :paper-a cito:sharesAuthorInstitutionWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">
+A citation in which the citing and the cited entities are published in the same journal.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+Like the ancestor class `cito:Citation`, `cito:JournalSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesJournalWith` for linking the citing paper and the cited paper.
+
+Derived from the blog post "Journal self-citations are increasingly biased toward impact factor years" by Ludo Waltman and Caspar Chorus (https://www.cwts.nl/blog?article=n-q2x264).
+    </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#note">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/retracts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">retracts</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:retracts :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity constitutes a formal retraction of the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We wrote that the Earth moves in [X]; we now retire such statement.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitationCharacterizationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is citation characterization of</rdfs:label>
+    <vann:example>
+    cito:extends 
+        cito:isCitationCharacterizationOf :my-citation .
+
+    :my-citation a cito:Citation .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation between the characterization of a citation, made by using a CiTO citation characterization property, and that citation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/hasCitationCharacterization"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isPlagiarizedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is plagiarized by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isPlagiarizedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is plagiarized by the author of the citing entity, who includes within the citing entity textual or other elements from the cited entity without formal acknowledgement of their source. The cited entity is thus not explicitly cited from within the citing entity, according to the norms of scholarly practice, but is cited implicitly.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/plagiarizes"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedAsMetadataDocumentBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited as metadata document by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsMetadataDocumentBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited as being the container of metadata relating to the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCreditedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is credited by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCreditedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity makes contributions that are acknowledged by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/hasCitedEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has cited entity</rdfs:label>
+    <vann:example>
+    :my-citation a cito:Citation ;
+        cito:hasCitedEntity :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation between a citation and the cited entity.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/cito/Citation"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/agreesWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">agrees with</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:agreesWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity agrees with statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isAgreedWithBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We share Galileo's opinion: the Earth moves [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/containsAssertionFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">contains assertion from</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:containsAssertionFrom :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity contains a statement of fact or a logical assertion (or a collection of such facts and/or assertions) originally present in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/providesAssertionFor"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+Example: We think that to stand on the top of giants [X] is a valuable principle to follow for our own research.
+
+This object property is designed to be used to relate a separate abstract, summary or nanopublication to the cited entity upon which it is based.
+    </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedAsEvidenceBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited as evidence by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsEvidenceBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited for providing factual evidence to the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isQualifiedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is qualified by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isQualifiedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents statements, ideas or conclusions that are qualified or have conditions placed upon them by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/qualifies"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/AuthorNetworkSelfCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">author network self citation</rdfs:label>
+    <vann:example>
+    :my-citation a cito:AuthorNetworkSelfCitation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCoAuthorshipCitationLevel "2"^^xsd:positiveInteger ;
+        cito:hasCitedEntity :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subClassOf rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b1"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339).</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/refutes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">refutes</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:refutes :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity refutes statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We do not think that all their arguments in favour of their own and against the other strategies are equally convincing [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/credits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">credits</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:credits :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity acknowledges contributions made by the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCreditedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Galileo was the first to observe Jupiter's satellites [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/usesMethodIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">uses method in</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:usesMethodIn :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity describes work that uses a method detailed in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We follow [X] in using design patterns for testing.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/critiques">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">critiques</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:critiques :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity critiques statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCritiquedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: The ideas presented in [X] are badly substantantiated.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/sharesPublicationVenueWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">shares publication venue with</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:sharesPublicationVenueWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing and cited bibliographic resources are published in same publication venue.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isDisputedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is disputed by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isDisputedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents statements, ideas or conclusions that are disputed by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/obtainsSupportFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">obtains support from</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:obtainsSupportFrom :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity obtains intellectual or factual support from the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Our ideas were also shared by Doe et al. [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/corrects">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">corrects</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:corrects :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity corrects statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCorrectedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: The result published in [X] is partially wrong, the correct result is 42.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/providesConclusionsFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">provides conclusions for</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:providesConclusionsFor :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents conclusions that are used in work described in the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/usesConclusionsFrom"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isDocumentedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is documented by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isDocumentedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">Information about the cited entity is documented by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/obtainsBackgroundFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">obtains background from</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:obtainsBackgroundFrom :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity obtains background information from the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: There is a need for more observational studies and studies using narrative causation to describe the potential contribution of information in problem-solving and decision-making [X]; our work addresses these needs.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/derides">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">derides</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:derides :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity express derision for the cited entity, or for ideas or conclusions contained within it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isDeridedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: The ideas published in [X] are incredibly stupid.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/compiles">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">compiles</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:compiles :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity is used to create or compile the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCompiledBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+Example: This book gathers interviews with academic researchers of several disciplines [X].
+
+Note: This property has been imported from the CiTO4Data ontology, usage of which has been deprecated.
+    </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedAsAuthorityBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited as authority by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsAuthorityBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited as providing an authoritative description or definition of the subject under discussion in the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/usesConclusionsFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">uses conclusions from</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:usesConclusionsFrom :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity describes work that uses conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Building upon Galileo's findings [X], we discovered that all the planets move.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesAsRelated">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites as related</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:citesAsRelated :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity cites the cited entity as one that is related.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedAsRelatedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: An analysis similar to what we proposed here is presented in [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">situation</rdfs:label>
+    <rdfs:comment xml:lang="en">A view on a set of entities. It can be seen as a 'relational context', reifying a relation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/providesExcerptFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">provides excerpt for</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:providesExcerptFor :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity contains information, usually of a textual nature, that is excerpted by (used as an excerpt within) the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/qualifies">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">qualifies</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:qualifies :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity qualifies or places conditions or restrictions upon statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Galileo's masterpiece 'Dialogo sopra i due massimi sistemi del mondo' [X] is formally a dialog and substantially a scientific pamphlet.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/likes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">likes</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:likes :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity shows appreciation of or interest in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+This property enables social media "likes" statements to be encoded in RDF. 
+Use of this property does NOT imply the existence of a formal citation of the entity that is "liked".
+    </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/hasCitationCharacterization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has citation characterization</rdfs:label>
+    <vann:example>
+    :my-citation a cito:Citation ;
+        cito:hasCitationCharacterization cito:extends .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation between a citation and its characterization, made by using a CiTO citation characterization property.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/cito/Citation"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+This usage involved [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), whereby a CiTO object property, such as the aforementioned `cito:extends`, is used as the object of an OWL assertion.
+
+In such cases of OWL punning, the CiTO object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class `owl:Thing`.
+    </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/supports">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">supports</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:supports :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity provides intellectual or factual support for statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We support Galileo's statement [X], that Earth moves.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesForInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites for information</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:citesForInformation :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity cites the cited entity as a source of information on the subject under discussion.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedForInformationBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: The grammar of Pascal was introduced in [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isParodiedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is parodied by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isParodiedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">The characteristic style or content of the cited entity is imitated by the citing entity for comic effect, usually without explicit citation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/parodies"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/confirms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">confirms</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:confirms :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity confirms facts, ideas or statements presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isConfirmedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Our findings are similar to those published in [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/AuthorSelfCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">author self citation</rdfs:label>
+    <vann:example>
+    # The following cito:AuthorSelfCitation resource
+
+    :my-citation a cito:AuthorSelfCitation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+
+    # can be alternatively described as follows
+
+    :paper-a cito:extends :paper-b .
+    :paper-a cito:sharesAuthorWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A citation in which the citing and the cited entities have at least one author in common.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Like the ancestor class `cito:Citation`, `cito:AuthorSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesAuthorWith` for linking the citing paper and the cited paper.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/providesDataFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">provides data for</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:providesDataFor :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents data that are used in work described in the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/usesDataFrom"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/providesQuotationFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">provides quotation for</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:providesQuotationFor :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity contains information, usually of a textual nature, that is quoted by (used as a quotation within) the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/reviews">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">reviews</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:reviews :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity reviews statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: This paper discusses Toulmin's methodology in modelling argumentation [X], focussing on highlighting advantages and drawbacks of the application of such a methodology in the Social Web.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isAgreedWithBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is agreed with by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isAgreedWithBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity contains statements, ideas or conclusions with which the citing entity agrees.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isDeridedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is derided by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isDeridedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity contains ideas or conclusions for which the citing entity express derision.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesAsEvidence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites as evidence</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:citesAsEvidence :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity cites the cited entity as source of factual evidence for statements it contains.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedAsEvidenceBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We found an unquestionable demonstration of our hypothesis in [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isLinkedToBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is linked to by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isLinkedToBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is the target for an HTTP Uniform Resource Locator (URL) link within the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/linksTo"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isDiscussedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is discussed by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isDiscussedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents statements, ideas or conclusions that are discussed by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/givesBackgroundTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">gives background to</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:givesBackgroundTo :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity provides background information for the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/obtainsBackgroundFrom"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/bibo/doi">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/givesSupportTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">gives support to</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:givesSupportTo :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity provides intellectual or factual support for the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/obtainsSupportFrom"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesAsDataSource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites as data source</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:citesAsDataSource :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity cites the cited entity as source of data.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedAsDataSourceBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Italy has more than ten thousand kilometers of shoreline: see [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/disagreesWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">disagrees with</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:disagreesWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity disagrees with statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isDisagreedWithBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We do not share Galileo's opinion [X]: the Earth does not move.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isSpeculatedOnBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is speculated on by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isSpeculatedOnBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited because the citing article contains speculations on its content or ideas.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/speculatesOn"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/usesDataFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">uses data from</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:usesDataFrom :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity describes work that uses data presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Using the information collected from our recent study [X], we can estimate that there are tens of millions of HTML forms with potentially useful deep-web content.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCompiledBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is compiled by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCompiledBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is the result of a compile or creation event using the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Note: This property has been imported from the CiTO4Data ontology, usage of which has been deprecated.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/hasCoAuthorshipCitationLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">has co-authorship citation level</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:hasCoAuthorshipCitationLevel '2'^^xsd:positiveInteger .
+    </vann:example>
+    <rdfs:comment xml:lang="en">
+The minimal distance that one of the authors of the citing entity has with regards to one of the authors of the cited entity, according to their co-authorship network.
+    </rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/cito/AuthorNetworkSelfCitation"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+For instance, a citation has a co-authorship citation level equal to 1 if at least one author of the citing entity has previously published as co-author with one of the authors of the cited entity. Similarly, we say that a citation has a co-authorship citation level equal to 2 if at least one author of the citing entity has previously published as co-author with someone who him/herself has previously published as co-author with one of the authors of the cited entity. And so on.
+    </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/JournalCartelCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">journal cartel citation</rdfs:label>
+    <vann:example>
+    :my-citation a cito:JournalCartelCitation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A citation from one journal to another journal which forms one of a very large number of citations from the citing journal to recent articles in the cited journal, possibly undertaken as part of a citation cartel for the purpose of gaming the impact factor of the cited journal.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/Citation"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Derived from the blog post 'What do we know about journal citation cartels? A call for information' by Philippe Mongeon, Ludo Waltman and Sarah de Rijcke (https://www.cwts.nl/blog?article=n-q2w2b4).</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCoAuthorshipCitationLevel"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitingEntityOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is citing entity of</rdfs:label>
+    <vann:example>
+    :paper-a
+        cito:isCitingEntityOf :my-citation .
+
+    :my-citation a cito:Citation .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation between a citing entity and a citation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/hasCitingEntity"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/hasReplyFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has reply from</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:hasReplyFrom :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity evokes a reply from the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/repliesTo"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/describes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">describes</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:describes :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity describes the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isDescribedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Galileo's book [X] is a dialog among three scientists about Copernicus' eliocentric theory.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/sharesAuthorInstitutionWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:label xml:lang="en">shares author institution with</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:sharesAuthorInstitutionWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which each entity has at least one author that shares a common institutional affiliation with an author of the other entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/sharesAuthorWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:label xml:lang="en">shares author with</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:sharesAuthorWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which each entity has at least one author in common with the other entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/includesQuotationFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">includes quotation from</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:includesQuotationFrom :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity includes one or more quotations from the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/providesQuotationFor"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+A quotation is a repetition of what someone has said, and is presented 'within quotation marks', for example:
+
+    On June 4th 1940, Winston Churchill made a speech on the radio that has since become famous, that included the words: ' ... we shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender ...'
+    </skos:note>
+    <skos:note xml:lang="en">Example: As Newton wrote in [X]: 'We are like dwarfs standing on the shoulders of giants'.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/Citation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">citation</rdfs:label>
+    <vann:example>
+    # The following RDF statement
+
+    :paper-a cito:extends :paper-b .
+
+    # can be alternatively described as follows
+
+    :my-citation a cito:Citation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">
+A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (`biro:BibliographicReference`) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <owl:equivalentClass rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b2"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+The time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property `cito:hasCitationTimeSpan`.
+
+The nature or type of a citation can be characterized by using CiTO object properties, e.g. http://purl.org/spar/cito/citesAsDataSource (definition: 'The citing entity cites the cited entity as a source of data'). 
+
+This CiTO class `cito:Citation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties. 
+
+This usage involved [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), whereby a CiTO object property, such as the aforementioned `cito:extends`, is used as the object of the OWL assertion.
+
+Using punning, the CiTO object property is considered as a proper named individual of the class `owl:Thing`. 
+
+Such reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable. 
+
+Such situations can be resolved by the creation of a user-defined citation characterization, for example by using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/), as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/.
+    </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/parodies">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">parodies</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:parodies :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity imitates the characteristic style or content of the cited entity for comic effect, usually without explicit citation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We act as giants on the shoulders of dwarfs [X]!</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/includesExcerptFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">includes excerpt from</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:includesExcerptFrom :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity includes one or more excerpts from the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/providesExcerptFor"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+An excerpt is more general than a quotation. 
+It is generally used to indicate a re-published extract from a book, instruction manual, film, radio programme, etc, that need not be what someone said.  
+For example:
+
+    Oxford 01865
+    Oxshott 01372
+    Oxted 01883
+    Oxton 01578
+
+is an excerpt from the UK Dialling Codes section of the Oxford Telephone Directory.
+
+Example: In her work, the author states that even though most Human Information Behaviour researchers are familiar with the literature related to their studies, it is not uncommon for investigators to fail to see the benefits they may gain from previous mistakes [X]
+    </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCitationCharacterization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/extends">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">extends</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:extends :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity extends facts, ideas or understandings presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isExtendedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We add to Galileo's findings concerning the Earth [X] that also the Moon moves.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedAsSourceDocumentBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited as source document by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsSourceDocumentBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited as being the entity from which the citing entity is derived, or about which the citing entity contains metadata.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/updates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">updates</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:updates :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity updates statements, ideas, hypotheses or understanding presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Earth moves, said Galileo [X]; in addition, we can say now it moves very fast.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/citation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>citation</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        schema:citation :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">This property is defined in [schema.org](https://schema.org/) and has been added here to align schema.org with CiTO. The object property `schema:citation` expresses similar semantics to `cito:cites` except for the explicit definition of domain and range classes, that are `schema:CreativeWork` according to schema.org. For that reason, it is here defined as a subproperty of `cito:cites`.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/providesMethodFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">provides method for</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:providesMethodFor :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity details a method that is used in work described by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/usesMethodIn"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isConfirmedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is confirmed by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isConfirmedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents facts, ideas or statements that are confirmed by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isExtendedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is extended by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isExtendedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents facts, ideas or understandings that are extended by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCritiquedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is critiqued by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCritiquedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents statements, ideas or conclusions that are critiqued by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/plagiarizes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">plagiarizes</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:plagiarizes :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A property indicating that the author of the citing entity plagiarizes the cited entity, by including textual or other elements from the cited entity without formal acknowledgement of their source.  The citing entity thus contains no explicit citation of the cited entity, according to the norms of scholarly practice, but cites it implicitly.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: The conclusion of our dissertation can be summarised by the following motto, we created specifically for this purpose: we are like dwarfs standing on the shoulders of giants.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/cites">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:cites :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which a citing entity cites a cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isReviewedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is reviewed by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isReviewedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents statements, ideas or conclusions that are reviewed by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/reviews"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isRidiculedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is ridiculed by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isRidiculedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity or aspects of its contents are ridiculed by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/ridicules"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/providesAssertionFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">provides assertion for</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:providesAssertionFor :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity contains and is the original source of a statement of fact or a logical assertion (or a collection of such facts and/or assertions) that is to be found in the citing entity. This inverse object property is designed to be used to relate a cited entity to a separate abstract, summary or nanopublication based upon it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b6">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+    <rdf:rest rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCorrectedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is corrected by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCorrectedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents statements, ideas or conclusions that are corrected by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/AffiliationSelfCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">affiliation self citation</rdfs:label>
+    <vann:example>
+    # The following cito:AffiliationSelfCitation resource
+
+    :my-citation a cito:AffiliationSelfCitation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+
+    # can be alternatively described as follows
+
+    :paper-a cito:extends :paper-b .
+    :paper-a cito:sharesAuthorInstitutionWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A citation in which at least one author from each of the citing and the cited entities is affiliated with the same academic institution.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Like the ancestor class `cito:Citation`, `cito:AffiliationSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesAuthorInstitutionWith` for linking the citing paper and the cited paper.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isRefutedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is refuted by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isRefutedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents statements, ideas or conclusions that are refuted by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/refutes"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isUpdatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is updated by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isUpdatedBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents statements, ideas, hypotheses or understanding that are updated by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/updates"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/linksTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">links to</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:linksTo :paper-b .  
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity provides a link, in the form of an HTTP Uniform Resource Locator (URL), to the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: The BioSharing registry (https://biosharing.org) can be of use as it describes the standards in detail, including versions where applicable.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedEntityOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited entity of</rdfs:label>
+    <vann:example>
+    :paper-b
+        cito:isCitedEntityOf :my-citation .
+
+    :my-citation a cito:Citation .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation between a cited entity and a citation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/hasCitedEntity"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesAsPotentialSolution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites as potential solution</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:citesAsPotentialSolution :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity cites the cited entity as providing or containing a possible solution to the issues being discussed.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedAsPotentialSolutionBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: This risk could be avoided using the approach shown in [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/hasCitingEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has citing entity</rdfs:label>
+    <vann:example>
+    :my-citation a cito:Citation ;
+        cito:hasCitingEntity :paper-a .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation between a citation and the citing entity.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/cito/Citation"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedForInformationBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited for information by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedForInformationBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited as a source of information on the subject under discussion in the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/includedInDataCatalog">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/speculatesOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">speculates on</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:speculatesOn :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity speculates on something within or related to the cited entity, without firm evidence.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We believe that if Galileo believed that Earth goes around the Sun [X], he also should believe that Moon goes around Earth.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/documents">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">documents</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:documents :paper-b .
+    </vann:example>
+    <rdfs:comment>A relation according to which the citing entity documents information about the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isDocumentedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Herein we report in detail the complete set of ontological rules defined in the Overlapping Ontology [X].</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCitingEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/SelfCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">self citation</rdfs:label>
+    <vann:example>
+    :my-citation a cito:SelfCitation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A citation in which the citing and the cited entities have something significant in common with one another, over and beyond their subject matter, for example authors, journal, institutional affiliation, or funding agency.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/Citation"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedAsDataSourceBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited as data source by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsDataSourceBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited as a data source by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isDisagreedWithBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is disagreed with by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isDisagreedWithBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity presents statements, ideas or conclusions that are disagreed with by the citing entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/repliesTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">replies to</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:repliesTo :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity replies to statements, ideas or criticisms presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: We will not investigate the issues of the approach proposed in [X] here, but rather we introduce yet another alternative.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/isCitedAsRecommendedReadingBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is cited as recommended reading by</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:isCitedAsRecommendedReadingBy :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the cited entity is cited by the citing entity as an item of recommended reading.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture. 
+Similarly, it could be used to describe items in a 'Suggested further reading' list at the end of a book chapter.
+    </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/ridicules">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">ridicules</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:ridicules :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity ridicules the cited entity or aspects of its contents.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">Example: Galileo said that the Earth 'moves' [X]; really? And where is it going?</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/sharesJournalWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">shares journal with</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:sharesJournalWith :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing and cited bibliographic resources are published in the same journal.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/sharesPublicationVenueWith"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b9">
+    <rdf:first rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b5"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesAsRecommendedReading">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites as recommended reading</rdfs:label>
+    <vann:example>
+    :paper-a a fabio:JournalArticle ;
+        cito:citesAsRecommendedReading :paper-b .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A relation according to which the citing entity cites the cited entity as an item of recommended reading.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedAsRecommendedReadingBy"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+Example: To our knowledge, [X] is the best source of exercises about UML, making it a valuable proposal for beginners.
+
+This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture.  Similarly, it could be used to describe items in a "Suggested further reading" list at the end of a book chapter.
+    </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/abstract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#priorVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b7">
+    <rdf:first rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b3"/>
+    <rdf:rest rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#duration">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b8">
+    <rdf:first rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b4"/>
+    <rdf:rest rdf:nodeID="nf75e75c983704646b88d66dfd41d85a3b9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/example">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/codeRepository">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/logo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,20 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:linksTo a owl:ObjectProperty ;
+    rdfs:label "links to"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:linksTo :paper-b .  
+    """ ;
+    rdfs:comment "A relation according to which the citing entity provides a link, in the form of an HTTP Uniform Resource Locator (URL), to the cited entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:cites ;
+    vs:term_status reg:statusStable ;
+    skos:note "Example: The BioSharing registry (https://biosharing.org) can be of use as it describes the standards in detail, including versions where applicable."@en .
+
