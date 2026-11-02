@@ -28,10 +28,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n7a11dca0d3954cb9a83bb2e6e5d77316b1"
+        "@id": "http://purl.org/spar/cito/SelfCitation"
       },
       {
-        "@id": "http://purl.org/spar/cito/SelfCitation"
+        "@id": "_:nf75e75c983704646b88d66dfd41d85a3b1"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "@id": "_:n7a11dca0d3954cb9a83bb2e6e5d77316b1",
+    "@id": "_:nf75e75c983704646b88d66dfd41d85a3b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

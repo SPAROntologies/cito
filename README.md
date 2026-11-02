@@ -1,6 +1,12 @@
 # Citation Typing Ontology (CiTO)
 
-The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically.
+[![License](https://img.shields.io/github/license/SPAROntologies/cito)](LICENSE.md)
+[![Release](https://img.shields.io/github/v/release/SPAROntologies/cito)](https://github.com/SPAROntologies/cito/releases/latest)
+[![Tests](https://img.shields.io/github/actions/workflow/status/SPAROntologies/cito/validation.yml?label=tests)](https://github.com/SPAROntologies/cito/actions/workflows/validation.yml)
+[![Documentation](https://img.shields.io/badge/docs-sparontologies.net-blue)](http://www.sparontologies.net/ontologies/cito)
+[![IRI](https://img.shields.io/badge/IRI-purl.org%2Fspar%2Fcito-blue)](http://purl.org/spar/cito)
+
+The **_Citation Typing Ontology (CiTO)_** is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically.
 
 **URL:** http://purl.org/spar/cito
 
@@ -12,5 +18,5 @@ The Citation Typing Ontology (CiTO) is an ontology that enables characterization
 
 **Website:** http://www.sparontologies.net/ontologies/cito
 
-**Cite as:** Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-cito-ontologies.pdf
+**Cite as:** Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001.
 

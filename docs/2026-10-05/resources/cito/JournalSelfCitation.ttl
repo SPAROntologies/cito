@@ -1,0 +1,35 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:JournalSelfCitation a owl:Class ;
+    rdfs:label "journal self citation"@en ;
+    vann:example """
+    # The following cito:AffiliationSelfCitation resource
+
+    :my-citation a cito:AffiliationSelfCitation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+
+    # can be alternatively described as follows
+
+    :paper-a cito:extends :paper-b .
+    :paper-a cito:sharesAuthorInstitutionWith :paper-b .
+    """ ;
+    rdfs:comment """
+A citation in which the citing and the cited entities are published in the same journal.
+    """@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subClassOf cito:SelfCitation ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+Like the ancestor class `cito:Citation`, `cito:JournalSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesJournalWith` for linking the citing paper and the cited paper.
+
+Derived from the blog post "Journal self-citations are increasingly biased toward impact factor years" by Ludo Waltman and Caspar Chorus (https://www.cwts.nl/blog?article=n-q2x264).
+    """@en .
+

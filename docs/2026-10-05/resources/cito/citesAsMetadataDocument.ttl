@@ -1,0 +1,21 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:citesAsMetadataDocument a owl:ObjectProperty ;
+    rdfs:label "cites as metadata document"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:citesAsMetadataDocument :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the citing entity cites the cited entity as being the container of metadata describing the citing entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:cites ;
+    owl:inverseOf cito:isCitedAsMetadataDocumentBy ;
+    vs:term_status reg:statusStable ;
+    skos:note "Example: Basic bibliographic, entity and project metadata relating to this article, recorded in a structured machine-readable form, is available as an additional file [X] accompanying this paper."@en .
+

@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: The Citation Typing Ontology (CiTO)
+message: >-
+If you use this software, please cite it using the
+metadata from this file.
+type: software
+authors:
+- given-names: Silvio
+  family-names: Peroni
+  orcid: 'https://orcid.org/0000-0003-0530-4305'
+- given-names: David
+  family-names: Shotton
+  orcid: 'https://orcid.org/0000-0001-5506-523X'
+identifiers:
+- type: doi
+  value: 10.25504/FAIRsharing.b220d4
+repository-code: 'https://github.com/SPAROntologies/cito'
+url: 'http://www.sparontologies.net/ontologies/cito'
+abstract: The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically. 
+keywords:
+- citation networks
+- bibliometrics
+- scholarly publishing
+- scientometrics
+- semantic publishing
+license: CC-BY-4.0
+version: 2.9.1
+date-released: '2026-10-05'
+preferred-citation:
+    type: article
+    authors:
+    - family-names: "Peroni"
+      given-names: "Silvio"
+      orcid: "https://orcid.org/0000-0003-0530-4305"
+    - family-names: "Shotton"
+      given-names: "David"
+      orcid: "https://orcid.org/0000-0001-5506-523X"
+    doi: "10.1016/j.websem.2012.08.001"
+    journal: "Journal of Web Semantics"
+    issue: 17
+    start: 33
+    end: 43
+    title: "FaBiO and CiTO: ontologies for describing bibliographic resources and citations"
+    year: 2012
