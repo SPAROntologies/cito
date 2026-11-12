@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 title: The Citation Typing Ontology (CiTO)
 message: >-
-If you use this software, please cite it using the
-metadata from this file.
+  If you use this software, please cite it using the
+  metadata from this file.
 type: software
 authors:
 - given-names: Silvio
@@ -18,9 +18,11 @@ repository-code: 'https://github.com/SPAROntologies/cito'
 url: 'http://www.sparontologies.net/ontologies/cito'
 abstract: The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically. 
 keywords:
-- citation networks
+- SPAR Ontologies
+- OWL ontology
+- citations
 - bibliometrics
-- scholarly publishing
+- scholarly communication
 - scientometrics
 - semantic publishing
 license: CC-BY-4.0

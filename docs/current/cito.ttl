@@ -53,7 +53,7 @@ bibo:doi a owl:AnnotationProperty .
         "Tim Clark (https://orcid.org/0000-0003-4060-7360)" ;
     dc:creator "David Shotton (http://orcid.org/0000-0001-5506-523X)",
         "Silvio Peroni (http://orcid.org/0000-0003-0530-4305)" ;
-    dc:date "2026-10-05" ;
+    dc:date "2026-11-12" ;
     dc:title "The Citation Typing Ontology (CiTO)"@en ;
     dcterms:bibliographicCitation "Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: https://doi.org/10.2139/ssrn.3198992"@en ;
     dcterms:created "2017-10-30" ;
@@ -236,7 +236,7 @@ Which citations are linked to an in-text reference pointer, and what are the pap
     """ ;
     dcterms:issued "2017-10-30" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
-    dcterms:modified "2026-10-05" ;
+    dcterms:modified "2026-11-12" ;
     dcterms:publisher <https://ror.org/00wb4mk85> ;
     dcterms:source <https://github.com/SPAROntologies/cito/blob/master/docs/cq.md> ;
     bibo:doi "https://doi.org/10.25504/FAIRsharing.b220d4" ;
@@ -249,18 +249,18 @@ Which citations are linked to an in-text reference pointer, and what are the pap
     dc:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
     schema:keywords 
         "SPAR Ontologies"@en ,
-        "Semantic Publishing and Referencing Ontologies"@en ,
+        "OWL ontology"@en ,
         "bibliometrics"@en,
-        "citation networks"@en,
-        "scholarly publishing"@en,
+        "citations"@en,
+        "scholarly communication"@en,
         "scientometrics"@en,
         "semantic publishing"@en ;
     rdfs:seeAlso <http://www.sparontologies.net/ontologies/cito> ;
-    owl:backwardCompatibleWith cito:2026-09-03 ;
+    owl:backwardCompatibleWith cito:2026-10-05 ;
     owl:imports <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> ;
-    owl:priorVersion cito:2026-09-03 ;
-    owl:versionIRI cito:2026-10-05 ;
-    owl:versionInfo "2.9.1" ;
+    owl:priorVersion cito:2026-10-05 ;
+    owl:versionIRI cito:2026-11-12 ;
+    owl:versionInfo "2.9.2" ;
     vann:changes <https://github.com/SPAROntologies/cito/blob/master/CHANGELOG.md> ;
     foaf:logo <https://github.com/SPAROntologies/sparontologies.github.io/blob/master/static/img/spar/spar-logo.png> .
 
@@ -281,7 +281,7 @@ cito:AffiliationSelfCitation a owl:Class ;
     """ ;
     rdfs:comment """A citation in which at least one author from each of the citing and the cited entities is affiliated with the same academic institution.
     """@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf cito:SelfCitation ;
     vs:term_status reg:statusStable ;
     skos:note "Like the ancestor class `cito:Citation`, `cito:AffiliationSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesAuthorInstitutionWith` for linking the citing paper and the cited paper."@en .
@@ -303,7 +303,7 @@ cito:AuthorSelfCitation a owl:Class ;
     """ ;
     rdfs:comment """A citation in which the citing and the cited entities have at least one author in common.
     """@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf cito:SelfCitation ;
     vs:term_status reg:statusStable ;
     skos:note "Like the ancestor class `cito:Citation`, `cito:AuthorSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesAuthorWith` for linking the citing paper and the cited paper."@en .
@@ -317,7 +317,7 @@ cito:DistantCitation a owl:Class ;
         cito:hasCitedEntity :paper-b .
     """ ;
     rdfs:comment "A citation in which the citing and the cited entities have nothing significant in common with one another (for example authors, journal, institutional affiliation, or funding agency) over and beyond their subject matter."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf cito:Citation ;
     vs:term_status reg:statusStable ;
     skos:note "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en .
@@ -340,7 +340,7 @@ cito:FunderSelfCitation a owl:Class ;
     rdfs:comment """
 A citation in which the works reported in the citing and the cited entities were funded by the same funding agency.
     """@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf cito:SelfCitation ;
     vs:term_status reg:statusStable ;
     skos:note "Like the ancestor class `cito:Citation`, `cito:FunderSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesFundingAgencyWith` for linking the citing paper and the cited paper."@en .
@@ -354,7 +354,7 @@ cito:JournalCartelCitation a owl:Class ;
         cito:hasCitedEntity :paper-b .
     """ ;
     rdfs:comment "A citation from one journal to another journal which forms one of a very large number of citations from the citing journal to recent articles in the cited journal, possibly undertaken as part of a citation cartel for the purpose of gaming the impact factor of the cited journal."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf cito:Citation ;
     vs:term_status reg:statusStable ;
     skos:note "Derived from the blog post 'What do we know about journal citation cartels? A call for information' by Philippe Mongeon, Ludo Waltman and Sarah de Rijcke (https://www.cwts.nl/blog?article=n-q2w2b4)."@en .
@@ -377,7 +377,7 @@ cito:JournalSelfCitation a owl:Class ;
     rdfs:comment """
 A citation in which the citing and the cited entities are published in the same journal.
     """@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf cito:SelfCitation ;
     vs:term_status reg:statusStable ;
     skos:note """
@@ -393,7 +393,7 @@ cito:agreesWith a owl:ObjectProperty ;
         cito:agreesWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity agrees with statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isAgreedWithBy ;
     vs:term_status reg:statusStable ;
@@ -406,7 +406,7 @@ cito:citesAsAuthority a owl:ObjectProperty ;
         cito:citesAsAuthority :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as one that provides an authoritative description or definition of the subject under discussion."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsAuthorityBy ;
     vs:term_status reg:statusStable ;
@@ -419,7 +419,7 @@ cito:citesAsDataSource a owl:ObjectProperty ;
         cito:citesAsDataSource :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as source of data."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsDataSourceBy ;
     vs:term_status reg:statusStable ;
@@ -432,7 +432,7 @@ cito:citesAsEvidence a owl:ObjectProperty ;
         cito:citesAsEvidence :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as source of factual evidence for statements it contains."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsEvidenceBy ;
     vs:term_status reg:statusStable ;
@@ -445,7 +445,7 @@ cito:citesAsMetadataDocument a owl:ObjectProperty ;
         cito:citesAsMetadataDocument :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as being the container of metadata describing the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsMetadataDocumentBy ;
     vs:term_status reg:statusStable ;
@@ -458,7 +458,7 @@ cito:citesAsPotentialSolution a owl:ObjectProperty ;
         cito:citesAsPotentialSolution :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as providing or containing a possible solution to the issues being discussed."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsPotentialSolutionBy ;
     vs:term_status reg:statusStable ;
@@ -471,7 +471,7 @@ cito:citesAsRecommendedReading a owl:ObjectProperty ;
         cito:citesAsRecommendedReading :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as an item of recommended reading."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsRecommendedReadingBy ;
     vs:term_status reg:statusStable ;
@@ -488,7 +488,7 @@ cito:citesAsRelated a owl:ObjectProperty ;
         cito:citesAsRelated :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as one that is related."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsRelatedBy ;
     vs:term_status reg:statusStable ;
@@ -501,7 +501,7 @@ cito:citesAsSourceDocument a owl:ObjectProperty ;
         cito:citesAsSourceDocument :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as being the entity from which the citing entity is derived, or about which the citing entity contains metadata."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsSourceDocumentBy ;
     vs:term_status reg:statusStable ;
@@ -514,7 +514,7 @@ cito:citesForInformation a owl:ObjectProperty ;
         cito:citesForInformation :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as a source of information on the subject under discussion."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedForInformationBy ;
     vs:term_status reg:statusStable ;
@@ -527,7 +527,7 @@ cito:compiles a owl:ObjectProperty ;
         cito:compiles :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity is used to create or compile the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCompiledBy ;
     vs:term_status reg:statusStable ;
@@ -544,7 +544,7 @@ cito:confirms a owl:ObjectProperty ;
         cito:confirms :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity confirms facts, ideas or statements presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isConfirmedBy ;
     vs:term_status reg:statusStable ;
@@ -557,7 +557,7 @@ cito:containsAssertionFrom a owl:ObjectProperty ;
         cito:containsAssertionFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity contains a statement of fact or a logical assertion (or a collection of such facts and/or assertions) originally present in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:providesAssertionFor ;
     vs:term_status reg:statusStable ;
@@ -574,7 +574,7 @@ cito:corrects a owl:ObjectProperty ;
         cito:corrects :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity corrects statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCorrectedBy ;
     vs:term_status reg:statusStable ;
@@ -587,7 +587,7 @@ cito:credits a owl:ObjectProperty ;
         cito:credits :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity acknowledges contributions made by the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCreditedBy ;
     vs:term_status reg:statusStable ;
@@ -600,7 +600,7 @@ cito:critiques a owl:ObjectProperty ;
         cito:critiques :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity critiques statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCritiquedBy ;
     vs:term_status reg:statusStable ;
@@ -613,7 +613,7 @@ cito:derides a owl:ObjectProperty ;
         cito:derides :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity express derision for the cited entity, or for ideas or conclusions contained within it."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isDeridedBy ;
     vs:term_status reg:statusStable ;
@@ -626,7 +626,7 @@ cito:describes a owl:ObjectProperty ;
         cito:describes :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity describes the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isDescribedBy ;
     vs:term_status reg:statusStable ;
@@ -639,7 +639,7 @@ cito:disagreesWith a owl:ObjectProperty ;
         cito:disagreesWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity disagrees with statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isDisagreedWithBy ;
     vs:term_status reg:statusStable ;
@@ -652,7 +652,7 @@ cito:discusses a owl:ObjectProperty ;
         cito:discusses :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity discusses statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isDiscussedBy ;
     vs:term_status reg:statusStable ;
@@ -665,7 +665,7 @@ cito:disputes a owl:ObjectProperty ;
         cito:disputes :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity disputes statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isDisputedBy ;
     vs:term_status reg:statusStable ;
@@ -678,7 +678,7 @@ cito:documents a owl:ObjectProperty ;
         cito:documents :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity documents information about the cited entity." ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isDocumentedBy ;
     vs:term_status reg:statusStable ;
@@ -691,7 +691,7 @@ cito:extends a owl:ObjectProperty ;
         cito:extends :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity extends facts, ideas or understandings presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isExtendedBy ;
     vs:term_status reg:statusStable ;
@@ -704,7 +704,7 @@ cito:givesBackgroundTo a owl:ObjectProperty ;
         cito:givesBackgroundTo :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity provides background information for the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:obtainsBackgroundFrom ;
     vs:term_status reg:statusStable .
@@ -716,7 +716,7 @@ cito:givesSupportTo a owl:ObjectProperty ;
         cito:givesSupportTo :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity provides intellectual or factual support for the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:obtainsSupportFrom ;
     vs:term_status reg:statusStable .
@@ -728,7 +728,7 @@ cito:hasCitationCreationDate a owl:DatatypeProperty ;
         cito:hasCitationCreationDate '2025-06-16'^^xsd:date .
     """ ;
     rdfs:comment "The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself. When combined with the citation time span, it permits that citation to be located in history."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable .
 
 cito:hasCitationTimeSpan a owl:DatatypeProperty ;
@@ -739,7 +739,7 @@ cito:hasCitationTimeSpan a owl:DatatypeProperty ;
     """ ;
     rdfs:comment "The temporal characteristic of a citation, namely the interval between the publication date of the cited entity and the publication date of the citing entity. Note that when one or both of the publication dates is given as just 'year', then the citation time span is rounded to the nearest year, and when one or both of the publication dates is given as just 'year and month', then the citation time span is rounded to the nearest month, with the inherent inaccuracies that such rounding involves."@en ;
     rdfs:domain cito:Citation ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:range xsd:duration ;
     vs:term_status reg:statusStable .
 
@@ -750,7 +750,7 @@ cito:hasReplyFrom a owl:ObjectProperty ;
         cito:hasReplyFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity evokes a reply from the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:repliesTo ;
     vs:term_status reg:statusStable .
@@ -762,7 +762,7 @@ cito:includesExcerptFrom a owl:ObjectProperty ;
         cito:includesExcerptFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity includes one or more excerpts from the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:providesExcerptFor ;
     vs:term_status reg:statusStable ;
@@ -788,7 +788,7 @@ cito:includesQuotationFrom a owl:ObjectProperty ;
         cito:includesQuotationFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity includes one or more quotations from the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:providesQuotationFor ;
     vs:term_status reg:statusStable ;
@@ -808,7 +808,7 @@ cito:isCitationCharacterizationOf a owl:ObjectProperty ;
     :my-citation a cito:Citation .
     """ ;
     rdfs:comment "A relation between the characterization of a citation, made by using a CiTO citation characterization property, and that citation."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     owl:inverseOf cito:hasCitationCharacterization ;
     vs:term_status reg:statusStable .
 
@@ -821,7 +821,7 @@ cito:isCitedEntityOf a owl:ObjectProperty ;
     :my-citation a cito:Citation .
     """ ;
     rdfs:comment "A relation between a cited entity and a citation."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     owl:inverseOf cito:hasCitedEntity ;
     vs:term_status reg:statusStable .
 
@@ -834,7 +834,7 @@ cito:isCitingEntityOf a owl:ObjectProperty ;
     :my-citation a cito:Citation .
     """ ;
     rdfs:comment "A relation between a citing entity and a citation."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     owl:inverseOf cito:hasCitingEntity ;
     vs:term_status reg:statusStable .
 
@@ -845,7 +845,7 @@ cito:isLinkedToBy a owl:ObjectProperty ;
         cito:isLinkedToBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is the target for an HTTP Uniform Resource Locator (URL) link within the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:linksTo ;
     vs:term_status reg:statusStable .
@@ -857,7 +857,7 @@ cito:isParodiedBy a owl:ObjectProperty ;
         cito:isParodiedBy :paper-b .
     """ ;
     rdfs:comment "The characteristic style or content of the cited entity is imitated by the citing entity for comic effect, usually without explicit citation."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:parodies ;
     vs:term_status reg:statusStable .
@@ -869,7 +869,7 @@ cito:isPlagiarizedBy a owl:ObjectProperty ;
         cito:isPlagiarizedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is plagiarized by the author of the citing entity, who includes within the citing entity textual or other elements from the cited entity without formal acknowledgement of their source. The cited entity is thus not explicitly cited from within the citing entity, according to the norms of scholarly practice, but is cited implicitly."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:plagiarizes ;
     vs:term_status reg:statusStable .
@@ -881,7 +881,7 @@ cito:isQualifiedBy a owl:ObjectProperty ;
         cito:isQualifiedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are qualified or have conditions placed upon them by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:qualifies ;
     vs:term_status reg:statusStable .
@@ -893,7 +893,7 @@ cito:isRefutedBy a owl:ObjectProperty ;
         cito:isRefutedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are refuted by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:refutes ;
     vs:term_status reg:statusStable .
@@ -905,7 +905,7 @@ cito:isRetractedBy a owl:ObjectProperty ;
         cito:isRetractedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is formally retracted by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:retracts ;
     vs:term_status reg:statusStable .
@@ -917,7 +917,7 @@ cito:isReviewedBy a owl:ObjectProperty ;
         cito:isReviewedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are reviewed by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:reviews ;
     vs:term_status reg:statusStable .
@@ -929,7 +929,7 @@ cito:isRidiculedBy a owl:ObjectProperty ;
         cito:isRidiculedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity or aspects of its contents are ridiculed by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:ridicules ;
     vs:term_status reg:statusStable .
@@ -941,7 +941,7 @@ cito:isSpeculatedOnBy a owl:ObjectProperty ;
         cito:isSpeculatedOnBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited because the citing article contains speculations on its content or ideas."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:speculatesOn ;
     vs:term_status reg:statusStable .
@@ -953,7 +953,7 @@ cito:isSupportedBy a owl:ObjectProperty ;
         cito:isSupportedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity receives intellectual or factual support from the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:supports ;
     vs:term_status reg:statusStable .
@@ -965,7 +965,7 @@ cito:isUpdatedBy a owl:ObjectProperty ;
         cito:isUpdatedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas, hypotheses or understanding that are updated by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:updates ;
     vs:term_status reg:statusStable .
@@ -977,7 +977,7 @@ cito:likes a owl:ObjectProperty ;
         cito:likes :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity shows appreciation of or interest in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable ;
     skos:note """
 This property enables social media "likes" statements to be encoded in RDF. 
@@ -991,7 +991,7 @@ cito:providesConclusionsFor a owl:ObjectProperty ;
         cito:providesConclusionsFor :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents conclusions that are used in work described in the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:usesConclusionsFrom ;
     vs:term_status reg:statusStable .
@@ -1003,7 +1003,7 @@ cito:providesDataFor a owl:ObjectProperty ;
         cito:providesDataFor :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents data that are used in work described in the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:usesDataFrom ;
     vs:term_status reg:statusStable .
@@ -1015,7 +1015,7 @@ cito:providesMethodFor a owl:ObjectProperty ;
         cito:providesMethodFor :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity details a method that is used in work described by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:usesMethodIn ;
     vs:term_status reg:statusStable .
@@ -1028,7 +1028,7 @@ cito:sharesAuthorInstitutionWith a owl:ObjectProperty,
         cito:sharesAuthorInstitutionWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which each entity has at least one author that shares a common institutional affiliation with an author of the other entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable .
 
 cito:sharesAuthorWith a owl:ObjectProperty,
@@ -1039,7 +1039,7 @@ cito:sharesAuthorWith a owl:ObjectProperty,
         cito:sharesAuthorWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which each entity has at least one author in common with the other entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf owl:topObjectProperty ;
     vs:term_status reg:statusStable .
 
@@ -1051,7 +1051,7 @@ cito:sharesFundingAgencyWith a owl:ObjectProperty,
         cito:sharesFundingAgencyWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which two entities result from activities that have been funded by the same funding agency."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable .
 
 cito:sharesJournalWith a owl:ObjectProperty ;
@@ -1061,7 +1061,7 @@ cito:sharesJournalWith a owl:ObjectProperty ;
         cito:sharesJournalWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing and cited bibliographic resources are published in the same journal."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:sharesPublicationVenueWith ;
     vs:term_status reg:statusStable .
 
@@ -1078,7 +1078,7 @@ schema:citation a owl:ObjectProperty ;
         schema:citation :paper-b .
     """ ;
     rdfs:comment "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."@en ;
-    rdfs:isDefinedBy schema: ;
+    rdfs:isDefinedBy <https://schema.org> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "This property is defined in [schema.org](https://schema.org/) and has been added here to align schema.org with CiTO. The object property `schema:citation` expresses similar semantics to `cito:cites` except for the explicit definition of domain and range classes, that are `schema:CreativeWork` according to schema.org. For that reason, it is here defined as a subproperty of `cito:cites`."@en .
@@ -1101,6 +1101,20 @@ skos:note a owl:AnnotationProperty .
 
 foaf:logo a owl:AnnotationProperty .
 
+dc:language a owl:AnnotationProperty .
+
+owl:backwardCompatibleWith a owl:AnnotationProperty .
+
+rdfs:isDefinedBy a owl:AnnotationProperty .
+
+rdfs:seeAlso a owl:AnnotationProperty .
+
+schema:image a owl:AnnotationProperty .
+
+schema:keywords a owl:AnnotationProperty .
+
+vann:changes a owl:AnnotationProperty .
+
 cito:AuthorNetworkSelfCitation a owl:Class ;
     rdfs:label "author network self citation"@en ;
     vann:example """
@@ -1111,7 +1125,7 @@ cito:AuthorNetworkSelfCitation a owl:Class ;
         cito:hasCitedEntity :paper-b .
     """ ;
     rdfs:comment "A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onDataRange xsd:positiveInteger ;
             owl:onProperty cito:hasCoAuthorshipCitationLevel ;
@@ -1131,7 +1145,7 @@ cito:hasCoAuthorshipCitationLevel a owl:DatatypeProperty,
 The minimal distance that one of the authors of the citing entity has with regards to one of the authors of the cited entity, according to their co-authorship network.
     """@en ;
     rdfs:domain cito:AuthorNetworkSelfCitation ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:range xsd:positiveInteger ;
     vs:term_status reg:statusStable ;
     skos:note """
@@ -1145,7 +1159,7 @@ cito:isAgreedWithBy a owl:ObjectProperty ;
         cito:isAgreedWithBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity contains statements, ideas or conclusions with which the citing entity agrees."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1156,7 +1170,7 @@ cito:isCitedAsAuthorityBy a owl:ObjectProperty ;
         cito:isCitedAsAuthorityBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited as providing an authoritative description or definition of the subject under discussion in the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1167,7 +1181,7 @@ cito:isCitedAsDataSourceBy a owl:ObjectProperty ;
         cito:isCitedAsDataSourceBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited as a data source by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1178,7 +1192,7 @@ cito:isCitedAsEvidenceBy a owl:ObjectProperty ;
         cito:isCitedAsEvidenceBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited for providing factual evidence to the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1189,7 +1203,7 @@ cito:isCitedAsMetadataDocumentBy a owl:ObjectProperty ;
         cito:isCitedAsMetadataDocumentBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited as being the container of metadata relating to the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1200,7 +1214,7 @@ cito:isCitedAsPotentialSolutionBy a owl:ObjectProperty ;
         cito:isCitedAsPotentialSolutionBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited as providing or containing a possible solution to the issues being discussed in the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1211,7 +1225,7 @@ cito:isCitedAsRecommendedReadingBy a owl:ObjectProperty ;
         cito:isCitedAsRecommendedReadingBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited by the citing entity as an item of recommended reading."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable ;
     skos:note """
@@ -1226,7 +1240,7 @@ cito:isCitedAsRelatedBy a owl:ObjectProperty ;
         cito:isCitedAsRelatedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited as being related to the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1237,7 +1251,7 @@ cito:isCitedAsSourceDocumentBy a owl:ObjectProperty ;
         cito:isCitedAsSourceDocumentBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited as being the entity from which the citing entity is derived, or about which the citing entity contains metadata."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1248,7 +1262,7 @@ cito:isCitedForInformationBy a owl:ObjectProperty ;
         cito:isCitedForInformationBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited as a source of information on the subject under discussion in the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1259,7 +1273,7 @@ cito:isCompiledBy a owl:ObjectProperty ;
         cito:isCompiledBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is the result of a compile or creation event using the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable ;
     skos:note "Note: This property has been imported from the CiTO4Data ontology, usage of which has been deprecated."@en .
@@ -1271,7 +1285,7 @@ cito:isConfirmedBy a owl:ObjectProperty ;
         cito:isConfirmedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents facts, ideas or statements that are confirmed by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1282,7 +1296,7 @@ cito:isCorrectedBy a owl:ObjectProperty ;
         cito:isCorrectedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are corrected by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1293,7 +1307,7 @@ cito:isCreditedBy a owl:ObjectProperty ;
         cito:isCreditedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity makes contributions that are acknowledged by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1304,7 +1318,7 @@ cito:isCritiquedBy a owl:ObjectProperty ;
         cito:isCritiquedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are critiqued by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1315,7 +1329,7 @@ cito:isDeridedBy a owl:ObjectProperty ;
         cito:isDeridedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity contains ideas or conclusions for which the citing entity express derision."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1326,7 +1340,7 @@ cito:isDescribedBy a owl:ObjectProperty ;
         cito:isDescribedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is described by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1337,7 +1351,7 @@ cito:isDisagreedWithBy a owl:ObjectProperty ;
         cito:isDisagreedWithBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are disagreed with by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1348,7 +1362,7 @@ cito:isDiscussedBy a owl:ObjectProperty ;
         cito:isDiscussedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are discussed by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1359,7 +1373,7 @@ cito:isDisputedBy a owl:ObjectProperty ;
         cito:isDisputedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are disputed by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1370,7 +1384,7 @@ cito:isDocumentedBy a owl:ObjectProperty ;
         cito:isDocumentedBy :paper-b .
     """ ;
     rdfs:comment "Information about the cited entity is documented by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1381,7 +1395,7 @@ cito:isExtendedBy a owl:ObjectProperty ;
         cito:isExtendedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents facts, ideas or understandings that are extended by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1392,7 +1406,7 @@ cito:linksTo a owl:ObjectProperty ;
         cito:linksTo :paper-b .  
     """ ;
     rdfs:comment "A relation according to which the citing entity provides a link, in the form of an HTTP Uniform Resource Locator (URL), to the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: The BioSharing registry (https://biosharing.org) can be of use as it describes the standards in detail, including versions where applicable."@en .
@@ -1404,7 +1418,7 @@ cito:obtainsBackgroundFrom a owl:ObjectProperty ;
         cito:obtainsBackgroundFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity obtains background information from the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: There is a need for more observational studies and studies using narrative causation to describe the potential contribution of information in problem-solving and decision-making [X]; our work addresses these needs."@en .
@@ -1416,7 +1430,7 @@ cito:obtainsSupportFrom a owl:ObjectProperty ;
         cito:obtainsSupportFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity obtains intellectual or factual support from the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: Our ideas were also shared by Doe et al. [X]."@en .
@@ -1428,7 +1442,7 @@ cito:parodies a owl:ObjectProperty ;
         cito:parodies :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity imitates the characteristic style or content of the cited entity for comic effect, usually without explicit citation."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We act as giants on the shoulders of dwarfs [X]!"@en .
@@ -1440,7 +1454,7 @@ cito:plagiarizes a owl:ObjectProperty ;
         cito:plagiarizes :paper-b .
     """ ;
     rdfs:comment "A property indicating that the author of the citing entity plagiarizes the cited entity, by including textual or other elements from the cited entity without formal acknowledgement of their source.  The citing entity thus contains no explicit citation of the cited entity, according to the norms of scholarly practice, but cites it implicitly."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: The conclusion of our dissertation can be summarised by the following motto, we created specifically for this purpose: we are like dwarfs standing on the shoulders of giants."@en .
@@ -1452,7 +1466,7 @@ cito:providesAssertionFor a owl:ObjectProperty ;
         cito:providesAssertionFor :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity contains and is the original source of a statement of fact or a logical assertion (or a collection of such facts and/or assertions) that is to be found in the citing entity. This inverse object property is designed to be used to relate a cited entity to a separate abstract, summary or nanopublication based upon it."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1463,7 +1477,7 @@ cito:providesExcerptFor a owl:ObjectProperty ;
         cito:providesExcerptFor :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity contains information, usually of a textual nature, that is excerpted by (used as an excerpt within) the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1474,7 +1488,7 @@ cito:providesQuotationFor a owl:ObjectProperty ;
         cito:providesQuotationFor :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity contains information, usually of a textual nature, that is quoted by (used as a quotation within) the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1485,7 +1499,7 @@ cito:qualifies a owl:ObjectProperty ;
         cito:qualifies :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity qualifies or places conditions or restrictions upon statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: Galileo's masterpiece 'Dialogo sopra i due massimi sistemi del mondo' [X] is formally a dialog and substantially a scientific pamphlet."@en .
@@ -1497,7 +1511,7 @@ cito:refutes a owl:ObjectProperty ;
         cito:refutes :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity refutes statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We do not think that all their arguments in favour of their own and against the other strategies are equally convincing [X]."@en .
@@ -1509,7 +1523,7 @@ cito:repliesTo a owl:ObjectProperty ;
         cito:repliesTo :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity replies to statements, ideas or criticisms presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We will not investigate the issues of the approach proposed in [X] here, but rather we introduce yet another alternative."@en .
@@ -1521,7 +1535,7 @@ cito:retracts a owl:ObjectProperty ;
         cito:retracts :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity constitutes a formal retraction of the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We wrote that the Earth moves in [X]; we now retire such statement."@en .
@@ -1533,7 +1547,7 @@ cito:reviews a owl:ObjectProperty ;
         cito:reviews :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity reviews statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: This paper discusses Toulmin's methodology in modelling argumentation [X], focussing on highlighting advantages and drawbacks of the application of such a methodology in the Social Web."@en .
@@ -1545,7 +1559,7 @@ cito:ridicules a owl:ObjectProperty ;
         cito:ridicules :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity ridicules the cited entity or aspects of its contents."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: Galileo said that the Earth 'moves' [X]; really? And where is it going?"@en .
@@ -1557,7 +1571,7 @@ cito:sharesPublicationVenueWith a owl:ObjectProperty ;
         cito:sharesPublicationVenueWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing and cited bibliographic resources are published in same publication venue."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable .
 
 cito:speculatesOn a owl:ObjectProperty ;
@@ -1567,7 +1581,7 @@ cito:speculatesOn a owl:ObjectProperty ;
         cito:speculatesOn :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity speculates on something within or related to the cited entity, without firm evidence."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We believe that if Galileo believed that Earth goes around the Sun [X], he also should believe that Moon goes around Earth."@en .
@@ -1579,7 +1593,7 @@ cito:supports a owl:ObjectProperty ;
         cito:supports :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity provides intellectual or factual support for statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We support Galileo's statement [X], that Earth moves."@en .
@@ -1591,7 +1605,7 @@ cito:updates a owl:ObjectProperty ;
         cito:updates :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity updates statements, ideas, hypotheses or understanding presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: Earth moves, said Galileo [X]; in addition, we can say now it moves very fast."@en .
@@ -1603,7 +1617,7 @@ cito:usesConclusionsFrom a owl:ObjectProperty ;
         cito:usesConclusionsFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity describes work that uses conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: Building upon Galileo's findings [X], we discovered that all the planets move."@en .
@@ -1615,7 +1629,7 @@ cito:usesDataFrom a owl:ObjectProperty ;
         cito:usesDataFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity describes work that uses data presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: Using the information collected from our recent study [X], we can estimate that there are tens of millions of HTML forms with potentially useful deep-web content."@en .
@@ -1627,7 +1641,7 @@ cito:usesMethodIn a owl:ObjectProperty ;
         cito:usesMethodIn :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity describes work that uses a method detailed in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We follow [X] in using design patterns for testing."@en .
@@ -1635,7 +1649,7 @@ cito:usesMethodIn a owl:ObjectProperty ;
 sit:Situation a owl:Class ;
     rdfs:label "situation"@en ;
     rdfs:comment "A view on a set of entities. It can be seen as a 'relational context', reifying a relation."@en ;
-    rdfs:isDefinedBy sit: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> .
 
 xsd:duration a rdfs:Datatype .
 
@@ -1647,7 +1661,7 @@ cito:hasCitationCharacterization a owl:ObjectProperty ;
     """ ;
     rdfs:comment "A relation between a citation and its characterization, made by using a CiTO citation characterization property."@en ;
     rdfs:domain cito:Citation ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable ;
     skos:note """
@@ -1664,7 +1678,7 @@ cito:hasCitedEntity a owl:ObjectProperty ;
     """ ;
     rdfs:comment "A relation between a citation and the cited entity."@en ;
     rdfs:domain cito:Citation ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable .
 
@@ -1676,9 +1690,16 @@ cito:hasCitingEntity a owl:ObjectProperty ;
     """ ;
     rdfs:comment "A relation between a citation and the citing entity."@en ;
     rdfs:domain cito:Citation ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable .
+
+sit:isSettingFor a owl:ObjectProperty ;
+    rdfs:label "is setting for"@en ;
+    rdfs:comment "The relation between a situation and something that situation is a setting for."@en ;
+    rdfs:domain sit:Situation ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> .
+
 
 cito:SelfCitation a owl:Class ;
     rdfs:label "self citation"@en ;
@@ -1689,7 +1710,7 @@ cito:SelfCitation a owl:Class ;
         cito:hasCitedEntity :paper-b .
     """ ;
     rdfs:comment "A citation in which the citing and the cited entities have something significant in common with one another, over and beyond their subject matter, for example authors, journal, institutional affiliation, or funding agency."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf cito:Citation ;
     vs:term_status reg:statusStable .
 
@@ -1710,7 +1731,7 @@ cito:Citation a owl:Class ;
     rdfs:comment """
 A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (`biro:BibliographicReference`) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.
     """@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( sit:Situation [ a owl:Restriction ;
                         owl:cardinality "1"^^xsd:nonNegativeInteger ;
@@ -1743,7 +1764,7 @@ cito:cites a owl:ObjectProperty ;
         cito:cites :paper-b .
     """ ;
     rdfs:comment "A relation according to which a citing entity cites a cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     owl:inverseOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 
@@ -1754,6 +1775,6 @@ cito:isCitedBy a owl:ObjectProperty ;
         cito:isCitedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable .
 
