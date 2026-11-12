@@ -1,8 +1,8 @@
 version = 1
-revision = 2
+revision = 5
 requires-python = ">=3.11"
 
 [[package]]
 name = "cito"
-version = "2.9.1"
+version = "2.9.2"
 source = { virtual = "." }
