@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
+
+sit:Situation a owl:Class ;
+    rdfs:label "situation"@en ;
+    rdfs:comment "A view on a set of entities. It can be seen as a 'relational context', reifying a relation."@en ;
+    rdfs:isDefinedBy sit: .
+

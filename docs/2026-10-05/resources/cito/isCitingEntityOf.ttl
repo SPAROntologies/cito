@@ -1,0 +1,20 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:isCitingEntityOf a owl:ObjectProperty ;
+    rdfs:label "is citing entity of"@en ;
+    vann:example """
+    :paper-a
+        cito:isCitingEntityOf :my-citation .
+
+    :my-citation a cito:Citation .
+    """ ;
+    rdfs:comment "A relation between a citing entity and a citation."@en ;
+    rdfs:isDefinedBy cito: ;
+    owl:inverseOf cito:hasCitingEntity ;
+    vs:term_status reg:statusStable .
+

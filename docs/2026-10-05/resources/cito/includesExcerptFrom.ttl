@@ -1,0 +1,34 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:includesExcerptFrom a owl:ObjectProperty ;
+    rdfs:label "includes excerpt from"@en ;
+    vann:example """
+    :paper-a a fabio:JournalArticle ;
+        cito:includesExcerptFrom :paper-b .
+    """ ;
+    rdfs:comment "A relation according to which the citing entity includes one or more excerpts from the cited entity."@en ;
+    rdfs:isDefinedBy cito: ;
+    rdfs:subPropertyOf cito:cites ;
+    owl:inverseOf cito:providesExcerptFor ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+An excerpt is more general than a quotation. 
+It is generally used to indicate a re-published extract from a book, instruction manual, film, radio programme, etc, that need not be what someone said.  
+For example:
+
+    Oxford 01865
+    Oxshott 01372
+    Oxted 01883
+    Oxton 01578
+
+is an excerpt from the UK Dialling Codes section of the Oxford Telephone Directory.
+
+Example: In her work, the author states that even though most Human Information Behaviour researchers are familiar with the literature related to their studies, it is not uncommon for investigators to fail to see the benefits they may gain from previous mistakes [X]
+    """@en .
+
