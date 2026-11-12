@@ -12,7 +12,7 @@ cito:providesAssertionFor a owl:ObjectProperty ;
         cito:providesAssertionFor :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity contains and is the original source of a statement of fact or a logical assertion (or a collection of such facts and/or assertions) that is to be found in the citing entity. This inverse object property is designed to be used to relate a cited entity to a separate abstract, summary or nanopublication based upon it."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 

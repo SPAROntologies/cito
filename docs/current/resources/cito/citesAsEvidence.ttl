@@ -13,7 +13,7 @@ cito:citesAsEvidence a owl:ObjectProperty ;
         cito:citesAsEvidence :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as source of factual evidence for statements it contains."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsEvidenceBy ;
     vs:term_status reg:statusStable ;

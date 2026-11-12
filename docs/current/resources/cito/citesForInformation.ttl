@@ -13,7 +13,7 @@ cito:citesForInformation a owl:ObjectProperty ;
         cito:citesForInformation :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as a source of information on the subject under discussion."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedForInformationBy ;
     vs:term_status reg:statusStable ;

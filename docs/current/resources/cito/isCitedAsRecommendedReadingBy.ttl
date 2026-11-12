@@ -13,7 +13,7 @@ cito:isCitedAsRecommendedReadingBy a owl:ObjectProperty ;
         cito:isCitedAsRecommendedReadingBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited by the citing entity as an item of recommended reading."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable ;
     skos:note """

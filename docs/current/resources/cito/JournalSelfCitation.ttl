@@ -24,7 +24,7 @@ cito:JournalSelfCitation a owl:Class ;
     rdfs:comment """
 A citation in which the citing and the cited entities are published in the same journal.
     """@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf cito:SelfCitation ;
     vs:term_status reg:statusStable ;
     skos:note """

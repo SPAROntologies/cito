@@ -13,7 +13,7 @@ cito:citesAsDataSource a owl:ObjectProperty ;
         cito:citesAsDataSource :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as source of data."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsDataSourceBy ;
     vs:term_status reg:statusStable ;

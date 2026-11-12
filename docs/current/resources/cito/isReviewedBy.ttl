@@ -12,7 +12,7 @@ cito:isReviewedBy a owl:ObjectProperty ;
         cito:isReviewedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are reviewed by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:reviews ;
     vs:term_status reg:statusStable .

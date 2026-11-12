@@ -12,7 +12,7 @@ cito:isDocumentedBy a owl:ObjectProperty ;
         cito:isDocumentedBy :paper-b .
     """ ;
     rdfs:comment "Information about the cited entity is documented by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 

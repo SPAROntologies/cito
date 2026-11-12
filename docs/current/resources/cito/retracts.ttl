@@ -13,7 +13,7 @@ cito:retracts a owl:ObjectProperty ;
         cito:retracts :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity constitutes a formal retraction of the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We wrote that the Earth moves in [X]; we now retire such statement."@en .

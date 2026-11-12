@@ -13,7 +13,7 @@ cito:documents a owl:ObjectProperty ;
         cito:documents :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity documents information about the cited entity." ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isDocumentedBy ;
     vs:term_status reg:statusStable ;

@@ -13,7 +13,7 @@ cito:ridicules a owl:ObjectProperty ;
         cito:ridicules :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity ridicules the cited entity or aspects of its contents."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: Galileo said that the Earth 'moves' [X]; really? And where is it going?"@en .

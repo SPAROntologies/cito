@@ -23,7 +23,7 @@ cito:AuthorSelfCitation a owl:Class ;
     """ ;
     rdfs:comment """A citation in which the citing and the cited entities have at least one author in common.
     """@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf cito:SelfCitation ;
     vs:term_status reg:statusStable ;
     skos:note "Like the ancestor class `cito:Citation`, `cito:AuthorSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesAuthorWith` for linking the citing paper and the cited paper."@en .

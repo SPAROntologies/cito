@@ -4,8 +4,8 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
+    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#"/>
     <rdfs:label xml:lang="en">situation</rdfs:label>
     <rdfs:comment xml:lang="en">A view on a set of entities. It can be seen as a 'relational context', reifying a relation.</rdfs:comment>
   </rdf:Description>

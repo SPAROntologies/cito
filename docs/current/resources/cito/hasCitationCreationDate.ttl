@@ -12,6 +12,6 @@ cito:hasCitationCreationDate a owl:DatatypeProperty ;
         cito:hasCitationCreationDate '2025-06-16'^^xsd:date .
     """ ;
     rdfs:comment "The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself. When combined with the citation time span, it permits that citation to be located in history."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable .
 

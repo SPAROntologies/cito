@@ -12,7 +12,7 @@ cito:isCitedAsEvidenceBy a owl:ObjectProperty ;
         cito:isCitedAsEvidenceBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited for providing factual evidence to the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 

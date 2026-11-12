@@ -13,7 +13,7 @@ cito:corrects a owl:ObjectProperty ;
         cito:corrects :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity corrects statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCorrectedBy ;
     vs:term_status reg:statusStable ;

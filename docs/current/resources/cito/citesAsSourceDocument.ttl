@@ -13,7 +13,7 @@ cito:citesAsSourceDocument a owl:ObjectProperty ;
         cito:citesAsSourceDocument :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as being the entity from which the citing entity is derived, or about which the citing entity contains metadata."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsSourceDocumentBy ;
     vs:term_status reg:statusStable ;

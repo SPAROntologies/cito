@@ -11,23 +11,9 @@
     <rdfs:comment xml:lang="en">
 A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (`biro:BibliographicReference`) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.
     </rdfs:comment>
-    <rdfs:label xml:lang="en">citation</rdfs:label>
-    <owl:equivalentClass rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b2"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <vann:example>
-    # The following RDF statement
-
-    :paper-a cito:extends :paper-b .
-
-    # can be alternatively described as follows
-
-    :my-citation a cito:Citation ; 
-        cito:hasCitingEntity :paper-a ;
-        cito:hasCitationCharacterization cito:extends ;
-        cito:hasCitedEntity :paper-b .
-    </vann:example>
+    <owl:equivalentClass rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b2"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito"/>
     <skos:note xml:lang="en">
 The time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property `cito:hasCitationTimeSpan`.
 
@@ -43,40 +29,54 @@ Such reification of citation acts can be very useful, since it permits one to co
 
 Such situations can be resolved by the creation of a user-defined citation characterization, for example by using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/), as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/.
     </skos:note>
+    <rdfs:label xml:lang="en">citation</rdfs:label>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vann:example>
+    # The following RDF statement
+
+    :paper-a cito:extends :paper-b .
+
+    # can be alternatively described as follows
+
+    :my-citation a cito:Citation ; 
+        cito:hasCitingEntity :paper-a ;
+        cito:hasCitationCharacterization cito:extends ;
+        cito:hasCitedEntity :paper-b .
+    </vann:example>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b9">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b5"/>
+  <rdf:Description rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b7">
+    <rdf:rest rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b8"/>
+    <rdf:first rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b3"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b3">
     <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCitationCharacterization"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b4">
-    <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCitedEntity"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b5">
     <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b5">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCitingEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b8">
-    <rdf:first rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b4"/>
-    <rdf:rest rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b9"/>
+  <rdf:Description rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b9">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b5"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b2">
+  <rdf:Description rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b8">
+    <rdf:first rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b4"/>
+    <rdf:rest rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b2">
+    <owl:intersectionOf rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b6"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b6"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b6">
+  <rdf:Description rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/cito/hasCitedEntity"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b6">
     <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
-    <rdf:rest rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b7"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b7">
-    <rdf:rest rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b8"/>
-    <rdf:first rdf:nodeID="ncc73a34cae4d4b23b0d7ebf741ccd056b3"/>
+    <rdf:rest rdf:nodeID="nc177cb2b78a64bc8ab2ddd5d7f23b4e9b7"/>
   </rdf:Description>
 </rdf:RDF>

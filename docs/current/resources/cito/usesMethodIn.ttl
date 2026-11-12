@@ -13,7 +13,7 @@ cito:usesMethodIn a owl:ObjectProperty ;
         cito:usesMethodIn :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity describes work that uses a method detailed in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We follow [X] in using design patterns for testing."@en .

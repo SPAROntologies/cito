@@ -12,7 +12,7 @@ cito:isConfirmedBy a owl:ObjectProperty ;
         cito:isConfirmedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents facts, ideas or statements that are confirmed by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 

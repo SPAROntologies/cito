@@ -13,7 +13,7 @@ cito:citesAsAuthority a owl:ObjectProperty ;
         cito:citesAsAuthority :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as one that provides an authoritative description or definition of the subject under discussion."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsAuthorityBy ;
     vs:term_status reg:statusStable ;

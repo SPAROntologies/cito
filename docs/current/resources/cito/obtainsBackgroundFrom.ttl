@@ -13,7 +13,7 @@ cito:obtainsBackgroundFrom a owl:ObjectProperty ;
         cito:obtainsBackgroundFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity obtains background information from the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: There is a need for more observational studies and studies using narrative causation to describe the potential contribution of information in problem-solving and decision-making [X]; our work addresses these needs."@en .

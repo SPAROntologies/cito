@@ -14,7 +14,7 @@ cito:hasCitationTimeSpan a owl:DatatypeProperty ;
     """ ;
     rdfs:comment "The temporal characteristic of a citation, namely the interval between the publication date of the cited entity and the publication date of the citing entity. Note that when one or both of the publication dates is given as just 'year', then the citation time span is rounded to the nearest year, and when one or both of the publication dates is given as just 'year and month', then the citation time span is rounded to the nearest month, with the inherent inaccuracies that such rounding involves."@en ;
     rdfs:domain cito:Citation ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:range xsd:duration ;
     vs:term_status reg:statusStable .
 

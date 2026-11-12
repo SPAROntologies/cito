@@ -12,6 +12,6 @@ cito:sharesPublicationVenueWith a owl:ObjectProperty ;
         cito:sharesPublicationVenueWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing and cited bibliographic resources are published in same publication venue."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable .
 

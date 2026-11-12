@@ -13,7 +13,7 @@ cito:citesAsPotentialSolution a owl:ObjectProperty ;
         cito:citesAsPotentialSolution :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as providing or containing a possible solution to the issues being discussed."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsPotentialSolutionBy ;
     vs:term_status reg:statusStable ;

@@ -12,7 +12,7 @@ cito:isPlagiarizedBy a owl:ObjectProperty ;
         cito:isPlagiarizedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is plagiarized by the author of the citing entity, who includes within the citing entity textual or other elements from the cited entity without formal acknowledgement of their source. The cited entity is thus not explicitly cited from within the citing entity, according to the norms of scholarly practice, but is cited implicitly."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:plagiarizes ;
     vs:term_status reg:statusStable .

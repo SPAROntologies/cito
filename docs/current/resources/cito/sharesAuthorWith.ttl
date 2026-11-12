@@ -13,7 +13,7 @@ cito:sharesAuthorWith a owl:ObjectProperty,
         cito:sharesAuthorWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which each entity has at least one author in common with the other entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf owl:topObjectProperty ;
     vs:term_status reg:statusStable .
 

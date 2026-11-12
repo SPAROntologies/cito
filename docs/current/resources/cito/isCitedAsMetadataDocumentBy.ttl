@@ -12,7 +12,7 @@ cito:isCitedAsMetadataDocumentBy a owl:ObjectProperty ;
         cito:isCitedAsMetadataDocumentBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is cited as being the container of metadata relating to the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 

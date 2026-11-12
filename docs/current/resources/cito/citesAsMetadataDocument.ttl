@@ -13,7 +13,7 @@ cito:citesAsMetadataDocument a owl:ObjectProperty ;
         cito:citesAsMetadataDocument :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as being the container of metadata describing the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsMetadataDocumentBy ;
     vs:term_status reg:statusStable ;

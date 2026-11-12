@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor">
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+    <rdfs:label xml:lang="en">is setting for</rdfs:label>
+    <rdfs:comment xml:lang="en">The relation between a situation and something that situation is a setting for.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>

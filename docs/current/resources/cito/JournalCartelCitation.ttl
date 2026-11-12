@@ -15,7 +15,7 @@ cito:JournalCartelCitation a owl:Class ;
         cito:hasCitedEntity :paper-b .
     """ ;
     rdfs:comment "A citation from one journal to another journal which forms one of a very large number of citations from the citing journal to recent articles in the cited journal, possibly undertaken as part of a citation cartel for the purpose of gaming the impact factor of the cited journal."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf cito:Citation ;
     vs:term_status reg:statusStable ;
     skos:note "Derived from the blog post 'What do we know about journal citation cartels? A call for information' by Philippe Mongeon, Ludo Waltman and Sarah de Rijcke (https://www.cwts.nl/blog?article=n-q2w2b4)."@en .

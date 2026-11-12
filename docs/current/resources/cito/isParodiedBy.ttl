@@ -12,7 +12,7 @@ cito:isParodiedBy a owl:ObjectProperty ;
         cito:isParodiedBy :paper-b .
     """ ;
     rdfs:comment "The characteristic style or content of the cited entity is imitated by the citing entity for comic effect, usually without explicit citation."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:parodies ;
     vs:term_status reg:statusStable .

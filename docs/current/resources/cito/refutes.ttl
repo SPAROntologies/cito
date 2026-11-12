@@ -13,7 +13,7 @@ cito:refutes a owl:ObjectProperty ;
         cito:refutes :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity refutes statements, ideas or conclusions presented in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We do not think that all their arguments in favour of their own and against the other strategies are equally convincing [X]."@en .
