@@ -31,7 +31,7 @@
         "@id": "http://purl.org/spar/cito/SelfCitation"
       },
       {
-        "@id": "_:nf75e75c983704646b88d66dfd41d85a3b1"
+        "@id": "_:ncc73a34cae4d4b23b0d7ebf741ccd056b1"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "@id": "_:nf75e75c983704646b88d66dfd41d85a3b1",
+    "@id": "_:ncc73a34cae4d4b23b0d7ebf741ccd056b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

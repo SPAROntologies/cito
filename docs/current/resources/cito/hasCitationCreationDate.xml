@@ -6,14 +6,14 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/cito/hasCitationCreationDate">
-    <rdfs:comment xml:lang="en">The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself. When combined with the citation time span, it permits that citation to be located in history.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has citation creation date</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vann:example>
     :paper-a a fabio:JournalArticle ;
         cito:hasCitationCreationDate '2025-06-16'^^xsd:date .
     </vann:example>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="en">has citation creation date</rdfs:label>
+    <rdfs:comment xml:lang="en">The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself. When combined with the citation time span, it permits that citation to be located in history.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

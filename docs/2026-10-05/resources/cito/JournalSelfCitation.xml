@@ -7,7 +7,15 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/cito/JournalSelfCitation">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <skos:note xml:lang="en">
+Like the ancestor class `cito:Citation`, `cito:JournalSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesJournalWith` for linking the citing paper and the cited paper.
+
+Derived from the blog post "Journal self-citations are increasingly biased toward impact factor years" by Ludo Waltman and Caspar Chorus (https://www.cwts.nl/blog?article=n-q2x264).
+    </skos:note>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">journal self citation</rdfs:label>
     <vann:example>
     # The following cito:AffiliationSelfCitation resource
 
@@ -24,14 +32,6 @@
     <rdfs:comment xml:lang="en">
 A citation in which the citing and the cited entities are published in the same journal.
     </rdfs:comment>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdfs:label xml:lang="en">journal self citation</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://purl.org/spar/cito/SelfCitation"/>
-    <skos:note xml:lang="en">
-Like the ancestor class `cito:Citation`, `cito:JournalSelfCitation` and its accompanying object properties `cito:hasCitingEntity`, `cito:hasCitedEntity` and `cito:hasCitationCharacterization` can be employed to reify direct citation statements made using the CiTO citation object property `cito:cites` or one of its sub-properties, accompanied by an additional statement using `cito:sharesJournalWith` for linking the citing paper and the cited paper.
-
-Derived from the blog post "Journal self-citations are increasingly biased toward impact factor years" by Ludo Waltman and Caspar Chorus (https://www.cwts.nl/blog?article=n-q2x264).
-    </skos:note>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
   </rdf:Description>
 </rdf:RDF>
