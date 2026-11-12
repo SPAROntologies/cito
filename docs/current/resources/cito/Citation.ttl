@@ -26,7 +26,7 @@ cito:Citation a owl:Class ;
     rdfs:comment """
 A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (`biro:BibliographicReference`) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.
     """@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( sit:Situation [ a owl:Restriction ;
                         owl:cardinality "1"^^xsd:nonNegativeInteger ;

@@ -13,6 +13,6 @@ cito:sharesAuthorInstitutionWith a owl:ObjectProperty,
         cito:sharesAuthorInstitutionWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which each entity has at least one author that shares a common institutional affiliation with an author of the other entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable .
 

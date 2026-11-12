@@ -13,7 +13,7 @@ cito:includesQuotationFrom a owl:ObjectProperty ;
         cito:includesQuotationFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity includes one or more quotations from the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:providesQuotationFor ;
     vs:term_status reg:statusStable ;

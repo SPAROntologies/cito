@@ -12,7 +12,7 @@ cito:isAgreedWithBy a owl:ObjectProperty ;
         cito:isAgreedWithBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity contains statements, ideas or conclusions with which the citing entity agrees."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 

@@ -13,7 +13,7 @@ cito:likes a owl:ObjectProperty ;
         cito:likes :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity shows appreciation of or interest in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable ;
     skos:note """
 This property enables social media "likes" statements to be encoded in RDF. 

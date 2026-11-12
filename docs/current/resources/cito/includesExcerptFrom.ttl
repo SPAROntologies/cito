@@ -13,7 +13,7 @@ cito:includesExcerptFrom a owl:ObjectProperty ;
         cito:includesExcerptFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity includes one or more excerpts from the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:providesExcerptFor ;
     vs:term_status reg:statusStable ;

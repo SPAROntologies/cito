@@ -18,7 +18,7 @@ cito:hasCoAuthorshipCitationLevel a owl:DatatypeProperty,
 The minimal distance that one of the authors of the citing entity has with regards to one of the authors of the cited entity, according to their co-authorship network.
     """@en ;
     rdfs:domain cito:AuthorNetworkSelfCitation ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:range xsd:positiveInteger ;
     vs:term_status reg:statusStable ;
     skos:note """

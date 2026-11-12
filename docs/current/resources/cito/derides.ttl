@@ -13,7 +13,7 @@ cito:derides a owl:ObjectProperty ;
         cito:derides :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity express derision for the cited entity, or for ideas or conclusions contained within it."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isDeridedBy ;
     vs:term_status reg:statusStable ;

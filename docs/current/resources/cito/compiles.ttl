@@ -13,7 +13,7 @@ cito:compiles a owl:ObjectProperty ;
         cito:compiles :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity is used to create or compile the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCompiledBy ;
     vs:term_status reg:statusStable ;

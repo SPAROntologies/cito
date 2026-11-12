@@ -1,0 +1,10 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
+
+sit:isSettingFor a owl:ObjectProperty ;
+    rdfs:label "is setting for"@en ;
+    rdfs:comment "The relation between a situation and something that situation is a setting for."@en ;
+    rdfs:domain sit:Situation ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> .
+

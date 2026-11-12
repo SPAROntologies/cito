@@ -12,7 +12,7 @@ cito:providesMethodFor a owl:ObjectProperty ;
         cito:providesMethodFor :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity details a method that is used in work described by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:usesMethodIn ;
     vs:term_status reg:statusStable .

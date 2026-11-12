@@ -14,7 +14,7 @@ cito:hasCitedEntity a owl:ObjectProperty ;
     """ ;
     rdfs:comment "A relation between a citation and the cited entity."@en ;
     rdfs:domain cito:Citation ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable .
 

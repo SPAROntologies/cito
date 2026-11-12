@@ -13,7 +13,7 @@ cito:credits a owl:ObjectProperty ;
         cito:credits :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity acknowledges contributions made by the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCreditedBy ;
     vs:term_status reg:statusStable ;

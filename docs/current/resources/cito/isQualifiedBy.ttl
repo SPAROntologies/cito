@@ -12,7 +12,7 @@ cito:isQualifiedBy a owl:ObjectProperty ;
         cito:isQualifiedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are qualified or have conditions placed upon them by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:qualifies ;
     vs:term_status reg:statusStable .

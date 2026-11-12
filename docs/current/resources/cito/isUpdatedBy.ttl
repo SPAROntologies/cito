@@ -12,7 +12,7 @@ cito:isUpdatedBy a owl:ObjectProperty ;
         cito:isUpdatedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas, hypotheses or understanding that are updated by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:updates ;
     vs:term_status reg:statusStable .

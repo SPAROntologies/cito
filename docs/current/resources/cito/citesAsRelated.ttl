@@ -13,7 +13,7 @@ cito:citesAsRelated a owl:ObjectProperty ;
         cito:citesAsRelated :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity cites the cited entity as one that is related."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isCitedAsRelatedBy ;
     vs:term_status reg:statusStable ;

@@ -14,7 +14,7 @@ cito:isCitationCharacterizationOf a owl:ObjectProperty ;
     :my-citation a cito:Citation .
     """ ;
     rdfs:comment "A relation between the characterization of a citation, made by using a CiTO citation characterization property, and that citation."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     owl:inverseOf cito:hasCitationCharacterization ;
     vs:term_status reg:statusStable .
 

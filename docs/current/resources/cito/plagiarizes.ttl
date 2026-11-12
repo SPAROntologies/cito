@@ -13,7 +13,7 @@ cito:plagiarizes a owl:ObjectProperty ;
         cito:plagiarizes :paper-b .
     """ ;
     rdfs:comment "A property indicating that the author of the citing entity plagiarizes the cited entity, by including textual or other elements from the cited entity without formal acknowledgement of their source.  The citing entity thus contains no explicit citation of the cited entity, according to the norms of scholarly practice, but cites it implicitly."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: The conclusion of our dissertation can be summarised by the following motto, we created specifically for this purpose: we are like dwarfs standing on the shoulders of giants."@en .

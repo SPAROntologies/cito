@@ -13,6 +13,6 @@ cito:sharesFundingAgencyWith a owl:ObjectProperty,
         cito:sharesFundingAgencyWith :paper-b .
     """ ;
     rdfs:comment "A relation according to which two entities result from activities that have been funded by the same funding agency."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     vs:term_status reg:statusStable .
 

@@ -13,7 +13,7 @@ cito:containsAssertionFrom a owl:ObjectProperty ;
         cito:containsAssertionFrom :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity contains a statement of fact or a logical assertion (or a collection of such facts and/or assertions) originally present in the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:providesAssertionFor ;
     vs:term_status reg:statusStable ;

@@ -12,7 +12,7 @@ cito:givesSupportTo a owl:ObjectProperty ;
         cito:givesSupportTo :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity provides intellectual or factual support for the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:obtainsSupportFrom ;
     vs:term_status reg:statusStable .

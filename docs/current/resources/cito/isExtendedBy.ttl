@@ -12,7 +12,7 @@ cito:isExtendedBy a owl:ObjectProperty ;
         cito:isExtendedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents facts, ideas or understandings that are extended by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 

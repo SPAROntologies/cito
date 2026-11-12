@@ -17,7 +17,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/cito/"
+        "@id": "http://purl.org/spar/cito"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -28,10 +28,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://purl.org/spar/cito/SelfCitation"
+        "@id": "_:nc177cb2b78a64bc8ab2ddd5d7f23b4e9b1"
       },
       {
-        "@id": "_:ncc73a34cae4d4b23b0d7ebf741ccd056b1"
+        "@id": "http://purl.org/spar/cito/SelfCitation"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "@id": "_:ncc73a34cae4d4b23b0d7ebf741ccd056b1",
+    "@id": "_:nc177cb2b78a64bc8ab2ddd5d7f23b4e9b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

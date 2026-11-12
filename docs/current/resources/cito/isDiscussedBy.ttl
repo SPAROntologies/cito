@@ -12,7 +12,7 @@ cito:isDiscussedBy a owl:ObjectProperty ;
         cito:isDiscussedBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity presents statements, ideas or conclusions that are discussed by the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable .
 

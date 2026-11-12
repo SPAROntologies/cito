@@ -13,7 +13,7 @@ cito:describes a owl:ObjectProperty ;
         cito:describes :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity describes the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isDescribedBy ;
     vs:term_status reg:statusStable ;

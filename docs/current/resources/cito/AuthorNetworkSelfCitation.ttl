@@ -17,7 +17,7 @@ cito:AuthorNetworkSelfCitation a owl:Class ;
         cito:hasCitedEntity :paper-b .
     """ ;
     rdfs:comment "A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onDataRange xsd:positiveInteger ;
             owl:onProperty cito:hasCoAuthorshipCitationLevel ;

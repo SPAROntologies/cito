@@ -13,7 +13,7 @@ cito:isCompiledBy a owl:ObjectProperty ;
         cito:isCompiledBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is the result of a compile or creation event using the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     vs:term_status reg:statusStable ;
     skos:note "Note: This property has been imported from the CiTO4Data ontology, usage of which has been deprecated."@en .

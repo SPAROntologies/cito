@@ -1,6 +1,6 @@
 [project]
 name = "cito"
-version = "2.9.1"
+version = "2.9.2"
 description = "The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically."
 readme = "README.md"
 requires-python = ">=3.11"

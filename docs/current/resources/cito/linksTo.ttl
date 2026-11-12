@@ -13,7 +13,7 @@ cito:linksTo a owl:ObjectProperty ;
         cito:linksTo :paper-b .  
     """ ;
     rdfs:comment "A relation according to which the citing entity provides a link, in the form of an HTTP Uniform Resource Locator (URL), to the cited entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: The BioSharing registry (https://biosharing.org) can be of use as it describes the standards in detail, including versions where applicable."@en .

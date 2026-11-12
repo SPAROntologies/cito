@@ -13,7 +13,7 @@ cito:parodies a owl:ObjectProperty ;
         cito:parodies :paper-b .
     """ ;
     rdfs:comment "A relation according to which the citing entity imitates the characteristic style or content of the cited entity for comic effect, usually without explicit citation."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:cites ;
     vs:term_status reg:statusStable ;
     skos:note "Example: We act as giants on the shoulders of dwarfs [X]!"@en .

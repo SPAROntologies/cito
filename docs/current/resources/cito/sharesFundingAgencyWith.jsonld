@@ -2,8 +2,8 @@
   {
     "@id": "http://purl.org/spar/cito/sharesFundingAgencyWith",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#SymmetricProperty"
+      "http://www.w3.org/2002/07/owl#SymmetricProperty",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://purl.org/vocab/vann/example": [
       {
@@ -18,7 +18,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/cito/"
+        "@id": "http://purl.org/spar/cito"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [

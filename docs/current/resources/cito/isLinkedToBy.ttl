@@ -12,7 +12,7 @@ cito:isLinkedToBy a owl:ObjectProperty ;
         cito:isLinkedToBy :paper-b .
     """ ;
     rdfs:comment "A relation according to which the cited entity is the target for an HTTP Uniform Resource Locator (URL) link within the citing entity."@en ;
-    rdfs:isDefinedBy cito: ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
     rdfs:subPropertyOf cito:isCitedBy ;
     owl:inverseOf cito:linksTo ;
     vs:term_status reg:statusStable .
